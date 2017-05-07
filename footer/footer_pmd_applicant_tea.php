@@ -129,7 +129,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                     <td>备注</td>
                     <td colspan="6"><?php echo $rowsGTR1["remark"]; ?></td>
                 </tr>
-                <!--修改组织信息-->
+                <!--修改组织信息222333123123-->
                 <div class="modal small hide fade" id="change_1" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
