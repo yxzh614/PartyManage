@@ -21,6 +21,10 @@
     	      <td>参与部门</td>
     	      <td colspan="5">&nbsp;</td>
    	        </tr>
+            <tr align="center">
+    	      <td>参与人员类别</td>
+    	      <td colspan="5">&nbsp;</td>
+   	        </tr>
     	    <tr align="center">
     	      <td>活动内容</td>
     	      <td colspan="5">&nbsp;</td>

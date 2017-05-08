@@ -30,7 +30,7 @@
 <!--表格信息-->
 <div class="btn-toolbar">
     <button class="btn btn-primary"><a href="#change" role="button" data-toggle="modal"><font color="#F7F8F7"><i class="icon-plus"></i>新建</font></a></button>
-    <button class="btn">导入</button>
+    <button class="btn">导入或转入</button>
     <button class="btn">导出</button>
   
 </div>
@@ -43,7 +43,6 @@
           <th>基本信息</th>
           <th>发展情况</th>
           <th>在校情况</th>
-          <th>会议记录</th>
           <th>参与活动</th>
           <th>民主评议</th>
           <th>奖惩情况</th>
@@ -54,12 +53,12 @@
       </thead>
       <tbody>
         <tr>
+        <!--复选框-->
           <td>134567543243213453</td>
           <td>张三</td>
           <td><a href="1_pmm_information_basic_stu.php">基本信息</a></td>
           <td><a href="1_pmm_information_development.php">发展情况</a></td>
           <td><a href="1_pmm_information_atSchool_stu.php">在校情况</a></td>
-          <td><a href="1_pmm_information_metting.php">会议记录</a></td>
           <td><a href="1_pmm_information_activities.php">参与活动</a></td>
           <td><a href="1_pmm_information_appraisement.php">民主评议</a></td>
           <td><a href="1_pmm_information_rorp.php">奖惩情况</a></td>
@@ -76,7 +75,6 @@
           <td><a href="1_pmm_information_basic_tea.php">基本信息</a></td>
           <td><a href="1_pmm_information_development.php">发展情况</a></td>
           <td><a href="1_pmm_information_atSchool_tea.php">在校情况</a></td>
-          <td><a href="1_pmm_information_metting.php">会议记录</a></td>
           <td><a href="1_pmm_information_activities.php">参与活动</a></td>
           <td><a href="1_pmm_information_appraisement.php">民主评议</a></td>
           <td><a href="1_pmm_information_rorp.php">奖惩情况</a></td>

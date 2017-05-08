@@ -38,16 +38,6 @@
     <button class="btn">删除</button> 
 </div>
 
-<div class="pagination">
-    <ul>
-        <li><a href="#">上一页</a></li>
-        <li><a href="#">1</a></li> 
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">下一页</a></li>
-    </ul>
-</div>
 
 <!--修改信息-->
 <div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

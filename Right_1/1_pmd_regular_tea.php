@@ -10,7 +10,7 @@
  
   <body class=""> 
     
- <?php include("1_footer_body_pmd.php"); ?>
+ <?php include("../Right_1/1_footer_body_pmd.php"); ?>
     
     <div class="content">
         
@@ -30,7 +30,7 @@
  <?php include("../footer/footer_pmd_activist.php"); ?>
  <?php include("../footer/footer_pmd_activist_train.php"); ?>
  <?php include("../footer/footer_pmd_probationary.php"); ?>
- <?php include("../footer/footer_pmd_regular_tea.php"); ?>
+ 
 
 
  <?php include("../footer/footer_bottom.php"); ?>

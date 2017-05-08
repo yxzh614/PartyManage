@@ -28,6 +28,10 @@
     	      <td>承担部门</td>
     	      <td colspan="5">&nbsp;</td>
    	        </tr>
+             <tr align="center">
+    	      <td>承担人员类别</td>
+    	      <td colspan="5">&nbsp;</td>
+   	        </tr>
     	    <tr align="center">
     	      <td>照片</td>
     	      <td colspan="5">

@@ -42,17 +42,6 @@
     <button class="btn">删除</button> 
 </div>
 
-<!--分页-->
-<div class="pagination">
-    <ul>
-        <li><a href="#">上一页</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">下一页</a></li>
-    </ul>
-</div>
 <!--修改信息-->
 <div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
@@ -62,7 +51,7 @@
     <div class="modal-body">     
     <form id="tab">
      	<label>培训总结</label>
-        <input type="text" name="summary" id="summary" value="" class="input-xlarge">
+        <input type="date" name="summary" /> 
         <label>教材名称</label>
         <input type="text" name="book_name" value="" class="input-xlarge">
         <label>考试成绩</label>
@@ -70,8 +59,7 @@
         <label>分学校意见</label>
         <input type="text" name="opinion" value="" class="input-xlarge"> 
         <label>考试日期</label>
-        <input type="text" name="date" value="" class="input-xlarge">
-       
+        <input type="date" name="date" />      
     </form>
     <div class="modal-footer">
         <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>

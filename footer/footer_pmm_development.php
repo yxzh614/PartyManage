@@ -9,14 +9,14 @@
         <tbody>
            
           <tr align="center">
-            <td width="43" rowspan="8"><p>发展</p>
+            <td width="43" rowspan="13"><p>发展</p>
               <p>情况</p></td>
-            <td width="107">发展阶段</td>
-            <td width="148">&nbsp;</td>
-            <td width="129">组织机构ID</td>
-            <td width="154">&nbsp;</td>
-            <td width="83">状态</td>
-            <td width="120">&nbsp;</td>
+            <td width="134">发展阶段</td>
+            <td width="110">&nbsp;</td>
+            <td width="134">组织机构ID</td>
+            <td width="115">&nbsp;</td>
+            <td width="154">状态</td>
+            <td width="94">&nbsp;</td>
             </tr>
           <tr align="center">
             <td colspan="2">入团时间</td>
@@ -59,6 +59,42 @@
             <td>&nbsp;</td>
             <td colspan="2">党前培训成绩</td>
             <td>&nbsp;</td>
+          </tr>
+          <tr align="center">
+            <td width="134">支部确定入党积极分子会议ID</td>
+            <td width="110">&nbsp;</td>
+            <td width="134">支部确定发展对象会议ID</td>
+            <td width="115">&nbsp;</td>
+            <td width="154">支部接收预备党员会议ID</td>
+            <td width="94">&nbsp;</td>
+          </tr>
+          <tr align="center">
+            <td>支部预备党员转正会议ID</td>
+            <td>&nbsp;</td>
+            <td>党委审批预备党员会议ID</td>
+            <td>&nbsp;</td>
+            <td>党委审批预备党员转正会议ID</td>
+            <td>&nbsp;</td>
+            </tr>
+          <tr align="center">
+            <td>谈话人</td>
+            <td>&nbsp;</td>
+            <td>谈话时间</td>
+            <td>&nbsp;</td>
+            <td>谈话地点</td>
+            <td>&nbsp;</td>
+            </tr>
+          <tr align="center">
+            <td>党员转入时间</td>
+            <td colspan="1">&nbsp;</td>
+            <td>转入自何处</td>
+            <td colspan="3">&nbsp;</td>
+          </tr>
+          <tr align="center">
+            <td>党员转出时间</td>
+            <td colspan="1">&nbsp;</td>
+            <td>转去何处</td>
+            <td colspan="3">&nbsp;</td>
           </tr>
           </tbody>
       </table>
@@ -118,7 +154,33 @@
         <input type="text" name="JJPX_mark" value="" class="input-xlarge" />
         <label>党前培训成绩</label>
         <input type="text" name="DQPX_mark" value="" class="input-xlarge"> 
-        
+                <label>支部确定入党积极分子会议ID</label>
+        <input type="text" name="ZQ_positivemeet_ID" value="" class="input-xlarge"> 
+        <label>支部确定发展对象会议ID</label>
+        <input type="text" name="ZQ_devemembermeet_ID" value="" class="input-xlarge"> 
+        <label>支部接收预备党员会议ID</label>
+        <input type="text" name="ZJ_readymeet_ID" value="" class="input-xlarge"> 
+       	<label>支部预备党员转正会议ID</label>
+        <input type="text" name="ZSbec_officalmeet_ID" value="" class="input-xlarge">
+        <label>党委审批预备党员会议</label>
+        <input type="text" name="DS_readymeet_ID" value="" class="input-xlarge">
+        <label>党委审批预备党员转正会议</label>
+        <input type="text" name="Bec_officialmeet_ID" value="" class="input-xlarge">
+        <label>谈话人</label>
+        <input type="text" name="Talker_ID" value="" class="input-xlarge">
+        <label>谈话时间</label>
+        <input type="date" name="Talk_time" />
+        <label>谈话地点</label>
+        <input type="text" name="Talk_site" value="" class="input-xlarge">
+        <label>党员转入时间</label>
+        <input type="date" name="In_time" />
+        <label>转入自何处</label>
+        <input type="text" name="In_where" value="" class="input-xlarge">
+        <label>党员转出时间</label>
+        <input type="date" name="Out_time" />
+        <label>转去何处</label>
+        <input type="text" name="Ge_where" value="" class="input-xlarge">
+
         
     </form>
     <div class="modal-footer">
