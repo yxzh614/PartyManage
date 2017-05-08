@@ -15,18 +15,6 @@
             <td>入党时间</td>
             <td>&nbsp;</td>
           </tr>
-          <tr align="center">
-            <td>党员转入时间</td>
-            <td>&nbsp;</td>
-            <td>转入自何处</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr align="center">
-            <td>党员转出时间</td>
-            <td>&nbsp;</td>
-            <td>转出自何处</td>
-            <td>&nbsp;</td>
-          </tr>
         </tbody>
       </table>
     </div>

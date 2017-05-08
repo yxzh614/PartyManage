@@ -20,18 +20,6 @@
             <td>入党时间</td>
             <td>&nbsp;</td>
           </tr>
-          <tr align="center">
-            <td>党员转入时间</td>
-            <td>&nbsp;</td>
-            <td>转入自何处</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr align="center">
-            <td>党员转出时间</td>
-            <td>&nbsp;</td>
-            <td>转出自何处</td>
-            <td>&nbsp;</td>
-          </tr>
         </tbody>
       </table>
     </div>
@@ -56,14 +44,6 @@
         <input type="date" name="Bec_official_time" />
         <label>入党时间</label>
         <input type="date" name="RD_datetime" />
-        <label>党员转入时间</label>
-        <input type="date" name="In_time" />
-        <label>转入自何处</label>
-        <input type="text" name="In_where"/>
-        <label>党员转出时间</label>
-        <input type="date" name="Out_time" />
-        <label>转出自何处</label>
-        <input type="text" name="Ge_where"/>
     </form>
     <div class="modal-footer">
         <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>

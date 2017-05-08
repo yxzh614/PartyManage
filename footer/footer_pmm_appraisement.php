@@ -37,7 +37,12 @@
         <label>评议时间</label>
         <input type="date" name="date">
         <label>评议结果</label>
-        <input type="text" name="place"  value="" class="input-xlarge">	
+        <select name="place">
+        	<option value="0">优秀</option>
+            <option value="1">及格</option>
+             <option value="2">不及格</option>
+        </select>
+      
         <label>备注</label>
         <input type="text" name="remark" value="" class="input-xlarge">
        

@@ -46,16 +46,7 @@
       </tbody>
     </table>
 </div>
-<div class="pagination">
-    <ul>
-        <li><a href="#">上一页</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">下一页</a></li>
-    </ul>
-</div>
+
 
 <!--修改缺席原因-->
 <div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -66,6 +57,10 @@
     <div class="modal-body">     
     <form id="tab">
         <label>缺席原因</label>
+         <select name="Reason">
+        	<option value="0">因公</option>
+            <option value="1">因私</option>
+        </select>
         <input type="text" name="absent_reason" value="00aXXYYZZ" class="input-xlarge"> 
     </form>
     <div class="modal-footer">

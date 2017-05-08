@@ -11,7 +11,7 @@
         $sqlGetTeaR1="SELECT
   personnelinformation.*,
   person_cate1_bmb.Person_cate1_name AS p1name,/* 类别1*/
-  person_cate2_bmb.person_cate2_name AS p2name,/* 类别2*/
+  person_cate2_bmb.person_cate2_name AS p2name,/* 类别2*/ 
   major_bmb.major_name AS major_name,/* 专业*/
   nation_bmb.nation_name AS nation_name,/* 民族*/
   native_bmb.place_name AS native_name,/* 籍贯*/
@@ -56,7 +56,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                     <td width="127">姓名</td>
                     <td width="112"><?php echo $rowsGTR1["name"]; ?></td>
                     <td width="77">性别</td>
-                    <td width="75"><?php echo $rowsGTR1["sex"] ? "男" : "女" ?></td>
+                    <td width="75"><?php echo $rowsGTR1["sex"] ? "女" : "男" ?></td>
                     <td width="140">出生日期</td>
                     <td width="97"><?php echo substr($rowsGTR1["ID_number"], 6, 8); ?></td>
                     <td width="66" rowspan="3">&nbsp;</td>
@@ -136,7 +136,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                     <h3 id="myModalLabel">编辑信息</h3>
                 </div>
                 <div class="modal-body">
-                <form id="tab" action="../Right_1/1_pmd_applicant_tea.php" method="post">
+                <form id="tab">
                 <label>姓名</label>
                 <input type="text" name="name" value="<?php echo $rowsGTR1["name"]; ?>" class="input-xlarge">
                 <label>性别</label>
@@ -153,6 +153,8 @@ WHERE ID_number='".$_GET["ID"]."'";
                     <?php
                 }
                             ?>
+                            <label>出生年月</label>
+                            <input type="month"  name="datetime" value="<?php echo substr($rowsGTR1["ID_number"], 6, 8); ?>"/>
                             <label>照片</label>
 
                             <input type="file" name="image" />
@@ -264,13 +266,13 @@ WHERE ID_number='".$_GET["ID"]."'";
                             </select>
                             <label>备注</label>
                             <input type="text" name="remark" value="<?php echo $rowsGTR1["remark"]; ?>" />
-
+                        </form>
                         <div class="modal-footer">
                             <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
                             <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">保存</button>
                         </div>
                         <br/><br/><br/>
-                    </form>
+                    </div>
                 </div>
         <?php
             }

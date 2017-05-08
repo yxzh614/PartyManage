@@ -4,7 +4,8 @@
     <?php 
 	
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");      session_start();
+	 require_once("../config.php");      
+	 session_start();
       if(isset($_COOKIE["PHPSESSID"])){
     session_id($_COOKIE["PHPSESSID"]);
     if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
@@ -51,7 +52,7 @@
 <!--搜索框-->
     	<div class="search-well">
                 <form class="form-inline">
-                    <input class="input-xlarge" placeholder="根据身份证号查询" id="appendedInputButton" type="text">
+                    <input class="input-xlarge" placeholder="根据身份证号或姓名查询" id="appendedInputButton" type="text">
                     <button class="btn" type="button"><i class="icon-search"></i> 查询</button>
                 </form>
      	</div>
@@ -76,10 +77,10 @@
                 echo "<td>".$rows["name"]."</td>";
                 echo "<td>".$rows["Person_cate1_name"]."</td>";
                 if($rows["person_cate1"]==1){
-                    echo "<td><a href='../Right_1/1_pmd_applicant_tea.php?ID=".$rows["ID_number"]."'>详细信息</a></td>";
+                    echo "<td><a href='../Right_1/1_pmd_activist_tea.php?ID=".$rows["ID_number"]."'>详细信息</a></td>";
                 }
                 else{
-                    echo "<td><a href='../Right_1/1_pmd_applicant_stu.php?ID=".$rows["ID_number"]."'>详细信息</a></td>";
+                    echo "<td><a href='../Right_1/1_pmd_activist_stu.php?ID=".$rows["ID_number"]."'>详细信息</a></td>";
                 }
                 echo "<td>";
                 ?>
@@ -103,12 +104,7 @@
 <div class="btn-toolbar">
     <button class="btn btn-primary">全选</button>
     <button class="btn btn-primary">删除</button>
-    <button class="btn">会议</button>
-    <button class="btn">培训时间</button> 
-    <button class="btn">培训总结时间</button>
-    <button class="btn">教材</button> 
-    <button class="btn">意见</button>
-    <button class="btn">考试日期</button>  
+    <button class="btn"><a href="#jieduan" role="button" data-toggle="modal"><font color="#000000">录入阶段信息</font></a></button>
 </div>
 </div>
 </div>
@@ -142,20 +138,34 @@
   </div>    
 </div>
 
-<!--删除信息-->
-<div class="modal small hide fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!--录入阶段信息-->
+<div class="modal small hide fade" id="jieduan" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">删除信息</h3>
+        <h3 id="myModalLabel">录入阶段信息</h3>
     </div>
-    <div class="modal-body">
-        <p class="error-text"><i class="icon-warning-sign modal-icon"></i>确定删除这条信息吗？</p>
-    </div>
+    <div class="modal-body">     
+    <form id="tab" action="1_pmd_activist_list.php" method="post">
+    	<label>积极分子分子培训时间</label>
+        <input type="date" name="JJPX_time">
+    	<label>培训总结时间</label>
+        <input type="date" name="summary" /> 
+        <label>教材名称</label>
+        <input type="text" name="book_name" value="" class="input-xlarge">
+        <label>分学校意见</label>
+        <input type="text" name="opinion" value="" class="input-xlarge"> 
+        <label>考试日期</label>
+        <input type="date" name="date" /> 	
+   
     <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-        <button class="btn btn-danger" data-dismiss="modal">删除</button>
+        <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
+        <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" value="保存" >
     </div>
+     </form>
+    	<br/><br/><br/>
+  </div>    
 </div>
+
 <?php include("../footer/footer_bottom.php");?>
             </div>
         </div>

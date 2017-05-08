@@ -7,7 +7,6 @@
     if(isset($_COOKIE["PHPSESSID"])){
     session_id($_COOKIE["PHPSESSID"]);
     if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
-
     if(isset($_POST["submit"])&&$_POST["submit"]){
         //$dt = new DateTime();
         //$dt->format('Y-m-d H:i:s');
@@ -58,7 +57,6 @@
   
 </div>
 <div class="well">
-    <form action="../del.php" method="post">
     <table class="table">
       <thead>
         <tr> 
@@ -76,7 +74,7 @@
         if($resAS=mysqli_query($db,$sqlAllStudents)){
             while ($rows=mysqli_fetch_assoc($resAS)){
                 echo "<tr>";
-                echo "<td><input type='checkbox' name='onetodel[]' value='".$rows["ID_number"]."'></td>";
+                echo "<td><input type='checkbox' name='onetodel' value='".$rows["ID_number"]."'></td>";
                 echo "<td>".$rows["name"]."</td>";
                 echo "<td>".$rows["Person_cate1_name"]."</td>";
                 if($rows["person_cate1"]==1){
@@ -87,29 +85,53 @@
                 }
                 echo "<td>";
                 ?>
-                <?php
+                <form action="../del.php" method="post">
+                <input type="hidden" name="ID_number" value="<?php echo $rows["ID_number"];?>">
+                <input type="hidden" name="type" value="stu">
+               
+                </form><?php
                 echo " </td>";
                 echo "</tr>";
             }
         }
         ?>
 
-        <button type="button" class="btn btn-primary" onclick='allcheck()'>全选</button>
-        <input type="submit" class="btn btn-primary" name="submit" onclick="return confirm('确定要删除吗？')" value="删除">
-        <button type="button" class="btn">列为入党积极分子时间</button>
+ 
         </tbody>
 
-    </table>
-    </form>
+    </table>       
+   
 </div>
 <div class="container-fluid">
 <div class="row-fluid">
 <div class="btn-toolbar">
-        
+  <button class="btn btn-primary">全选</button>
+   <th width="213">&nbsp;</th>
+        <input  class="btn btn-primary" type="submit" name="submit" value="删除">
+  <th width="213">&nbsp;</th>
+        <button class="btn"><a href="#jieduan" role="button" data-toggle="modal"><font color="#000000">录入阶段信息</font></a></button>       
 </div>
 </div>
 </div>
 
+<!--录入阶段信息-->
+<div class="modal small hide fade" id="jieduan" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">录入阶段信息</h3>
+    </div>
+    <div class="modal-body">     
+    <form id="tab" action="1_pmd_activist_list.php" method="post">
+    	 <label>列积极分子时间</label>
+        <input type="date" name="LJJ_time" />
+    <div class="modal-footer">
+        <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
+        <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" value="保存" >
+    </div>
+     </form>
+    	<br/><br/><br/>
+  </div>    
+</div>
 
 <!--编辑信息-->
 <div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -139,20 +161,6 @@
   </div>    
 </div>
 
-<!--删除信息-->
-<div class="modal small hide fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">删除信息</h3>
-    </div>
-    <div class="modal-body">
-        <p class="error-text"><i class="icon-warning-sign modal-icon"></i>确定删除这条信息吗？</p>
-    </div>
-    <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-        <button class="btn btn-danger" data-dismiss="modal">删除</button>
-    </div>
-</div>
 
 <?php include("../footer/footer_bottom.php");?>
 </div>
@@ -165,24 +173,8 @@
         $(function() {
             $('.demo-cancel-click').click(function(){return false;});
         });
-        function allcheck() {
-            if(!$("input[name='onetodel[]']").attr("checked")){
-                $("input[name='onetodel[]']").attr("checked",true);
-            }else{
-                $("input[name='onetodel[]']").attr("checked",false);
-            }
-        }
-        function checkdel() {
-            document.getElementsByName("onetodel[]");
-            for(let i=0;i<document.getElementsByName("onetodel[]").length;i++){
-                if(document.getElementsByName("onetodel[]")[i].hasAttribute("checked")===true&&document.getElementsByName("onetodel[]")[i].checked===true){
-                    return true;
-                }
-            }
-            console.log(false);
-            return false;
-        }
     </script>
+    
   </body>
 </html>
 <?php

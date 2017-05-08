@@ -67,8 +67,16 @@
         </select>
        <label>接收预备党员公示时间</label>
        <input type="date" name="Publicity_time"/>
-       <label>谈话人</label>
-       <input type="text" name="Talker_name" />
+       <label>谈话人1</label>
+       <select name="talker_name1">
+ 			<option value="0">张三</option>
+            <option value="1">李四</option>      
+       </select>
+       <label>谈话人2</label>
+       <select name="talker_name2">
+ 			<option value="0">张三</option>
+            <option value="1">李四</option>      
+       </select>
        <label>谈话地点</label>
        <input type="text" name="Talk_site" />
        <label>谈话时间</label>

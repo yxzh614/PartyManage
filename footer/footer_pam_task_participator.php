@@ -3,7 +3,8 @@
                 <form class="form-inline">
                     <input class="input-xlarge" placeholder="根据身份证号或姓名查询" id="appendedInputButton" type="text">
                     <button class="btn" type="button"><i class="icon-search"></i> 查询</button>
-                    <button class="btn btn-primary"><a href="#new" role="button" data-toggle="modal"><font color="#F7F8F7">导入</font></a></button>
+                    <button class="btn btn-primary" ><a href="#change_2" role="button" data-toggle="modal"><font color="#F7F8F7">党员名单</font></a></button>
+                    <button class="btn btn-primary" ><a href="#change_2" role="button" data-toggle="modal"><font color="#F7F8F7">积极分子名单</font></a></button>
                 </form>
      	</div>
 <div class="well">
@@ -55,18 +56,9 @@
     <button class="btn btn-primary">全选</button>
     <button class="btn">删除</button> 
 </div>
-<div class="pagination">
-    <ul>
-        <li><a href="#">上一页</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">下一页</a></li>
-    </ul>
-</div>
+
 <!--导入信息-->
-<div class="modal small hide fade" id="new" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal small hide fade" id="change_2" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">修改信息</h3>
@@ -95,10 +87,12 @@
     <form id="tab">
         <label>承担工作</label>
         <input type="text" name="work" value="整理文档" class="input-xlarge">
-       
+        <button class="btn" id="btn_change_select" data-dismiss="modal" aria-hidden="true">全选</button>
     </form>
+    
     <div class="modal-footer">
-        <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
+        
+        <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">消</button>
         <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">保存</button>
     </div>
     	<br/><br/><br/>

@@ -9,9 +9,11 @@
     if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
 
     if(isset($_POST["submit"])&&$_POST["submit"]){
-
-        $sqlAddStu="UPDATE `personnelinformation` SET `name` = '044'
- WHERE `personnelinformation`.`ID_number` = '000000000000000000';";
+        //$dt = new DateTime();
+        //$dt->format('Y-m-d H:i:s');
+        $sqlAddStu="INSERT INTO `personnelinformation` (ID_number,name,person_cate1,person_cate2)
+ VALUES 
+ ( '".$_POST['ID_number']."','".$_POST['name']."',".$_POST['person_cate1'].",5)";
         if(mysqli_query($db,$sqlAddStu)){
             // echo "==插入成功==";
             echo "<script>alert('添加成功！')</script>";

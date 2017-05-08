@@ -57,7 +57,7 @@
           <td>2012.03.04</td>
           <td>XX227</td>
           <td>XXXX</td>
-          <td><a href="1_pam_meeting_information.php">详细信息</a></td>
+          <td><a href="1_pam_activity_information.php">详细信息</a></td>
           <td>
               <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
