@@ -3,7 +3,7 @@
 <head>
 
 <?php
-session_start();
+session_start();//huihua
 include("footer/footer_head.php");
 require_once("config.php");
 if(isset($_COOKIE["PHPSESSID"])){

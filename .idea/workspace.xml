@@ -4,106 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="11b319f0-8e3e-4105-9dd3-d58ea6ed508a" name="Default" comment="">
+    <list default="true" id="11b319f0-8e3e-4105-9dd3-d58ea6ed508a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_footer_body_pam.php" afterPath="$PROJECT_DIR$/Right_1/1_footer_body_pam.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_footer_body_pmd.php" afterPath="$PROJECT_DIR$/Right_1/1_footer_body_pmd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_footer_body_pmm.php" afterPath="$PROJECT_DIR$/Right_1/1_footer_body_pmm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_footer_body_setting.php" afterPath="$PROJECT_DIR$/Right_1/1_footer_body_setting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_footer_body_statistics.php" afterPath="$PROJECT_DIR$/Right_1/1_footer_body_statistics.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_footer_pmm_stage.php" afterPath="$PROJECT_DIR$/Right_1/1_footer_pmm_stage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_index.php" afterPath="$PROJECT_DIR$/Right_1/1_index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pam_activity.php" afterPath="$PROJECT_DIR$/Right_1/1_pam_activity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pam_activity_information.php" afterPath="$PROJECT_DIR$/Right_1/1_pam_activity_information.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pam_meeting.php" afterPath="$PROJECT_DIR$/Right_1/1_pam_meeting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pam_meeting_information.php" afterPath="$PROJECT_DIR$/Right_1/1_pam_meeting_information.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pam_organization.php" afterPath="$PROJECT_DIR$/Right_1/1_pam_organization.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pam_organization_duty.php" afterPath="$PROJECT_DIR$/Right_1/1_pam_organization_duty.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pam_organization_rorp.php" afterPath="$PROJECT_DIR$/Right_1/1_pam_organization_rorp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pam_task.php" afterPath="$PROJECT_DIR$/Right_1/1_pam_task.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pam_task_information.php" afterPath="$PROJECT_DIR$/Right_1/1_pam_task_information.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_activist_list.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_activist_list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_activist_stu.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_activist_stu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_activist_tea.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_activist_tea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_applicant_list.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_applicant_list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_applicant_stu.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_applicant_stu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_applicant_tea.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_applicant_tea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_probationary_confirmationLetter.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_probationary_confirmationLetter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_probationary_stu.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_probationary_stu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_probationary_tea.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_probationary_tea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_regular_list.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_regular_list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_regular_probationary.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_regular_probationary.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_regular_stu.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_regular_stu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmd_regular_tea.php" afterPath="$PROJECT_DIR$/Right_1/1_pmd_regular_tea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_arrears.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_arrears.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_activities.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_activities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_appraisement.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_appraisement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_atSchool_stu.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_atSchool_stu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_atSchool_tea.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_atSchool_tea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_basic_stu.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_basic_stu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_basic_tea.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_basic_tea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_development.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_development.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_note.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_note.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_rorp.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_rorp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_stage.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_stage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_stage_thinkingReport.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_stage_thinkingReport.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_user_log_in.php" afterPath="$PROJECT_DIR$/Right_1/1_user_log_in.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/_notes/dwsync.xml" afterPath="$PROJECT_DIR$/Right_1/_notes/dwsync.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_bottom.php" afterPath="$PROJECT_DIR$/footer/footer_bottom.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_head.php" afterPath="$PROJECT_DIR$/footer/footer_head.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_activity.php" afterPath="$PROJECT_DIR$/footer/footer_pam_activity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_activity_look.php" afterPath="$PROJECT_DIR$/footer/footer_pam_activity_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_attend.php" afterPath="$PROJECT_DIR$/footer/footer_pam_attend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_attend_look.php" afterPath="$PROJECT_DIR$/footer/footer_pam_attend_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_meeting.php" afterPath="$PROJECT_DIR$/footer/footer_pam_meeting.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_meeting_look.php" afterPath="$PROJECT_DIR$/footer/footer_pam_meeting_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_origization.php" afterPath="$PROJECT_DIR$/footer/footer_pam_origization.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_origization_duty.php" afterPath="$PROJECT_DIR$/footer/footer_pam_origization_duty.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_origization_duty_look.php" afterPath="$PROJECT_DIR$/footer/footer_pam_origization_duty_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_task.php" afterPath="$PROJECT_DIR$/footer/footer_pam_task.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_task_look.php" afterPath="$PROJECT_DIR$/footer/footer_pam_task_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_task_participator.php" afterPath="$PROJECT_DIR$/footer/footer_pam_task_participator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_task_participator_look.php" afterPath="$PROJECT_DIR$/footer/footer_pam_task_participator_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_unattend.php" afterPath="$PROJECT_DIR$/footer/footer_pam_unattend.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pam_unattend_look.php" afterPath="$PROJECT_DIR$/footer/footer_pam_unattend_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_activist.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_activist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_activist_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_activist_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_activist_train.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_activist_train.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_activist_train_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_activist_train_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_applicant_stu.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_applicant_stu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_applicant_stu_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_applicant_stu_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_applicant_tea.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_applicant_tea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_applicant_tea_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_applicant_tea_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_probationary.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_probationary.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_probationary_confirmationLetter.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_probationary_confirmationLetter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_probationary_confirmationLetter_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_probationary_confirmationLetter_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_probationary_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_probationary_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_regular.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_regular.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_regular_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_regular_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_regular_probationary.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_regular_probationary.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmd_regular_probationary_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmd_regular_probationary_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_activities.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_activities.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_activities_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_activities_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_appraisement.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_appraisement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_appraisement_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_appraisement_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_arrears.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_arrears.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_atSchool_stu.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_atSchool_stu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_atSchool_stu_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_atSchool_stu_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_atSchool_tea.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_atSchool_tea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_atSchool_tea_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_atSchool_tea_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_basic_stu.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_basic_stu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_basic_stu_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_basic_stu_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_basic_tea.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_basic_tea.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_basic_tea_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_basic_tea_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_development.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_development.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_development_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_development_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_note.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_note.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_note_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_note_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_stage_thinkingReport.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_stage_thinkingReport.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_stage_thinkingReport_look.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_stage_thinkingReport_look.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_rorp.php" afterPath="$PROJECT_DIR$/footer/footer_rorp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_rorp_look.php" afterPath="$PROJECT_DIR$/footer/footer_rorp_look.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/del.php" afterPath="$PROJECT_DIR$/del.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -150,100 +54,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="footer_pmd_applicant_tea.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/footer/footer_pmd_applicant_tea.php">
+    <leaf>
+      <file leaf-file-name="del.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/del.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2261">
-              <caret line="119" column="35" lean-forward="false" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
+            <state relative-caret-position="468">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
-                <marker date="1493642232906" expanded="true" signature="337:481" ph="SELECT perso... personnelinformation" />
-                <marker date="1493642232906" expanded="true" signature="14761:14784" ph="..." />
-                <marker date="1493642232906" expanded="true" signature="14761:14842" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="1_pmd_probationary_list.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Right_1/1_pmd_probationary_list.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3705">
-              <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
-              <folding>
-                <marker date="1493864810098" expanded="true" signature="286:7570" ph="..." />
-                <marker date="1493864810098" expanded="true" signature="429:595" ph="INSERT INTO `personnelinformation`... " />
-                <marker date="1493864810098" expanded="true" signature="2288:2411" ph="SELECT *,Per... personnelinformation" />
-                <marker date="1493864810098" expanded="true" signature="7198:7238" ph="..." />
-                <marker date="1493864810098" expanded="true" signature="7382:7539" ph="..." />
-                <marker date="1493864810098" expanded="true" signature="7443:7524" ph="{...}" />
-                <marker date="1493864810098" expanded="true" signature="7576:7693" ph="..." />
-                <marker date="1493864810098" expanded="true" signature="7595:7681" ph="..." />
-                <marker date="1493864810098" expanded="true" signature="7721:7779" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sign-in.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sign-in.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-              <folding>
-                <marker date="1494159986552" expanded="true" signature="305:381" ph="SELECT `righ... user" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="elements.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stylesheets/elements.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="1_pmd_applicant_tea.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Right_1/1_pmd_applicant_tea.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-              <folding>
-                <marker date="1493454980471" expanded="true" signature="279:1940" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="331:904" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="632:725" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="780:884" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="794:867" ph="//..." />
-                <marker date="1493454980471" expanded="true" signature="939:1924" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="953:999" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="1031:1639" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="1069:1142" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="1191:1363" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="1402:1628" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="1438:1613" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="1468:1520" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="1531:1572" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="1752:1909" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="1813:1894" ph="{...}" />
-                <marker date="1493454980471" expanded="true" signature="1946:2063" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="1965:2051" ph="..." />
-                <marker date="1493454980471" expanded="true" signature="2091:2149" ph="..." />
+                <marker date="1494240217881" expanded="true" signature="453:554" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -264,6 +82,9 @@
       <dir>D:\wamp64\www\PartyManage</dir>
     </dirStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -280,13 +101,13 @@
         <option value="$PROJECT_DIR$/Right_1/1_footer_body_statistics.php" />
         <option value="$PROJECT_DIR$/log-out.php" />
         <option value="$PROJECT_DIR$/Right_1/1_pmd_activist_list.php" />
-        <option value="$PROJECT_DIR$/del.php" />
         <option value="$PROJECT_DIR$/Right_1/1_pmd_applicant_list.php" />
         <option value="$PROJECT_DIR$/Right_1/1_pmd_applicant_tea.php" />
         <option value="$PROJECT_DIR$/footer/footer_pmd_applicant_tea.php" />
-        <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/Right_1/1_pmd_probationary_list.php" />
         <option value="$PROJECT_DIR$/stylesheets/elements.css" />
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/del.php" />
       </list>
     </option>
   </component>
@@ -301,7 +122,7 @@
     <option name="x" value="54" />
     <option name="y" value="-8" />
     <option name="width" value="1554" />
-    <option name="height" value="904" />
+    <option name="height" value="916" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -341,21 +162,21 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PM" />
+              <option name="myItemId" value="PartyManage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PM" />
+              <option name="myItemId" value="PartyManage" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,14 +187,15 @@
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\wamp64\www\PartyManage" />
       <recent name="D:\wamp64\www\PartyManage\footer" />
       <recent name="D:\wamp64\www\PartyManage\Right_6" />
       <recent name="D:\wamp64\www\PartyManage\Right_5" />
       <recent name="D:\wamp64\www\PartyManage\Right_4" />
-      <recent name="D:\wamp64\www\PartyManage\Right_3" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -464,24 +286,6 @@
     <configuration>C:\Users\ak-hyeon-chal\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
   </component>
-  <component name="SvnFileUrlMappingImpl">
-    <option name="myMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\wamp64\www\PM" />
-          <option name="myCopyRoot" value="D:\wamp64\www\PM" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-    <option name="myMoreRealMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\wamp64\www\PM" />
-          <option name="myCopyRoot" value="D:\wamp64\www\PM" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="11b319f0-8e3e-4105-9dd3-d58ea6ed508a" name="Default" comment="" />
@@ -502,26 +306,30 @@
       <workItem from="1494141679292" duration="13937000" />
       <workItem from="1494160048109" duration="2961000" />
       <workItem from="1494237933367" duration="245000" />
+      <workItem from="1494238939475" duration="935000" />
+      <workItem from="1494239875401" duration="450000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55209000" />
+    <option name="totallyTimeSpent" value="56594000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1554" height="904" extended-state="0" />
+    <frame x="54" y="-8" width="1554" height="916" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2931727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30120483" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19410977" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -772,7 +580,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,7 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,17 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="123" column="6" lean-forward="false" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="6" />
-          <folding>
-            <element signature="e#652#4057#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/del.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,7 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,7 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
           <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,67 +622,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding>
-            <marker date="1493454980471" expanded="true" signature="279:1940" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="331:904" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="632:725" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="780:884" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="794:867" ph="//..." />
-            <marker date="1493454980471" expanded="true" signature="939:1924" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="953:999" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="1031:1639" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="1069:1142" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="1191:1363" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="1402:1628" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="1438:1613" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="1468:1520" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="1531:1572" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="1752:1909" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="1813:1894" ph="{...}" />
-            <marker date="1493454980471" expanded="true" signature="1946:2063" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="1965:2051" ph="..." />
-            <marker date="1493454980471" expanded="true" signature="2091:2149" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/footer/footer_pmd_applicant_tea.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="119" column="35" lean-forward="false" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
-          <folding>
-            <marker date="1493642232906" expanded="true" signature="337:481" ph="SELECT perso... personnelinformation" />
-            <marker date="1493642232906" expanded="true" signature="14761:14784" ph="..." />
-            <marker date="1493642232906" expanded="true" signature="14761:14842" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-          </folding>
+          <caret line="119" column="35" lean-forward="false" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Right_1/1_pmd_probationary_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3705">
+        <state relative-caret-position="3724">
           <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
-          <folding>
-            <marker date="1493864810098" expanded="true" signature="286:7570" ph="..." />
-            <marker date="1493864810098" expanded="true" signature="429:595" ph="INSERT INTO `personnelinformation`... " />
-            <marker date="1493864810098" expanded="true" signature="2288:2411" ph="SELECT *,Per... personnelinformation" />
-            <marker date="1493864810098" expanded="true" signature="7198:7238" ph="..." />
-            <marker date="1493864810098" expanded="true" signature="7382:7539" ph="..." />
-            <marker date="1493864810098" expanded="true" signature="7443:7524" ph="{...}" />
-            <marker date="1493864810098" expanded="true" signature="7576:7693" ph="..." />
-            <marker date="1493864810098" expanded="true" signature="7595:7681" ph="..." />
-            <marker date="1493864810098" expanded="true" signature="7721:7779" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,17 +644,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding>
-            <marker date="1494159986552" expanded="true" signature="305:381" ph="SELECT `righ... user" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/elements.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php" />
+    <entry file="file://$PROJECT_DIR$/del.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <marker date="1494240217881" expanded="true" signature="453:554" ph="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>
