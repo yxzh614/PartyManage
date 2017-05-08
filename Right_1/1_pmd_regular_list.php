@@ -117,7 +117,7 @@
         <h3 id="myModalLabel">录入阶段信息</h3>
     </div>
     <div class="modal-body">     
-    <form id="tab" action="1_pmd_activist_list.php" method="post">
+    <form id="tab" action="1_pmd_regular_list.php" method="post">
         <label>党委审批预备党员转正会议</label>
         <select name="Bec_officialmeet">
         	<option value="会议ID">会议主题1</option>
@@ -145,9 +145,8 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">修改信息</h3>
     </div>
-    <div class="modal-body">     
+    <div class="modal-body">
   <form id="tab" action="1_pmd_regular_list.php" method="post">
-        
      	<label>身份证号</label>
         <input type="text" name="ID_number" value="" class="input-xlarge">
         <label>姓名</label>
@@ -157,12 +156,12 @@
         	<option value="1">教师</option>
             <option value="2">研究生</option>
             <option value="3">本科生</option>
-        </select> 
-    </form>
+        </select>
     <div class="modal-footer">
         <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
       <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" value="保存" >
     </div>
+  </form>
     	<br/><br/><br/>
   </div>
     

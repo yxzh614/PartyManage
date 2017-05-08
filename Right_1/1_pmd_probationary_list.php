@@ -183,12 +183,12 @@
         	<option value="1">教师</option>
             <option value="2">研究生</option>
             <option value="3">本科生</option>
-        </select> 
-    </form>
+        </select>
     <div class="modal-footer">
         <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
         <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" value="保存" >
     </div>
+    </form>
     	<br/><br/><br/>
   </div>
     
