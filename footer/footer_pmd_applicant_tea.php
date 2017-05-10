@@ -136,27 +136,25 @@ WHERE ID_number='".$_GET["ID"]."'";
                     <h3 id="myModalLabel">编辑信息</h3>
                 </div>
                 <div class="modal-body">
-                <form id="tab">
+                <form id="tab" action="../Right_1/1_pmd_applicant_tea.php?ID=<?php echo $_GET["ID"] ?>" method="post">
+                    <input type="hidden" name="ID_number" value="<?php echo $rowsGTR1['ID_number'];?>">
                 <label>姓名</label>
-                <input type="text" name="name" value="<?php echo $rowsGTR1["name"]; ?>" class="input-xlarge">
+                <input type="text" name="name" value="<?php echo $rowsGTR1["name"]; ?>" class="input-xlarge" title="name">
                 <label>性别</label>
                 <?php
                 if ($rowsGTR1["sex"] == 0) {
                     ?>
-                    <input type="radio" name="sex" value="男" id="sex_0" checked="checked"/> 男
-                    <input type="radio" name="sex" value="女" id="sex_1"/>女
+                    <input type="radio" name="sex" value="0" id="sex_0" checked="checked"/> 男
+                    <input type="radio" name="sex" value="1" id="sex_1"/>女
                     <?php
                 }else{
                     ?>
-                    <input type="radio" name="sex" value="男" id="sex_0" /> 男
-                    <input type="radio" name="sex" value="女" id="sex_1" checked="checked"/>女
+                    <input type="radio" name="sex" value="0" id="sex_0" /> 男
+                    <input type="radio" name="sex" value="1" id="sex_1" checked="checked"/>女
                     <?php
                 }
                             ?>
-                            <label>出生年月</label>
-                            <input type="month"  name="datetime" value="<?php echo substr($rowsGTR1["ID_number"], 6, 8); ?>"/>
                             <label>照片</label>
-
                             <input type="file" name="image" />
                             <label>民族</label>
                             <select name="nation">
@@ -171,7 +169,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                                 }
                                 ?>
                             </select>
-                            <label>籍贯</label>
+                            <label>籍贯test</label>
                             <select name="province">
                                 <option value="0">辽宁</option>
                                 <option value="1">河北</option>
@@ -185,8 +183,22 @@ WHERE ID_number='".$_GET["ID"]."'";
                                 <option value="0">浑南新区</option>
                                 <option value="1">皇姑区</option>
                             </select>
+
+                    <label>籍贯</label>
+                    <select name="native_place">
+                        <?php
+                        $sqlAllNative="SELECT * FROM home_place_bmb";
+                        if($resANv=mysqli_query($db,$sqlAllNative)){
+                            while($rowsANv=mysqli_fetch_assoc($resANv)){
+                                ?>
+                                <option value="<?php echo $rowsANv["place"]; ?>"><?php echo $rowsANv["place_name"]; ?></option>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </select>
                             <label>申请入党时间</label>
-                            <input type="date" name="SQRD_time" value="<?php echo $rowsGTR1["SQRD_time"]; ?>">
+                            <input type="date" name="SQRD_time"  value="<?php echo $rowsGTR1["SQRD_time"]; ?>">
                             <label>联系电话</label>
                             <input type="text" name="tel" value="<?php echo $rowsGTR1["tel"]; ?>" class="input-xlarge">
                             <label>政治面貌</label>
@@ -202,8 +214,6 @@ WHERE ID_number='".$_GET["ID"]."'";
                                 }
                                 ?>
                             </select>
-                            <label>身份证号</label>
-                            <input type="text" name="ID_number" value="" class="input-xlarge">
                             <label>所属组织</label>
                             <select name="Department_ID">
                                 <?php
@@ -218,9 +228,9 @@ WHERE ID_number='".$_GET["ID"]."'";
                                 ?>
                             </select>
                             <label>入团时间</label>
-                            <input type="date" name="Join_T_time" value="<?php echo $rowsGTR1["join_T_time"]; ?>">
+                            <input type="date" name="join_T_time" value="<?php echo $rowsGTR1["join_T_time"]; ?>">
                             <label>毕业日期</label>
-                            <input type="date" name="Graduation_date" value="<?php echo $rowsGTR1["graduation_date"]; ?>">
+                            <input type="date" name="graduation_date" value="<?php echo $rowsGTR1["graduation_date"]; ?>">
                             <label>教工号</label>
                             <input type="number" name="tea_number" value="<?php echo $rowsGTR1["ID_number"]; ?>">
                             <label>列积极分子时间</label>
@@ -266,11 +276,12 @@ WHERE ID_number='".$_GET["ID"]."'";
                             </select>
                             <label>备注</label>
                             <input type="text" name="remark" value="<?php echo $rowsGTR1["remark"]; ?>" />
-                        </form>
+
                         <div class="modal-footer">
                             <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
-                            <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">保存</button>
+                            <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava"  value="保存">
                         </div>
+                </form>
                         <br/><br/><br/>
                     </div>
                 </div>
@@ -282,4 +293,3 @@ WHERE ID_number='".$_GET["ID"]."'";
       </table>
     </div>
 </div>
-  
