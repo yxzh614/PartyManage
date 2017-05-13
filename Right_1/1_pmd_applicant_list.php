@@ -50,13 +50,14 @@
     	<div class="search-well">
                 <form class="form-inline">
                     <input class="input-xlarge" placeholder="根据身份证号或姓名查询" id="appendedInputButton" type="text">
-                    <button class="btn" type="button"><i class="icon-search"></i> 查询</button>
+                    <button class="btn" type="button" onclick="SearchPage()"><i class="icon-search"></i> 查询</button>
                 </form>
      	</div>
 	</div>
   
 </div>
 <div class="well">
+    <form action="../del.php" method="post">
     <table class="table">
       <thead>
         <tr> 
@@ -74,7 +75,7 @@
         if($resAS=mysqli_query($db,$sqlAllStudents)){
             while ($rows=mysqli_fetch_assoc($resAS)){
                 echo "<tr>";
-                echo "<td><input type='checkbox' name='onetodel' value='".$rows["ID_number"]."'></td>";
+                echo "<td><input type='checkbox' name='onetodel[]' class='onetodel' value='".$rows["ID_number"]."'></td>";
                 echo "<td>".$rows["name"]."</td>";
                 echo "<td>".$rows["Person_cate1_name"]."</td>";
                 if($rows["person_cate1"]==1){
@@ -99,19 +100,19 @@
  
         </tbody>
 
-    </table>       
-   
-</div>
-<div class="container-fluid">
-<div class="row-fluid">
-<div class="btn-toolbar">
-  <button class="btn btn-primary">全选</button>
-   <th width="213">&nbsp;</th>
-        <input  class="btn btn-primary" type="submit" name="submit" value="删除">
-  <th width="213">&nbsp;</th>
-        <button class="btn"><a href="#jieduan" role="button" data-toggle="modal"><font color="#000000">录入阶段信息</font></a></button>       
-</div>
-</div>
+    </table>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="btn-toolbar">
+                    <button class="btn btn-primary" type="button" name="allChecked" id="allChecked" onclick="DoCheck()">全选</button>
+                    <tr width="213">&nbsp;</tr>
+                    <input  class="btn btn-primary" type="submit" name="submit" value="删除">
+                    <tr width="213">&nbsp;</tr>
+                    <button class="btn"><a href="#jieduan" role="button" data-toggle="modal"><font color="#000000">录入阶段信息</font></a></button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 
 <!--录入阶段信息-->
@@ -173,6 +174,36 @@
         $(function() {
             $('.demo-cancel-click').click(function(){return false;});
         });
+function SearchPage() {
+}
+        function allCheck() {
+            let ch = document.getElementsByName("onetodel[]");
+            let r = true;
+            for (let i = 0; i < ch.length; i++) {
+                if (ch[i].checked === false) {
+                    r = false;
+                }
+            }
+            return r;
+        }
+        function DoCheck()
+        {
+            var ch=document.getElementsByName("onetodel[]");
+            if(allCheck())
+            {
+                for(let i=0;i<ch.length;i++)
+                {
+                    ch[i].checked=false;
+                    console.log(ch);
+                }
+            }else{
+                for(let i=0;i<ch.length;i++)
+                {
+                    ch[i].checked=true;
+                    console.log(ch);
+                }
+            }
+        }
     </script>
     
   </body>

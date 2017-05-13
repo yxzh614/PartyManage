@@ -11,7 +11,6 @@ if(isset($_COOKIE["PHPSESSID"])){
     if(isset($_SESSION["right"]) &&$_SESSION["right"]==0){
         if(isset($_POST["submit"])&&$_POST["submit"]) {
             $checkbox = $_POST['onetodel'];
-
             for ($i = 0; $i < count($checkbox); $i++) {
                 $sqlToDel = "DELETE FROM `personnelinformation` WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
                 echo $sqlToDel;
