@@ -170,33 +170,13 @@ WHERE ID_number='".$_GET["ID"]."'";
                                 ?>
                             </select>
                             <label>籍贯test</label>
-                            <select name="province">
-                                <option value="0">辽宁</option>
-                                <option value="1">河北</option>
-                                <option value="2">黑龙江</option>
-                            </select>
-                            <select name="city">
-                                <option value="0">沈阳</option>
-                                <option value="1">本溪</option>
-                            </select>
-                            <select name="district">
-                                <option value="0">浑南新区</option>
-                                <option value="1">皇姑区</option>
-                            </select>
+                    <input type="hidden" id="native_place" name="native_place" value="000000">
+                    <div style="text-align: center;">
+                        <select id="seachprov" name="seachprov" onChange="changeComplexProvince(this.value, sub_array, 'seachcity', 'seachdistrict');"></select>&nbsp;&nbsp;
+                        <select id="seachcity" name="homecity" onChange="changeCity(this.value,'seachdistrict','seachdistrict');"></select>&nbsp;&nbsp;
+                        <span id="seachdistrict_div"><select id="seachdistrict" name="seachdistrict"></select></span>
+                    </div>
 
-                    <label>籍贯</label>
-                    <select name="native_place">
-                        <?php
-                        $sqlAllNative="SELECT * FROM home_place_bmb";
-                        if($resANv=mysqli_query($db,$sqlAllNative)){
-                            while($rowsANv=mysqli_fetch_assoc($resANv)){
-                                ?>
-                                <option value="<?php echo $rowsANv["place"]; ?>"><?php echo $rowsANv["place_name"]; ?></option>
-                                <?php
-                            }
-                        }
-                        ?>
-                    </select>
                             <label>申请入党时间</label>
                             <input type="date" name="SQRD_time"  value="<?php echo $rowsGTR1["SQRD_time"]; ?>">
                             <label>联系电话</label>
@@ -279,7 +259,7 @@ WHERE ID_number='".$_GET["ID"]."'";
 
                         <div class="modal-footer">
                             <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
-                            <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava"  value="保存">
+                            <input type="submit" name="submit" class="btn btn-danger" onclick="showAreaID()" id="btn_change_sava"  value="保存">
                         </div>
                 </form>
                         <br/><br/><br/>
@@ -293,3 +273,8 @@ WHERE ID_number='".$_GET["ID"]."'";
       </table>
     </div>
 </div>
+<script>
+    $(function (){
+        initComplexArea('seachprov', 'seachcity', 'seachdistrict', area_array, sub_array, '11', '0', '0');
+    });
+</script>
