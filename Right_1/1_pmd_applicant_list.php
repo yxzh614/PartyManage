@@ -74,8 +74,8 @@
         $sqlAllStudents="SELECT *,Person_cate1_name FROM personnelinformation,person_cate1_bmb WHERE `person_cate2`=5 AND person_cate1=Person_cate1_";
         if($resAS=mysqli_query($db,$sqlAllStudents)){
             while ($rows=mysqli_fetch_assoc($resAS)){
-                echo "<tr>";
-                echo "<td><input type='checkbox' name='onetodel[]' class='onetodel' value='".$rows["ID_number"]."'></td>";
+                echo "<tr>",
+                "<td><input type='checkbox' name='onetodel[]' class='onetodel' value='".$rows["ID_number"]."'></td>";
                 echo "<td>".$rows["name"]."</td>";
                 echo "<td>".$rows["Person_cate1_name"]."</td>";
                 if($rows["person_cate1"]==1){
@@ -106,7 +106,7 @@
                 <div class="btn-toolbar">
                     <button class="btn btn-primary" type="button" name="allChecked" id="allChecked" onclick="DoCheck()">全选</button>
                     <tr width="213">&nbsp;</tr>
-                    <input  class="btn btn-primary" type="submit" name="submit" value="删除">
+                    <input  class="btn btn-primary" type="submit" name="submit" onclick="return allUncheck()&&confirm('确定要删除吗？')" value="删除">
                     <tr width="213">&nbsp;</tr>
                     <button class="btn"><a href="#jieduan" role="button" data-toggle="modal"><font color="#000000">录入阶段信息</font></a></button>
                 </div>
@@ -175,6 +175,7 @@
             $('.demo-cancel-click').click(function(){return false;});
         });
 function SearchPage() {
+
 }
         function allCheck() {
             let ch = document.getElementsByName("onetodel[]");
@@ -182,6 +183,15 @@ function SearchPage() {
             for (let i = 0; i < ch.length; i++) {
                 if (ch[i].checked === false) {
                     r = false;
+                }
+            }
+            return r;
+        }function allUncheck() {
+            let ch = document.getElementsByName("onetodel[]");
+            let r = false;
+            for (let i = 0; i < ch.length; i++) {
+                if (ch[i].checked === true) {
+                    r = true;
                 }
             }
             return r;
