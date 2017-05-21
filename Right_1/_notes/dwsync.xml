@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="1_footer_body_setting.php" server="E:/PHP/AppServ/www/PartyManage/" local="131376843011781586" remote="131376843010000000" Dst="0" />
-<file name="1_footer_pmm_stage.php" server="E:/PHP/AppServ/www/PartyManage/" local="131369017252529118" remote="131369017250000000" Dst="0" />
 <file name="1_footer_body_pam.php" server="E:/PHP/AppServ/www/PartyManage/" local="131376834378201484" remote="131376834370000000" Dst="0" />
-<file name="1_pam_activity.php" server="E:/PHP/AppServ/www/PartyManage/" local="131378325783920856" remote="131378325780000000" Dst="0" />
+<file name="1_pam_activity.php" server="E:/PHP/AppServ/www/PartyManage/" local="131383385864188841" remote="131383385860000000" Dst="0" />
 <file name="1_pam_activity_information.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377430517671008" remote="131377430510000000" Dst="0" />
 <file name="1_pam_meeting.php" server="E:/PHP/AppServ/www/PartyManage/" local="131378330751201270" remote="131378330750000000" Dst="0" />
 <file name="1_footer_body_statistics.php" server="E:/PHP/AppServ/www/PartyManage/" local="131376843013472423" remote="131376843010000000" Dst="0" />
@@ -12,10 +11,10 @@
 <file name="1_index.php" server="E:/PHP/AppServ/www/PartyManage/" local="131379285827694098" remote="131379285820000000" Dst="0" />
 <file name="1_pmd_activist_list.php" server="E:/PHP/AppServ/www/PartyManage/" local="131383379451792072" remote="131383379450000000" Dst="0" />
 <file name="1_pmd_applicant_tea.php" server="E:/PHP/AppServ/www/PartyManage/" local="131379285804712784" remote="131379285800000000" Dst="0" />
-<file name="1_pmd_applicant_list.php" server="E:/PHP/AppServ/www/PartyManage/" local="131382905485666735" remote="131382905480000000" Dst="0" />
+<file name="1_pmd_applicant_list.php" server="E:/PHP/AppServ/www/PartyManage/" local="131383381763934319" remote="131383381760000000" Dst="0" />
 <file name="1_pmd_applicant_stu.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377431928618466" remote="131377431920000000" Dst="0" />
 <file name="1_pmd_probationary_confirmationLetter.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377432274733696" remote="131377432270000000" Dst="0" />
-<file name="1_pmd_probationary_list.php" server="E:/PHP/AppServ/www/PartyManage/" local="131382837684568419" remote="131382837680000000" Dst="0" />
+<file name="1_pmd_probationary_list.php" server="E:/PHP/AppServ/www/PartyManage/" local="131389871821880225" remote="131389871820000000" Dst="0" />
 <file name="1_pam_meeting_information.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377430749470126" remote="131377430740000000" Dst="0" />
 <file name="1_pam_organization.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377430867869055" remote="131377430860000000" Dst="0" />
 <file name="1_pam_organization_duty.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377430978165329" remote="131377430970000000" Dst="0" />
@@ -26,13 +25,13 @@
 <file name="1_pmd_activist_tea.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377431671990978" remote="131377431670000000" Dst="0" />
 <file name="1_pmd_probationary_stu.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377432755007382" remote="131377432750000000" Dst="0" />
 <file name="1_pmd_probationary_tea.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377432884131053" remote="131377432880000000" Dst="0" />
-<file name="1_pmd_regular_list.php" server="E:/PHP/AppServ/www/PartyManage/" local="131382908636376441" remote="131382908630000000" Dst="0" />
+<file name="1_pmd_regular_list.php" server="E:/PHP/AppServ/www/PartyManage/" local="131386368874406174" remote="131386368870000000" Dst="0" />
 <file name="1_pmd_regular_probationary.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377433532320384" remote="131377433530000000" Dst="0" />
 <file name="1_pmd_regular_stu.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377433636902215" remote="131377433630000000" Dst="0" />
 <file name="1_pmd_regular_tea.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377433720016658" remote="131377433720000000" Dst="0" />
 <file name="1_footer_body_pmm.php" server="E:/PHP/AppServ/www/PartyManage/" local="131376843013012019" remote="131376843010000000" Dst="0" />
 <file name="1_pmm_arrears.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377433779710001" remote="131377433770000000" Dst="0" />
-<file name="1_pmm_information.php" server="E:/PHP/AppServ/www/PartyManage/" local="131378332361901140" remote="131378332360000000" Dst="0" />
+<file name="1_pmm_information.php" server="E:/PHP/AppServ/www/PartyManage/" local="131383399002710321" remote="131383399000000000" Dst="0" />
 <file name="1_pmm_information_activities.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377433961015700" remote="131377433960000000" Dst="0" />
 <file name="1_pmm_information_appraisement.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377434045596330" remote="131377434040000000" Dst="0" />
 <file name="1_pmm_information_atSchool_stu.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377434121174845" remote="131377434120000000" Dst="0" />
@@ -42,6 +41,31 @@
 <file name="1_pmm_information_development.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377434400608850" remote="131377434400000000" Dst="0" />
 <file name="1_pmm_information_note.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377434517535433" remote="131377434510000000" Dst="0" />
 <file name="1_pmm_information_rorp.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377434583757826" remote="131377434580000000" Dst="0" />
-<file name="1_pmm_information_stage.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377434642979264" remote="131377434640000000" Dst="0" />
-<file name="1_pmm_information_stage_thinkingReport.php" server="E:/PHP/AppServ/www/PartyManage/" local="131377434766274277" remote="131377434760000000" Dst="0" />
+<file name="1_footer_body_pmd.php" server="D:/AppServ/www/PartyManage-develop/" local="131391642173366444" remote="131391642170000000" Dst="0" />
+<file name="1_index.php" server="D:/AppServ/www/PartyManage-develop/" local="131391564411252867" remote="131391564410000000" Dst="0" />
+<file name="1_footer_body_pmm.php" server="D:/AppServ/www/PartyManage-develop/" local="131391642249683593" remote="131391642240000000" Dst="0" />
+<file name="1_pmm_information_regular_doc.php" server="D:/AppServ/www/PartyManage-develop/" local="131396815071778373" remote="131396815070000000" Dst="0" />
+<file name="1_footer_body_pam.php" server="D:/AppServ/www/PartyManage-develop/" local="131391642116291989" remote="131391642110000000" Dst="0" />
+<file name="1_pam_activity.php" server="D:/AppServ/www/PartyManage-develop/" local="131392356010000000" remote="131392356010000000" Dst="0" />
+<file name="1_pam_activity_information.php" server="D:/AppServ/www/PartyManage-develop/" local="131377430517671008" remote="131377430510000000" Dst="0" />
+<file name="1_pam_meeting.php" server="D:/AppServ/www/PartyManage-develop/" local="131378330751201270" remote="131378330750000000" Dst="0" />
+<file name="1_pmm_information.php" server="D:/AppServ/www/PartyManage-develop/" local="131396592372715607" remote="131396592370000000" Dst="0" />
+<file name="1_footer_body_statistics.php" server="D:/AppServ/www/PartyManage-develop/" local="131391642395981019" remote="131391642390000000" Dst="0" />
+<file name="1_user_log_in.php" server="D:/AppServ/www/PartyManage-develop/" local="131378332987698898" remote="131378332980000000" Dst="0" />
+<file name="1_footer_body_setting.php" server="D:/AppServ/www/PartyManage-develop/" local="131391642349973747" remote="131391642340000000" Dst="0" />
+<file name="1_pmm_inside.php" server="D:/AppServ/www/PartyManage-develop/" local="131393125636515666" remote="131393125630000000" Dst="0" />
+<file name="1_pmm_arrears.php" server="D:/AppServ/www/PartyManage-develop/" local="131377433779710001" remote="131377433770000000" Dst="0" />
+<file name="1_pmd_activist_stu.php" server="D:/AppServ/www/PartyManage-develop/" local="131393254097450520" remote="131393254090000000" Dst="0" />
+<file name="1_pmd_activist_tea.php" server="D:/AppServ/www/PartyManage-develop/" local="131393254097651930" remote="131393254090000000" Dst="0" />
+<file name="1_pmd_activist_list.php" server="D:/AppServ/www/PartyManage-develop/" local="131383379451792072" remote="131383379450000000" Dst="0" />
+<file name="1_pmd_applicant_stu.php" server="D:/AppServ/www/PartyManage-develop/" local="131393157911252017" remote="131393157910000000" Dst="0" />
+<file name="1_pmd_applicant_tea.php" server="D:/AppServ/www/PartyManage-develop/" local="131393158089198868" remote="131393158080000000" Dst="0" />
+<file name="1_pmd_probationary_confirmationLetter.php" server="D:/AppServ/www/PartyManage-develop/" local="131377432274733696" remote="131377432270000000" Dst="0" />
+<file name="1_pmd_probationary_stu.php" server="D:/AppServ/www/PartyManage-develop/" local="131393254097874392" remote="131393254090000000" Dst="0" />
+<file name="1_pmd_regular_stu.php" server="D:/AppServ/www/PartyManage-develop/" local="131393254098299696" remote="131393254090000000" Dst="0" />
+<file name="1_pmd_regular_tea.php" server="D:/AppServ/www/PartyManage-develop/" local="131396585729242356" remote="131396585720000000" Dst="0" />
+<file name="1_pmm_information_probationary_doc.php" server="D:/AppServ/www/PartyManage-develop/" local="131396815117310977" remote="131396815110000000" Dst="0" />
+<file name="1_pmm_information_rorp.php" server="D:/AppServ/www/PartyManage-develop/" local="131377434583757826" remote="131377434580000000" Dst="0" />
+<file name="1_pmd_applicant_list.php" server="D:/AppServ/www/PartyManage-develop/" local="131389872874083047" remote="131389872870000000" Dst="0" />
+<file name="1_pmd_probationary_list.php" server="D:/AppServ/www/PartyManage-develop/" local="131389871821880225" remote="131389871820000000" Dst="0" />
 </dwsync>

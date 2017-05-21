@@ -6,7 +6,8 @@
                     <li><a href="3_pmm_information.php" class="hidden-phone visible-tablet visible-desktop" role="button">修改录入人员信息</a></li>
                     
                 </ul>
-                <a class="brand" href="#"><span class="first">信息科学与工程学院</span> <span class="second">党务工作信息系统</span></a>
+                <img src="/PartyManage-develop/images/4.png" />
+               <span class="font-head-first">信息科学与工程学院</span> <span class="font-head-second">党务工作信息系统</span>
         </div>
 </div>
     
@@ -42,6 +43,7 @@
             <li ><a href="3_pam_activity.php">活动信息</a></li>
             <li ><a href="3_pam_task.php">开展工作信息</a></li>
         </ul>
+        
 		<!-- 入党流程——参考文档 -->
        <!-- <a href="help.html" class="nav-header" ><i class="icon-question-sign"></i>入党流程</a>-->
       	<a href="#accounts-menu" class="nav-header" data-toggle="collapse"><i class="icon-briefcase"></i>设置<span class="label label-info"></span></a>

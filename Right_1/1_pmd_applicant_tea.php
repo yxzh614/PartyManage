@@ -7,24 +7,14 @@
     if(isset($_COOKIE["PHPSESSID"])){
     session_id($_COOKIE["PHPSESSID"]);
     if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
+
     if(isset($_POST["submit"])&&$_POST["submit"]){
         //$dt = new DateTime();
         //$dt->format('Y-m-d H:i:s');
-        $sqlUpdateTea="UPDATE `personnelinformation` 
-SET 
-`nation`=".$_POST['nation'].",
-`native_place`=".$_POST['native_place'].",
-`SQRD_time`='".$_POST["SQRD_time"]."',
-`tel`='".$_POST["tel"]."',
-`politics_status`=".$_POST['politics_status'].",
-`Department_ID`='".$_POST["Department_ID"]."',
-`join_T_time`='".$_POST["join_T_time"]."',
-`graduation_date`='".$_POST["graduation_date"]."',
-`zip_code`='".$_POST["zip_code"]."',
-`LJJ_time`='".$_POST["LJJ_time"]."'
- WHERE `personnelinformation`.`ID_number` = '".$_POST["ID_number"]."';";
-        echo $sqlUpdateTea;
-        if(mysqli_query($db,$sqlUpdateTea)){
+        $sqlAddStu="INSERT INTO `personnelinformation` (ID_number,name,person_cate1,person_cate2)
+ VALUES 
+ ( '".$_POST['ID_number']."','".$_POST['name']."',".$_POST['person_cate1'].",5)";
+        if(mysqli_query($db,$sqlAddStu)){
             // echo "==插入成功==";
             echo "<script>alert('添加成功！')</script>";
         }
@@ -59,9 +49,8 @@ SET
                     
 
  <?php include("../footer/footer_pmd_applicant_tea.php"); ?>
+ <?php include("../footer/footer_pmd_doc_applicant.php"); ?>
 
-
- <?php include("../footer/footer_bottom.php"); ?>
                     
             </div>
         </div>

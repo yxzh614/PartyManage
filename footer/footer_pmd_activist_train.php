@@ -1,6 +1,6 @@
 <h4><font color="#0F258F">积极分子培训信息</font></h4>                  
 <div class="btn-toolbar">
-    <button class="btn btn-primary"><a href="#change" role="button" data-toggle="modal"><font color="#F7F8F7"><i class="icon-plus"></i> 新建</font></a></button>
+    <button class="btn btn-primary"><a href="#change_3" role="button" data-toggle="modal"><font color="#F7F8F7"><i class="icon-plus"></i> 新建</font></a></button>
     <button class="btn">导入</button>
     <button class="btn">导出</button>
   <div class="btn-group">
@@ -28,7 +28,7 @@
           <td>分学校意见</td>
           <td>考试日期</td>
           <td>
-              <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
+              <a href="#change_3" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
               <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
           </td>
         </tr> 
@@ -43,7 +43,7 @@
 </div>
 
 <!--修改信息-->
-<div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal small hide fade" id="change_3" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">修改信息</h3>

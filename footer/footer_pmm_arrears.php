@@ -2,7 +2,7 @@
     <button class="btn btn-primary"><i class="icon-plus"></i> <a href="#change" role="button" data-toggle="modal"><font color="#F7F8F7">新建</font></a></button>
     <button class="btn">导入</button>
     <button class="btn">导出</button>
-     <button class="btn">党费计算器</button>
+     <button class="btn"><a href="#feiyong" role="button" data-toggle="modal"><font color="#000000">党费计算器</font></a></button>
 </div>
 <div class="well">
     <table class="table">
@@ -41,7 +41,38 @@
       </tbody>
     </table>
 </div>
-
+<!--党费计算-->
+<div class="modal small hide fade" id="feiyong" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">党费计算</h3>
+    </div>
+    <div class="modal-body">     
+    <form id="tab">
+     	<label>党员类型</label>
+       <select name="dangyuantype">
+        	<option value="1">在职</option>
+            <option value="2">退休</option>
+           
+        </select> 
+        <label>月工资</label>
+        <input type="text" name="name" value="" class="input-xlarge">
+      元<br>
+      <button class="btn btn-primary">计算</button>
+       <br>
+       <br>
+        <label>每月应缴费</label>
+         <input type="text" name="name" value="" class="input-xlarge">
+        
+    元
+    </form>
+    <div class="modal-footer">
+        <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">关闭</button>
+    </div>
+    	<br/><br/><br/>
+  </div>
+    
+</div>
 
 
 <!--编辑信息-->

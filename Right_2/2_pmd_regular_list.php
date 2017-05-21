@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include("footer/footer_head.php"); ?>
+    <?php
+   session_start();
+   include("../footer/footer_head.php");
+   require_once("../config.php"); ?>
   </head>
 
 <body class="">   
@@ -71,19 +74,37 @@
 <div class="btn-toolbar">
     <button class="btn btn-primary">全选</button>
     <button class="btn">删除</button> 
+    <button class="btn"><a href="#jieduan" role="button" data-toggle="modal"><font color="#000000">录入阶段信息</font></a></button>
 </div>
 </div>
 </div>
-<!--分页-->
-<div class="pagination">
-    <ul>
-        <li><a href="#">上一页</a></li>
-        <li><a href="#">1</a></li> 
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">下一页</a></li>
-    </ul>
+<!--录入阶段信息-->
+<div class="modal small hide fade" id="jieduan" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">录入阶段信息</h3>
+    </div>
+    <div class="modal-body">     
+    <form id="tab" action="2_pmd_regular_list.php" method="post">
+        <label>党委审批预备党员转正会议</label>
+        <select name="Bec_officialmeet">
+        	<option value="会议ID">会议主题1</option>
+            <option value="会议ID">会议主题2</option>
+        </select>
+        <label>预备党员转正公示时间</label>
+        <input type="date" name="ZZ_publicity_time" />
+        <label>转正时间</label>
+        <input type="date" name="Bec_official_time" />
+        <label>入党时间</label>
+        <input type="date" name="RD_datetime" />
+   
+    <div class="modal-footer">
+        <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
+        <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" value="保存" >
+    </div>
+     </form>
+    	<br/><br/><br/>
+  </div>    
 </div>
 
 <!--修改信息-->

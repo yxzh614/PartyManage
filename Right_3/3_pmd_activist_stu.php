@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-     <?php include("footer/footer_head.php"); ?>
+    <?php
+   session_start();
+   include("../footer/footer_head.php");
+      require_once("../config.php"); ?>
   </head>
  
   <body class=""> 
@@ -25,7 +28,8 @@
  <?php include("../footer/footer_pmd_applicant_stu.php"); ?>
  <?php include("../footer/footer_pmd_activist.php"); ?>
  <?php include("../footer/footer_pmd_activist_train.php"); ?>
-
+<?php include("../footer/footer_pmd_doc_activist.php"); ?>
+ <?php include("../footer/footer_pmd_doc_thinking.php"); ?>
 
  <?php include("../footer/footer_bottom.php"); ?>
                     

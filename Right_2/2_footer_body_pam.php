@@ -6,7 +6,8 @@
                     <li><a href="2_pmm_information.php" class="hidden-phone visible-tablet visible-desktop" role="button"> 修改录入管理范围所有信息</a></li>
                     
                 </ul>
-                <a class="brand" href="#"><span class="first">信息科学与工程学院</span> <span class="second">党务工作信息系统</span></a>
+                <img src="/PartyManage-develop/images/4.png" />
+               <span class="font-head-first">信息科学与工程学院</span> <span class="font-head-second">党务工作信息系统</span>
         </div>
 </div>
     
@@ -32,6 +33,8 @@
  <a href="#memberManagement-menu" class="nav-header" data-toggle="collapse"><i class="icon-exclamation-sign"></i>党员管理<i class="icon-chevron-up"></i></a>
         <ul id="memberManagement-menu" class="nav nav-list collapse">
             <li ><a href="2_pmm_information.php">党员信息</a></li>
+            <li ><a href="2_pmm_inside.php">调入人员</a></li>
+            <li ><a href="2_pmm_outside.php">调出人员</a></li>
             <li ><a href="2_pmm_arrears.php">欠缴党费</a></li>
         </ul>
         
@@ -42,6 +45,12 @@
             <li ><a href="2_pam_meeting.php">会议管理</a></li>
             <li ><a href="2_pam_activity.php">活动管理</a></li>
             <li ><a href="2_pam_task.php">开展工作信息</a></li>
+        </ul>
+        <!--统计分析-->
+      	<a href="#statistics-menu" class="nav-header" data-toggle="collapse"><i class="icon-legal"></i>统计分析<i class="icon-chevron-up"></i></a>
+        <ul id="statistics-menu" class="nav nav-list collapse">
+        	<li ><a href="2_user_log_in.php">用户登录信息</a></li>
+            <li ><a href="#">人员基本信息</a></li>
         </ul>
 		<!-- 入党流程——参考文档 -->
        <!-- <a href="help.html" class="nav-header" ><i class="icon-question-sign"></i>入党流程</a>-->

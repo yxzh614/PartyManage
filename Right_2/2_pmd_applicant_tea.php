@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-     <?php include("footer/footer_head.php"); ?>
+    <?php
+   session_start();
+   include("../footer/footer_head.php");
+   require_once("../config.php"); ?>
   </head>
  
   <body class=""> 
@@ -24,7 +27,7 @@
                     
 
  <?php include("../footer/footer_pmd_applicant_tea.php"); ?>
-
+ <?php include("../footer/footer_pmd_doc_applicant.php"); ?>
 
  <?php include("../footer/footer_bottom.php"); ?>
                     

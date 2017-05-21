@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <head>
-   <?php include("footer/footer_head.php"); ?>
+    <?php
+   session_start();
+   include("../footer/footer_head.php");
+      require_once("../config.php"); ?>
   </head>
   <body class=""> 
     

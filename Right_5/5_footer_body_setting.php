@@ -6,7 +6,8 @@
                     <li><a href="5_pmm_information.php" class="hidden-phone visible-tablet visible-desktop" role="button"> 查看所有信息</a></li>
                     
                 </ul>
-                <a class="brand" href="#"><span class="first">信息科学与工程学院</span> <span class="second">党务工作信息系统</span></a>
+                 <img src="/PartyManage-develop/images/4.png" />
+               <span class="font-head-first">信息科学与工程学院</span> <span class="font-head-second">党务工作信息系统</span>
         </div>
 </div>
     

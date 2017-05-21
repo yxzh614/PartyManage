@@ -28,8 +28,7 @@
                     
 
  <?php include("../footer/footer_pmd_applicant_stu.php"); ?>
-
-
+ <?php include("../footer/footer_pmd_doc_applicant.php"); ?>
  <?php include("../footer/footer_bottom.php"); ?>
                     
             </div>

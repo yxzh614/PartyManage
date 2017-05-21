@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <?php include("footer/footer_head.php"); ?>
+   <?php
+   session_start();
+   include("../footer/footer_head.php");
+      require_once("../config.php"); ?>
   </head>
   <body class=""> 
     <?php include("3_footer_body_pmd.php"); ?>
@@ -27,7 +30,7 @@
 
     <div class="alert alert-info">
         <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>欢迎来到:</strong>沈阳理工大学信息科学与工程学院党务工作信息系统</div>
+       <font color="#DDE1DD"><strong>欢迎来到:</strong>沈阳理工大学信息科学与工程学院党务工作信息系统</font></div>
     </div>
 </div>
 

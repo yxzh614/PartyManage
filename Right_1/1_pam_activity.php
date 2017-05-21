@@ -69,6 +69,7 @@
 <div class="btn-toolbar">
     <button class="btn btn-primary">全选</button>
     <button class="btn">删除</button>
+</div>
 
 <!--新建信息-->
 <div class="modal small hide fade" id="new" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

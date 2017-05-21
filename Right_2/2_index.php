@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <?php include("footer/footer_head.php"); ?>
+     <?php
+   session_start();
+   include("../footer/footer_head.php");
+   require_once("../config.php");
+   if(isset($_COOKIE["PHPSESSID"])){
+   session_id($_COOKIE["PHPSESSID"]);
+   if(isset($_SESSION["right"]) &&$_SESSION["right"]==1){
+   if(isset($_POST["submit"])&&$_POST["submit"]){
+       $dt = new DateTime();
+       $dt->format('Y-m-d H:i:s');
+       $sqlAddNews="INSERT INTO `news` (`NewsId`, `NewsTitle`, `NewsContent`, `NewsDate`) VALUES (NULL, '".$_POST["title"]."', '".$_POST["content"]."', '".date('Y-m-d H:i:s')."')";
+       if(mysqli_query($db,$sqlAddNews)){
+       }
+   }
+   ?>
   </head>
   <body class=""> 
     <?php include("2_footer_body_pmd.php"); ?>
@@ -27,7 +41,7 @@
 
     <div class="alert alert-info">
         <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>欢迎来到:</strong>沈阳理工大学信息科学与工程学院党务工作信息系统</div>
+       <font color="#DDE1DD"><strong>欢迎来到:</strong>沈阳理工大学信息科学与工程学院党务工作信息系统</font></div>
     </div>
 </div>
 
@@ -106,5 +120,21 @@
     
   </body>
 </html>
-
+<?php
+}else{
+    ?>
+    <script>
+        alert("未登录或权限不足！");
+        window.location = "../sign-in.php";
+    </script>
+    <?php
+}
+}
+else{
+    ?>
+    <script>
+        window.location = "../sign-in.php";
+    </script>
+    <?php
+}
 

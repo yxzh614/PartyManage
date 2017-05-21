@@ -1,9 +1,4 @@
 <h4><font color="#0F258F">积极分子培训信息</font></h4>                   
-<div class="btn-toolbar">
-    <button class="btn">导出</button>
-  <div class="btn-group">
-  </div>
-</div>
 <div class="well">
     <table class="table">
       <thead>

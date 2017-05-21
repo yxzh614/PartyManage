@@ -4,7 +4,10 @@
      <style type="text/css">
      .brand1 {font-family: georgia, serif; }
      </style>
-     <?php include("footer/footer_head.php"); ?>
+     <?php
+   session_start();
+   include("../footer/footer_head.php");
+      require_once("../config.php"); ?>
   </head>
  	
   <body class="">

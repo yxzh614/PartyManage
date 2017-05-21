@@ -1,4 +1,6 @@
-</br>
+<div class="btn-toolbar">
+    <button class="btn btn-primary" ><font color="#F7F8F7">导出</font></button>
+</div>
 <div class="well">
     <div align="center">
       <table width="668" height="134" border="1">

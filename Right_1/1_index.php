@@ -42,7 +42,7 @@
 
     <div class="alert alert-info">
         <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>欢迎来到:</strong>沈阳理工大学信息科学与工程学院党务工作信息系统</div>
+       <font color="#DDE1DD"><strong>欢迎来到:</strong>沈阳理工大学信息科学与工程学院党务工作信息系统</font></div>
     </div>
 </div>
 <div class="btn-toolbar">

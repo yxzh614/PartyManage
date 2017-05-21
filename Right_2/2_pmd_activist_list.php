@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php include("footer/footer_head.php"); ?>
+   <?php
+   session_start();
+   include("../footer/footer_head.php");
+   require_once("../config.php"); ?>
   </head>
 
 <body class="">   
@@ -67,20 +70,10 @@
 <div class="row-fluid">
 <div class="btn-toolbar">
     <button class="btn btn-primary">全选</button>
-    <button class="btn">删除</button> 
+    <button class="btn">删除</button>
+     <button class="btn"><a href="#jieduan" role="button" data-toggle="modal"><font color="#000000">录入阶段信息</font></a></button>
 </div>
 </div>
-</div>
-<!--分页-->
-<div class="pagination">
-    <ul>
-        <li><a href="#">上一页</a></li>
-        <li><a href="#">1</a></li> 
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">下一页</a></li>
-    </ul>
 </div>
 
 <!--新建信息-->
@@ -106,6 +99,33 @@
         <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
         <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">保存</button>
     </div>
+    	<br/><br/><br/>
+  </div>    
+</div>
+<!--录入阶段信息-->
+<div class="modal small hide fade" id="jieduan" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">录入阶段信息</h3>
+    </div>
+    <div class="modal-body">     
+    <form id="tab" action="2_pmd_activist_list.php" method="post">
+    	<label>积极分子分子培训时间</label>
+        <input type="date" name="JJPX_time">
+    	<label>培训总结时间</label>
+        <input type="date" name="summary" /> 
+        <label>教材名称</label>
+        <input type="text" name="book_name" value="" class="input-xlarge">
+        <label>分学校意见</label>
+        <input type="text" name="opinion" value="" class="input-xlarge"> 
+        <label>考试日期</label>
+        <input type="date" name="date" /> 	
+   
+    <div class="modal-footer">
+        <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
+        <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" value="保存" >
+    </div>
+     </form>
     	<br/><br/><br/>
   </div>    
 </div>

@@ -30,7 +30,8 @@
  <?php include("../footer/footer_pmd_activist.php"); ?>
  <?php include("../footer/footer_pmd_activist_train.php"); ?>
  <?php include("../footer/footer_pmd_probationary.php"); ?>
-
+ <?php include("../footer/footer_pmd_doc_probationary.php"); ?>
+ <?php include("../footer/footer_pmd_doc_thinking.php"); ?>
 
  <?php include("../footer/footer_bottom.php"); ?>
                     
