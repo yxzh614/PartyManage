@@ -5,12 +5,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
-    
-    <link rel="stylesheet" type="text/css" href="stylesheets/theme.css">
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
-
-    <script src="lib/jquery-1.7.2.min.js" type="text/javascript"></script>
 
 
     <!-- Demo page code -->

@@ -83,7 +83,7 @@
   <body class="body-sign-in">
 
  <div class="font-sign">
- 	<img src="/PartyManage-develop/images/5.png" />信息科学与工程学院党务工作信息系统
+ 	<img src="images/5.png" />信息科学与工程学院党务工作信息系统
  </div>
   <div class="row-fluid">
       <div class="dialog">
