@@ -116,7 +116,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">新建信息</h3>
     </div>
-    <div class="modal-body">     
+    <div class="modal-body">
     <form id="tab" action="1_pmd_activist_list.php" method="post">
      	<label>身份证号</label>
         <input type="text" name="ID_number" value="" class="input-xlarge">

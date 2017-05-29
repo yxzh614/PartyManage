@@ -11,7 +11,7 @@
             <td width="129">性别：</td>
             <td width="204" align="left"><input type="radio" name="sex" value="男" id="sex_0"  checked="checked" /> 男</label>
         <input type="radio" name="sex" value="女" id="sex_1" />女</label></td>
-            <td width="235" rowspan="5" align="left"><img src="/PartyManage-develop/images/photo.png" /></td>
+            <td width="235" rowspan="5" align="left"><img src="../images/photo.png" /></td>
           </tr>
           <tr align="right">
             <td>出生年月：</td>
