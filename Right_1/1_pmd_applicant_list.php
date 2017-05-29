@@ -8,13 +8,10 @@
     session_id($_COOKIE["PHPSESSID"]);
     if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
     if(isset($_POST["submit"])&&$_POST["submit"]){
-        //$dt = new DateTime();
-        //$dt->format('Y-m-d H:i:s');
-        $sqlAddStu="INSERT INTO `personnelinformation` (ID_number,name,person_cate1,person_cate2)
+        $sqlAddStuR1="INSERT INTO `personnelinformation` (ID_number,name,person_cate1,person_cate2)
  VALUES 
  ( '".$_POST['ID_number']."','".$_POST['name']."',".$_POST['person_cate1'].",5)";
-        if(mysqli_query($db,$sqlAddStu)){
-           // echo "==插入成功==";
+        if(mysqli_query($db,$sqlAddStuR1)){
 		echo "<script>alert('添加成功！')</script>";
         }
         ?>
@@ -34,11 +31,9 @@
         <div class="header">
             <h1 class="page-title">申请入党人员信息</h1>
         </div>
-        
         <ul class="breadcrumb">
             <li><a href="1_index.php">返回首页</a> /<span class="divider">申请入党人员信息</span></li>
         </ul>
-
         <div class="container-fluid">
         <div class="row-fluid">
      	<div class="btn-toolbar">
@@ -54,7 +49,6 @@
                 </form>
      	</div>
 	</div>
-  
 </div>
 <div class="well">
     <table class="table">
@@ -68,28 +62,27 @@
         </tr>
       </thead>
         <tbody>
-
         <?php
-        $sqlAllStudents="SELECT *,Person_cate1_name FROM personnelinformation,person_cate1_bmb WHERE `person_cate2`=5 AND person_cate1=Person_cate1_";
-        if($resAS=mysqli_query($db,$sqlAllStudents)){
-            while ($rows=mysqli_fetch_assoc($resAS)){
+        $sqlAllStudentsR1="SELECT *,Person_cate1_name FROM personnelinformation,person_cate1_bmb WHERE `person_cate2`=5 AND person_cate1=Person_cate1_";
+        if($resASR1=mysqli_query($db,$sqlAllStudentsR1)){
+            while ($rowsASR1=mysqli_fetch_assoc($resASR1)){
                 echo "<tr>";
-                echo "<td><input type='checkbox' name='onetodel' value='".$rows["ID_number"]."'></td>";
-                echo "<td>".$rows["name"]."</td>";
-                echo "<td>".$rows["Person_cate1_name"]."</td>";
-                if($rows["person_cate1"]==1){
-                    echo "<td><a href='../Right_1/1_pmd_applicant_tea.php?ID=".$rows["ID_number"]."'>详细信息</a></td>";
+                echo "<td><input type='checkbox' name='onetodel' value='".$rowsASR1["ID_number"]."'></td>";
+                echo "<td>".$rowsASR1["name"]."</td>";
+                echo "<td>".$rowsASR1["Person_cate1_name"]."</td>";
+                if($rowsASR1["person_cate1"]==1){
+                    echo "<td><a href='../Right_1/1_pmd_applicant_tea.php?ID=".$rowsASR1["ID_number"]."'>详细信息</a></td>";
                 }
                 else{
-                    echo "<td><a href='../Right_1/1_pmd_applicant_stu.php?ID=".$rows["ID_number"]."'>详细信息</a></td>";
+                    echo "<td><a href='../Right_1/1_pmd_applicant_stu.php?ID=".$rowsASR1["ID_number"]."'>详细信息</a></td>";
                 }
                 echo "<td>";
                 ?>
                 <form action="../del.php" method="post">
-                <input type="hidden" name="ID_number" value="<?php echo $rows["ID_number"];?>">
+                <input type="hidden" name="ID_number" value="<?php echo $rowsASR1["ID_number"];?>">
                 <input type="hidden" name="type" value="stu">
-               
-                </form><?php
+                </form>
+                <?php
                 echo " </td>";
                 echo "</tr>";
             }
@@ -174,7 +167,6 @@
             $('.demo-cancel-click').click(function(){return false;});
         });
     </script>
-    
   </body>
 </html>
 <?php

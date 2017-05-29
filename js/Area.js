@@ -1,60 +1,62 @@
 ﻿
-function initComplexArea(a, k, h, p, q, d, b, l) {
-    var f = initComplexArea.arguments;
-    var m = document.getElementById(a);
-    var o = document.getElementById(k);
-    var n = document.getElementById(h);
+function initComplexArea(sheng, shi, qu, p, q, shengNum, shiNum, quNum) {
+    var allArg = initComplexArea.arguments;
+    var shengSelect = document.getElementById(sheng);
+    var shiSelect = document.getElementById(shi);
+    var quSelect = document.getElementById(qu);
     var e = 0;
     var c = 0;
     if (p != undefined) {
-        if (d != undefined) {
-            d = parseInt(d);
+        if (shengNum != undefined) {
+            shengNum = parseInt(shengNum);
         }
         else {
-            d = 0;
+            shengNum = 0;
         }
-        if (b != undefined) {
-            b = parseInt(b);
-        }
-        else {
-            b = 0;
-        }
-        if (l != undefined) {
-            l = parseInt(l);
+        if (shiNum != undefined) {
+            shiNum = parseInt(shiNum);
         }
         else {
-            l = 0
+            shiNum = 0;
         }
-        n[0] = new Option("请选择 ", 0);
+        if (quNum != undefined) {
+            quNum = parseInt(quNum);
+        }
+        else {
+            quNum = 0
+        }
+        quSelect[0] = new Option("请选择 ", 0);
         for (e = 0; e < p.length; e++) {
             if (p[e] == undefined) {
                 continue;
             }
-            if (f[6]) {
-                if (f[6] == true) {
+            if (allArg[6]) {
+                if (allArg[6] == true) {
                     if (e == 0) {
                         continue
                     }
                 }
             }
-            m[c] = new Option(p[e], e);
-            if (d == e) {
-                m[c].selected = true;
+            shengSelect[c] = new Option(p[e], e);
+            if (shengNum == e) {
+                shengSelect[c].selected = true;
             }
             c++
         }
-        if (q[d] != undefined) {
-            c = 0; for (e = 0; e < q[d].length; e++) {
-                if (q[d][e] == undefined) { continue }
-                if (f[6]) {
-                    if ((f[6] == true) && (d != 71) && (d != 81) && (d != 82)) {
+        if (q[shengNum] != undefined) {
+            c = 0; for (e = 0; e < q[shengNum].length; e++) {
+                if (q[shengNum][e] == undefined) { continue }
+                if (allArg[6]) {
+                    if ((allArg[6] == true) && (shengNum != 71) && (shengNum != 81) && (shengNum != 82)) {
                         if ((e % 100) == 0) { continue }
                     }
-                } o[c] = new Option(q[d][e], e);
-                if (b == e) { o[c].selected = true } c++
+                } shiSelect[c] = new Option(q[shengNum][e], e);
+                if (shiNum == e) { shiSelect[c].selected = true } c++
             }
         }
     }
+    changeCity(document.getElementById("seachcity").value,'seachdistrict','seachdistrict');
+    document.getElementById("seachdistrict")[quNum-1].selected=true;
 }
 function changeComplexProvince(f, k, e, d) {
     var c = changeComplexProvince.arguments; var h = document.getElementById(e);
