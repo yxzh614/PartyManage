@@ -1,16 +1,2 @@
 config.php
-.idea/PartyManage.iml
-.idea/dataSources.local.xml
-.idea/dataSources.xml
-.idea/dataSources/41b229c8-5669-400d-9d82-b3dd4ec7eb2d.xml
-.idea/dataSources/41b229c8-5669-400d-9d82-b3dd4ec7eb2d.xml
-.idea/dataSources/9c4df9e8-6314-49d1-bdbc-febb9bf3c72f.xml
-.idea/dataSources/9c4df9e8-6314-49d1-bdbc-febb9bf3c72f/storage.xml
-.idea/dataSources/bba8d3eb-922f-4284-a951-87888db60a33.xml
-.idea/PartyManage.iml
-.idea/workspace.xml
-*.xml
-.idea/dataSources/bba8d3eb-922f-4284-a951-87888db60a33.xml
-.idea/dataSources/41b229c8-5669-400d-9d82-b3dd4ec7eb2d/storage.xml
-.idea/
-.idea/dataSources/03298424-70e2-42d6-a792-2ea15db754af/storage.xml
+.idea/*
