@@ -53,18 +53,27 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><input type="checkbox" name="checkboxGroup" value="1"></td>
-          <td>张三</td>
-          <td>毕业</td>
-          <td>第一支部</td>
-          <td>XXXXXXXXXXXX</td>
-          <td>2016年03月11日</td>
-          <td>
-          	  <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
-              <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
+      <?php
+      $sqlAllStudents = "SELECT ID_number,name,state,Department_ID,out_time,gowhere FROM personnelinformation WHERE out_time IS NOT NULL ";
+      if ($resAS = mysqli_query($db, $sqlAllStudents)) {
+          while ($rowsAS = mysqli_fetch_assoc($resAS)) {
+              echo "<tr>";
+              echo "<td><input type='checkbox' name='checkboxGroup' value='" . $rowsAS["ID_number"] . "'></td>";
+              echo "<td>" . $rowsAS["name"] . "</td>";
+              echo "<td>" ;
+              echo $rowsAS["state"]==1?"在校":($rowsAS["state"]==2?"毕业":"调出");
+              echo "</td>";
+              echo "<td>" . $rowsAS["Department_ID"] . "</td>";
+              echo "<td>" . $rowsAS["gowhere"] . "</td>";
+              echo "<td>" . $rowsAS["out_time"] . "</td>";
+              ?>
+              <td>
+                  <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
+                  <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+              </td>
+              </tr>
+          <?php }
+      } ?>
      
       </tbody>
     </table>

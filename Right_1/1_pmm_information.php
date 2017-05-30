@@ -86,14 +86,20 @@
                       <?php
                       $sqlAllStudents = "SELECT *,Person_cate1_name FROM personnelinformation,person_cate1_bmb WHERE (`person_cate2`=1 OR`person_cate2`=2)  AND person_cate1=Person_cate1_";
                       if ($resAS = mysqli_query($db, $sqlAllStudents)) {
-                          while ($rows = mysqli_fetch_assoc($resAS)) {
+                          while ($rowsAS = mysqli_fetch_assoc($resAS)) {
                               echo "<tr>";
-                              echo "<td><input type='checkbox' name='onetodel' value='" . $rows["ID_number"] . "'></td>";
-                              echo "<td>" . $rows["ID_number"] . "</td>";
-                              echo "<td>" . $rows["name"] . "</td>";
-                              echo "<td>" . $rows["Person_cate1_name"] . "</td>";
+                              echo "<td><input type='checkbox' name='onetodel' value='" . $rowsAS["ID_number"] . "'></td>";
+                              echo "<td>" . $rowsAS["ID_number"] . "</td>";
+                              echo "<td>" . $rowsAS["name"] . "</td>";
+                              echo "<td>" . $rowsAS["Person_cate1_name"] . "</td>";
+                              if($rowsAS["person_cate1"]==1){
+                                  echo "<td><a href='1_pmm_information_basic_tea.php?stuId=" . $rowsAS["ID_number"] . " '>基本信息</a></td>";
+                              }
+                              else {
+                                  echo "<td><a href='1_pmm_information_basic_stu.php?stuId=" . $rowsAS["ID_number"] . " '>基本信息</a></td>";
+                              }
+                              ?>
 
-                              echo "<td><a href='1_pmm_information_basic_stu.php?stuId=".$rows["ID_number"]." '>基本信息</a></td>";?>
                               <td><a href="1_pmm_information_development.php">发展情况</a></td>
                               <td><a href="1_pmm_information_atSchool_stu.php">在校情况</a></td>
                               <td><a href="1_pmm_information_activities.php">参与活动</a></td>
@@ -146,7 +152,7 @@
                           <div class="modal-footer">
                               <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消
                               </button>
-                              <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" value="保存">
+                              <input type="submit" name="submit" class="btn btn-danger" id="btn_change_save" value="保存">
                           </div>
                       </form>
 
