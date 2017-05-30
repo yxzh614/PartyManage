@@ -16,7 +16,7 @@ SET
 `SQRD_time`='".($_POST["SQRD_time"]?$_POST["SQRD_time"]:"0000-00-00")."', /*申请入党时间*/
 `sex`='".$_POST["sex"]."', /*性别*/
 `LJJ_time`='".($_POST["LJJ_time"]?$_POST["LJJ_time"]:"0000-00-00")."',/*列积极分子时间*/
-`native_place`='".$_POST['native_name']."',/*籍贯*/
+/*`native_place`='".$_POST['native_name']."',*//*籍贯*/
 `nation`='".$_POST["nation"]."',/*民族*/
 `Department_ID`='".$_POST["Department_ID"]."',/*所属组织*/
 `state`='".$_POST["state"]."',/*状态*/
@@ -26,6 +26,7 @@ SET
 `reward_condtion`='".$_POST["reward_condtion"]."',/*获奖情况*/
 `YorNwrong`='".$_POST["YorNwrong"]."',/*处分情况*/
 `remark`='".$_POST["remark"]."',/*备注*/
+`TC_and_BZ`='".$_POST["TC_and_BZ"]."',/*备注*/
 `politics_status`='".$_POST['politics_status']."',/*政治面貌*/
 `zip_code`='".$_POST["zip_code"]."'/*邮编*/
  WHERE `personnelinformation`.`ID_number` = '".$_POST["ID_number"]."'";
