@@ -4,7 +4,7 @@
 </div>
 <div class="well">
     <div align="center">
-      <table width="916" height="500" border="1">
+      <table width="916" height="500" border="0">
   <tbody>
   <?php
   $sqlGetTeaR1="SELECT

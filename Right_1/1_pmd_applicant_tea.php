@@ -13,9 +13,9 @@
 UPDATE `personnelinformation` 
 SET 
 `name`='".$_POST['name']."', /*姓名*/
-`SQRD_time`='".($_POST["SQRD_time"]?$_POST["SQRD_time"]:"0000-00-00")."', /*申请入党时间*/
+`SQRD_time`='".($_POST["SQRD_time"]?$_POST["SQRD_time"]:"2000-01-01")."', /*申请入党时间*/
 `sex`='".$_POST["sex"]."', /*性别*/
-`LJJ_time`='".($_POST["LJJ_time"]?$_POST["LJJ_time"]:"0000-00-00")."',/*列积极分子时间*/
+`LJJ_time`='".($_POST["LJJ_time"]?$_POST["LJJ_time"]:"2000-01-01")."',/*列积极分子时间*/
 /*`native_place`='".$_POST['native_name']."',*//*籍贯*/
 `nation`='".$_POST["nation"]."',/*民族*/
 `Department_ID`='".$_POST["Department_ID"]."',/*所属组织*/
@@ -45,19 +45,20 @@ SET
     }
     ?>
 </head>
+
   <body class="">
  <?php include("../Right_1/1_footer_body_pmd.php"); ?>
     <div class="content">
         <div class="header">
             <h1 class="page-title">详细信息</h1>
         </div>
-                <ul class="breadcrumb">
-            <li><a href="../Right_1/1_index.php">返回首页</a> /<a href="../Right_1/1_pmd_applicant_list.php">申请入党人员信息</a> /<span class="divider">详细信息</span></li>
-        </ul>
+            <ul class="breadcrumb">
+                <li><a href="../Right_1/1_index.php">返回首页</a> /<a href="../Right_1/1_pmd_applicant_list.php">申请入党人员信息</a> /<span class="divider">详细信息</span></li>
+            </ul>
         <div class="container-fluid">
             <div class="row-fluid">
- <?php include("../footer/footer_pmd_applicant_tea.php"); ?>
- <?php include("../footer/footer_pmd_doc_applicant.php"); ?>
+                <?php include("../footer/footer_pmd_applicant_tea.php"); ?>
+                <?php include("../footer/footer_pmd_doc_applicant.php"); ?>
             </div>
         </div>
     </div>
@@ -70,7 +71,6 @@ SET
             $('.demo-cancel-click').click(function(){return false;});
         });
     </script>
-    
   </body>
 </html>
 <?php

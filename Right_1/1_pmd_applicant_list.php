@@ -5,9 +5,9 @@
     require_once ("../config.php");
     session_start();
     if(isset($_COOKIE["PHPSESSID"])){
-    session_id($_COOKIE["PHPSESSID"]);
+        session_id($_COOKIE["PHPSESSID"]);
     if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
-    if(isset($_POST["submit"])&&$_POST["submit"]){
+        if(isset($_POST["submit"])&&$_POST["submit"]){
         $sqlAddStuR1="INSERT INTO `personnelinformation` (ID_number,name,person_cate1,person_cate2)
  VALUES 
  ( '".$_POST['ID_number']."','".$_POST['name']."',".$_POST['person_cate1'].",5)";
@@ -50,6 +50,7 @@
      	</div>
 	</div>
 </div>
+        <form action="../del.php" method="post">
 <div class="well">
     <table class="table">
       <thead>
@@ -66,8 +67,8 @@
         $sqlAllStudentsR1="SELECT *,Person_cate1_name FROM personnelinformation,person_cate1_bmb WHERE `person_cate2`=5 AND person_cate1=Person_cate1_";
         if($resASR1=mysqli_query($db,$sqlAllStudentsR1)){
             while ($rowsASR1=mysqli_fetch_assoc($resASR1)){
-                echo "<tr>";
-                echo "<td><input type='checkbox' name='onetodel' value='".$rowsASR1["ID_number"]."'></td>";
+                echo "<tr>",
+                    "<td><input type='checkbox' name='onetodel[]' class='onetodel' value='".$rowsASR1["ID_number"]."'></td>";
                 echo "<td>".$rowsASR1["name"]."</td>";
                 echo "<td>".$rowsASR1["Person_cate1_name"]."</td>";
                 if($rowsASR1["person_cate1"]==1){
@@ -79,8 +80,8 @@
                 echo "<td>";
                 ?>
                 <form action="../del.php" method="post">
-                <input type="hidden" name="ID_number" value="<?php echo $rowsASR1["ID_number"];?>">
-                <input type="hidden" name="type" value="stu">
+                    <input type="hidden" name="ID_number" value="<?php echo $rowsASR1["ID_number"];?>">
+                    <input type="hidden" name="type" value="stu">
                 </form>
                 <?php
                 echo " </td>";
@@ -88,24 +89,20 @@
             }
         }
         ?>
-
- 
         </tbody>
-
-    </table>       
+    </table>
    
 </div>
 <div class="container-fluid">
-<div class="row-fluid">
-<div class="btn-toolbar">
-  <button class="btn btn-primary">全选</button>
-   <th width="213">&nbsp;</th>
-        <input  class="btn btn-primary" type="submit" name="submit" value="删除">
-  <th width="213">&nbsp;</th>
-        <button class="btn"><a href="#jieduan" role="button" data-toggle="modal"><font color="#000000">录入阶段信息</font></a></button>       
+    <div class="row-fluid">
+        <div class="btn-toolbar">
+            <button class="btn btn-primary" type="button" name="allChecked" id="allChecked" onclick="DoCheck()">全选</button>
+            <input  class="btn btn-primary" type="submit" name="submit" onclick="return allUncheck()&&confirm('确定要删除吗？')" value="删除">
+            <button class="btn"><a href="#jieduan" role="button" data-toggle="modal"><font color="#000000">录入阶段信息</font></a></button>
+        </div>
+    </div>
 </div>
-</div>
-</div>
+        </form>
 
 <!--录入阶段信息-->
 <div class="modal small hide fade" id="jieduan" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -166,6 +163,46 @@
         $(function() {
             $('.demo-cancel-click').click(function(){return false;});
         });
+        function SearchPage() {
+
+        }
+        function allCheck() {
+            let ch = document.getElementsByName("onetodel[]");
+            let r = true;
+            for (let i = 0; i < ch.length; i++) {
+                if (ch[i].checked === false) {
+                    r = false;
+                }
+            }
+            return r;
+        }function allUncheck() {
+            let ch = document.getElementsByName("onetodel[]");
+            let r = false;
+            for (let i = 0; i < ch.length; i++) {
+                if (ch[i].checked === true) {
+                    r = true;
+                }
+            }
+            return r;
+        }
+        function DoCheck()
+        {
+            var ch=document.getElementsByName("onetodel[]");
+            if(allCheck())
+            {
+                for(let i=0;i<ch.length;i++)
+                {
+                    ch[i].checked=false;
+                    console.log(ch);
+                }
+            }else{
+                for(let i=0;i<ch.length;i++)
+                {
+                    ch[i].checked=true;
+                    console.log(ch);
+                }
+            }
+        }
     </script>
   </body>
 </html>
