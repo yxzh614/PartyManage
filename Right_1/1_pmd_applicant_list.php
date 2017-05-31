@@ -110,7 +110,7 @@
                         <input type="date" name="LJJ_time">
                         <div class="modal-footer">
                             <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
-                            <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" onclick="(()=>{document.getElementById('submitType').value='save_LJJ_time';})();" value="保存" >
+                            <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" onclick="return allUncheck()&&(()=>{document.getElementById('submitType').value='save_LJJ_time';})();" value="保存" >
                         </div>
                     <br/><br/><br/>
                 </div>
