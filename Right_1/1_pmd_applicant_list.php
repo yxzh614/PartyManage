@@ -51,6 +51,7 @@
 	</div>
 </div>
         <form action="../del.php" method="post">
+            <input id="submitType" type="hidden" name="type" value="">
 <div class="well">
     <table class="table">
       <thead>
@@ -79,10 +80,6 @@
                 }
                 echo "<td>";
                 ?>
-                <form action="../del.php" method="post">
-                    <input type="hidden" name="ID_number" value="<?php echo $rowsASR1["ID_number"];?>">
-                    <input type="hidden" name="type" value="stu">
-                </form>
                 <?php
                 echo " </td>";
                 echo "</tr>";
@@ -97,31 +94,30 @@
     <div class="row-fluid">
         <div class="btn-toolbar">
             <button class="btn btn-primary" type="button" name="allChecked" id="allChecked" onclick="DoCheck()">全选</button>
-            <input  class="btn btn-primary" type="submit" name="submit" onclick="return allUncheck()&&confirm('确定要删除吗？')" value="删除">
+            <input  class="btn btn-primary" type="submit" name="submit" onclick="return allUncheck()&&confirm('确定要删除吗？')&&(()=>{document.getElementById('submitType').value='del';})();" value="删除">
             <button class="btn"><a href="#jieduan" role="button" data-toggle="modal"><font color="#000000">录入阶段信息</font></a></button>
         </div>
     </div>
 </div>
+            <!--录入阶段信息-->
+            <div class="modal small hide fade" id="jieduan" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 id="myModalLabel">录入阶段信息</h3>
+                </div>
+                <div class="modal-body">
+                        <label>列积极分子时间</label>
+                        <input type="date" name="LJJ_time">
+                        <div class="modal-footer">
+                            <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
+                            <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" onclick="(()=>{document.getElementById('submitType').value='save_LJJ_time';})();" value="保存" >
+                        </div>
+                    <br/><br/><br/>
+                </div>
+            </div>
         </form>
 
-<!--录入阶段信息-->
-<div class="modal small hide fade" id="jieduan" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">录入阶段信息</h3>
-    </div>
-    <div class="modal-body">     
-    <form id="tab" action="1_pmd_applicant_list.php" method="post">
-    	 <label>列积极分子时间</label>
-        <input type="date" name="LJJ_time" />
-    <div class="modal-footer">
-        <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
-        <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" value="保存" >
-    </div>
-     </form>
-    	<br/><br/><br/>
-  </div>    
-</div>
+
 
 <!--编辑信息-->
 <div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -166,43 +162,7 @@
         function SearchPage() {
 
         }
-        function allCheck() {
-            let ch = document.getElementsByName("onetodel[]");
-            let r = true;
-            for (let i = 0; i < ch.length; i++) {
-                if (ch[i].checked === false) {
-                    r = false;
-                }
-            }
-            return r;
-        }function allUncheck() {
-            let ch = document.getElementsByName("onetodel[]");
-            let r = false;
-            for (let i = 0; i < ch.length; i++) {
-                if (ch[i].checked === true) {
-                    r = true;
-                }
-            }
-            return r;
-        }
-        function DoCheck()
-        {
-            var ch=document.getElementsByName("onetodel[]");
-            if(allCheck())
-            {
-                for(let i=0;i<ch.length;i++)
-                {
-                    ch[i].checked=false;
-                    console.log(ch);
-                }
-            }else{
-                for(let i=0;i<ch.length;i++)
-                {
-                    ch[i].checked=true;
-                    console.log(ch);
-                }
-            }
-        }
+
     </script>
   </body>
 </html>

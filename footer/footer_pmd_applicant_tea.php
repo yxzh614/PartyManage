@@ -20,7 +20,7 @@
   degree_bmb.degree_name AS degree_name,/* 学位*/
   home_add_bmb.place_name AS home_add_name,/* 家庭住址所在地*/
   police_station_bmb.place_name AS police_station_name,/* 户口所在派出所*/
-  department_id_bmb.Department AS department_name/* 所属组织机构*/
+  organization.name AS department_name/* 所属组织机构*/
 FROM
   personnelinformation
 LEFT JOIN person_cate1_bmb
@@ -45,8 +45,8 @@ LEFT JOIN home_place_bmb AS home_add_bmb
 ON home_add_bmb.place = personnelinformation.Home_Add
 LEFT JOIN home_place_bmb AS police_station_bmb
 ON police_station_bmb.place = personnelinformation.police_station
-LEFT JOIN department_id_bmb
-ON department_id_bmb.Department_ID=personnelinformation.Department_ID
+LEFT JOIN organization
+ON `organization`.Department_ID=personnelinformation.Department_ID
 WHERE ID_number='".$_GET["ID"]."'";
   if($resGTR1=mysqli_query($db,$sqlGetTeaR1)) {
       while ($rowsGTR1 = mysqli_fetch_assoc($resGTR1)) {
@@ -140,17 +140,17 @@ WHERE ID_number='".$_GET["ID"]."'";
               <td>
                   <select name="Department_ID" class="input-medium">
                       <?php
-                      $sqlAllDepartment = "SELECT * FROM department_id_bmb";
+                      $sqlAllDepartment = "SELECT * FROM `organization`";
                       if ($resAD = mysqli_query($db, $sqlAllDepartment)) {
                           while ($rowsAD = mysqli_fetch_assoc($resAD)) {
                               if($rowsGTR1["Department_ID"]==$rowsAD["Department_ID"]){
                                   ?>
-                                  <option selected="true" value="<?php echo $rowsAD["Department_ID"]; ?>"><?php echo $rowsAD["Department"]; ?></option>
+                                  <option selected="true" value="<?php echo $rowsAD["Department_ID"]; ?>"><?php echo $rowsAD["name"]; ?></option>
                                   <?php
 
                               }else{
                                   ?>
-                                  <option value="<?php echo $rowsAD["Department_ID"]; ?>"><?php echo $rowsAD["Department"]; ?></option>
+                                  <option value="<?php echo $rowsAD["Department_ID"]; ?>"><?php echo $rowsAD["name"]; ?></option>
                                   <?php
 
                               }
@@ -254,7 +254,6 @@ WHERE ID_number='".$_GET["ID"]."'";
                   <input readonly="readonly" type="text" name="ID_number" value="<?php echo $rowsGTR1["ID_number"]; ?>" class="input-medium">
               </td>
               <td>
-dd
               </td>
           </tr>
           <tr>
@@ -299,7 +298,7 @@ dd
                           <?php
                       }
                       ?>
-                  </select></td>
+              </td>
               <td>
 
               </td>

@@ -2,46 +2,40 @@
  * Created by 52668 on 17/5/14.
  */
 
-//得到地区码
-function getAreaID(){
-    var area = 0;
-    if($("#seachdistrict").val() != "0"){
-        area = $("#seachdistrict").val();
-    }else if ($("#seachcity").val() != "0"){
-        area = $("#seachcity").val();
+function allCheck() {
+    let ch = document.getElementsByName("onetodel[]");
+    let r = true;
+    for (let i = 0; i < ch.length; i++) {
+        if (ch[i].checked === false) {
+            r = false;
+        }
+    }
+    return r;
+}function allUncheck() {
+    let ch = document.getElementsByName("onetodel[]");
+    let r = false;
+    for (let i = 0; i < ch.length; i++) {
+        if (ch[i].checked === true) {
+            r = true;
+        }
+    }
+    return r;
+}
+function DoCheck()
+{
+    var ch=document.getElementsByName("onetodel[]");
+    if(allCheck())
+    {
+        for(let i=0;i<ch.length;i++)
+        {
+            ch[i].checked=false;
+            console.log(ch);
+        }
     }else{
-        area = $("#seachprov").val();
+        for(let i=0;i<ch.length;i++)
+        {
+            ch[i].checked=true;
+            console.log(ch);
+        }
     }
-    return area;
-}
-
-function showAreaID() {
-    //地区码
-    var areaID = getAreaID();
-    //地区名
-    var areaName = getAreaNamebyID(areaID) ;
-    if(areaID<100){
-        document.getElementById("getNativeName").value=areaID+"0000";
-    }else if(areaID<10000){
-        document.getElementById("getNativeName").value=areaID+"00";
-    }
-    else{
-        document.getElementById("getNativeName").value=areaID;
-    }
-}
-
-//根据地区码查询地区名
-function getAreaNamebyID(areaID){
-    var areaName = "";
-    if(areaID.length == 2){
-        areaName = area_array[areaID];
-    }else if(areaID.length == 4){
-        var index1 = areaID.substring(0, 2);
-        areaName = area_array[index1] + " " + sub_array[index1][areaID];
-    }else if(areaID.length == 6){
-        var index1 = areaID.substring(0, 2);
-        var index2 = areaID.substring(0, 4);
-        areaName = area_array[index1] + " " + sub_array[index1][index2] + " " + sub_arr[index2][areaID];
-    }
-    return areaName;
 }

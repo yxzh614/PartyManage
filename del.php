@@ -14,7 +14,9 @@
                 for ($i = 0; $i < count($checkbox); $i++) {
                     $sqlToDel = "DELETE FROM `personnelinformation` WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
                     echo $sqlToDel;
+
                 }
+                echo $_POST['type'];
             }else{
                 echo 33;
             }
