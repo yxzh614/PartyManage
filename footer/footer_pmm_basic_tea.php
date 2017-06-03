@@ -5,8 +5,9 @@ $sqlAllStudents = "SELECT *,Person_cate1_name,Person_cate2_name FROM personnelin
 if ($resAS = mysqli_query($db, $sqlAllStudents)) {
 if($rowsAS = mysqli_fetch_assoc($resAS))
 ?>
+    <form action="../Right_1/1_pmm_information_basic_tea.php?ID=<?php echo $_GET["stuId"];?>" method="post" id="edit">
 <div class="btn-toolbar">
-    <button class="btn btn-primary" ><font color="#F7F8F7">编辑</font></button>
+    <input class="btn btn-primary" type="submit" name="submit" value="保存" onclick="showAreaID()">
 </div>
 <div class="well">
     <div align="center">
@@ -141,6 +142,7 @@ if($rowsAS = mysqli_fetch_assoc($resAS))
       </table>
     </div>
 </div>
+    </form>
     <?php
 }
 }

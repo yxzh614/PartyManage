@@ -62,6 +62,8 @@
                       <button class="btn" type="button"><i class="icon-search"></i> 查询</button>
                   </form>
               </div>
+              <form action="../del.php" method="post">
+                  <input id="submitType" type="hidden" name="type" value="">
               <div class="well">
                   <table class="table">
                       <thead>
@@ -84,11 +86,11 @@
                       <tbody>
 
                       <?php
-                      $sqlAllStudents = "SELECT *,Person_cate1_name FROM personnelinformation,person_cate1_bmb WHERE (`person_cate2`=1 OR`person_cate2`=2)  AND person_cate1=Person_cate1_";
+                      $sqlAllStudents = "SELECT *,Person_cate1_name FROM personnelinformation,person_cate1_bmb WHERE (`person_cate2`=1 OR`person_cate2`=2)  AND personnelinformation.out_time IS NULL AND person_cate1=Person_cate1_";
                       if ($resAS = mysqli_query($db, $sqlAllStudents)) {
                           while ($rowsAS = mysqli_fetch_assoc($resAS)) {
                               echo "<tr>";
-                              echo "<td><input type='checkbox' name='onetodel' value='" . $rowsAS["ID_number"] . "'></td>";
+                              echo "<td><input type='checkbox'  name='onetodel[]' value='" . $rowsAS["ID_number"] . "'></td>";
                               echo "<td>" . $rowsAS["ID_number"] . "</td>";
                               echo "<td>" . $rowsAS["name"] . "</td>";
                               echo "<td>" . $rowsAS["Person_cate1_name"] . "</td>";
@@ -98,15 +100,20 @@
                               else {
                                   echo "<td><a href='1_pmm_information_basic_stu.php?stuId=" . $rowsAS["ID_number"] . " '>基本信息</a></td>";
                               }
-                              ?>
 
-                              <td><a href="1_pmm_information_development.php">发展情况</a></td>
-                              <td><a href="1_pmm_information_atSchool_stu.php">在校情况</a></td>
-                              <td><a href="1_pmm_information_activities.php">参与活动</a></td>
-                              <td><a href="1_pmm_information_appraisement.php">民主评议</a></td>
-                              <td><a href="1_pmm_information_rorp.php">奖惩情况</a></td>
-                              <td><a href="1_pmm_information_regular_doc.php">文档信息</a></td>
-                              <td><a href="1_pmm_information_note.php">备注</a></td>
+
+                              echo "<td><a href='1_pmm_information_development.php?stuId=" . $rowsAS["ID_number"] . " '>发展情况</a></td>";
+                              if($rowsAS["person_cate1"]==1){
+                                  echo "<td><a href='1_pmm_information_atSchool_tea.php?stuId=" . $rowsAS["ID_number"] . " '>在校情况</a></td>";
+                              }
+                              else {
+                                  echo "<td><a href='1_pmm_information_atSchool_stu.php?stuId=" . $rowsAS["ID_number"] . " '>在校情况</a></td>";
+                              }
+                              echo "<td><a href='1_pmm_information_activities.php?stuId=" . $rowsAS["ID_number"] . " '>参与活动</a></td>";
+                              echo "<td><a href='1_pmm_information_appraisement.php?stuId=" . $rowsAS["ID_number"] . " '>民主评议</a></td>";
+                              echo "<td><a href='1_pmm_information_rorp.php?stuId=" . $rowsAS["ID_number"] . " '>奖惩情况</a></td>";
+                              echo "<td><a href='1_pmm_information_regular_doc.php?stuId=" . $rowsAS["ID_number"] . " '>文档信息</a></td>";
+                              echo "<td><a href='1_pmm_information_note.php?stuId=" . $rowsAS["ID_number"] . " '>备注</a></td>";?>
                               <td>
                                   <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
                               </td>
@@ -119,10 +126,39 @@
                   </table>
               </div>
               <div class="btn-toolbar">
-                  <button class="btn btn-primary">全选</button>
-                  <button class="btn">删除</button>
+                  <button class="btn btn-primary" type="button" name="allChecked" id="allChecked" onclick="DoCheck()">全选</button>
+                  <input  class="btn btn-primary" type="submit" name="submit" onclick="return allUncheck()&&confirm('确定要删除吗？')&&(()=>{document.getElementById('submitType').value='del';})();" value="删除">
               </div>
 
+                  <!--调出-->
+                  <div class="modal small hide fade" id="out" tabindex="10" role="dialog" aria-labelledby="myModalLabel"
+                       aria-hidden="true">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                          <h3 id="myModalLabel">调出信息</h3>
+                      </div>
+                      <div class="modal-body">
+                          <form id="tab">
+                              <label>调出原因</label>
+                              <select class="input-medium" name="state">
+                                  <option value="2">毕业</option>
+                                  <option value="3">退休</option>
+                              </select>
+                              <label>调出至</label>
+                              <input type="text" name="gowhere" value="" class="input-xlarge">
+                              <label>调出日期</label>
+                              <input type="date" name="out_time">
+                          </form>
+                          <div class="modal-footer">
+                              <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
+                              <input  class="btn btn-primary" type="submit" name="submit" onclick="return allUncheck()&&confirm('确定要调出吗？')&&(()=>{document.getElementById('submitType').value='out';})();" value="确定">
+                          </div>
+                          <br/><br/><br/>
+                      </div>
+
+                  </div>
+
+              </form>
 
               <!--新建信息-->
               <div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel"
@@ -160,34 +196,6 @@
                   </div>
               </div>
 
-
-              <!--调出-->
-              <div class="modal small hide fade" id="out" tabindex="10" role="dialog" aria-labelledby="myModalLabel"
-                   aria-hidden="true">
-                  <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                      <h3 id="myModalLabel">调出信息</h3>
-                  </div>
-                  <div class="modal-body">
-                      <form id="tab">
-                          <label>调出原因</label>
-                          <select class="input-medium" name="">
-                              <option value="0">毕业</option>
-                              <option value="0">退休</option>
-                          </select>
-                          <label>调出至</label>
-                          <input type="text" name="" value="" class="input-xlarge">
-                          <label>调出日期</label>
-                          <input type="date" name="">
-                      </form>
-                      <div class="modal-footer">
-                          <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
-                          <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">确定</button>
-                      </div>
-                      <br/><br/><br/>
-                  </div>
-
-              </div>
 
               <!--删织信息-->
               <div class="modal small hide fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"

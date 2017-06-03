@@ -218,7 +218,6 @@ WHERE ID_number='".$_GET["ID"]."'";
                                   ?>
                                   <option value="<?php echo $rowsAS["state"]; ?>"><?php echo $rowsAS["state_name"]; ?></option>
                                   <?php
-
                               }
                           }
                       }

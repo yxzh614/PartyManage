@@ -25,6 +25,22 @@
                             echo $sqlToDel;
                         }
                     }break;
+                    case 'out':{
+                        $checkbox = $_POST['onetodel'];
+                        for ($i = 0; $i < count($checkbox); $i++) {
+                            $sqlToDel = "UPDATE `personnelinformation` SET `out_time`='" . $_POST["out_time"] . "',`gowhere`='" . $_POST["gowhere"] . "',`state`='" . $_POST["state"] . "' WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
+                        if (mysqli_query($db, $sqlToDel)) {
+                            // echo "==插入成功==";
+                            echo "<script>alert('调出成功！');window.location = \"Right_1/1_pmm_outside.php\";</script>";
+                        }
+                        ?>
+                        <script>
+                            //alert("数据不能为空！");
+                            //window.location = "1_DRM_stu_list.php";
+                        </script>
+                    <?php
+                        }
+                    }break;
                 }
 
             }else{

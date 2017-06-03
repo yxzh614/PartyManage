@@ -4,8 +4,35 @@
         <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
+	 require_once("../config.php");
+      if(isset($_POST["submit"])&&$_POST["submit"]){
+      $sqlUpdateTea="
+      UPDATE `personnelinformation`
+      SET
+      `name`='".$_POST['name']."', /*姓名*/
+`sex`='".$_POST["sex"]."', /*性别*/
+`nation`='".$_POST["nation"]."',/*民族*/
+`strong_point`='".$_POST["strong_point"]."',/*特长*/
+`tel`='".$_POST["tel"]."',/*电话*/
+`politics_status`='".$_POST['politics_status']."',/*政治面貌*/
+`zip_code`='".$_POST["zip_code"]."',/*邮编*/
+`Datetime`='".$_POST["datetime"]."-01"."',/*生日*/
+`graduation_date`='".$_POST["graduation_date"]."-01"."'/*毕业日期*/
 
+      WHERE `personnelinformation`.`ID_number` = '".$_POST["ID_number"]."'";
+      if(mysqli_query($db,$sqlUpdateTea)){
+      // echo "==插入成功==";
+      echo "<script>alert('修改成功！')</script>";
+      }
+      //echo $sqlAddStu;
+      ?>
+      <script>
+          //alert("数据不能为空！");
+          //window.location = "1_DRM_stu_list.php";
+      </script>
+      <?php
+      }
+      ?>
   </head>
  
   <body class=""> 

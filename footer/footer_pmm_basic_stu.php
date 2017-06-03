@@ -6,10 +6,9 @@ if(isset($_GET["stuId"])) {
     if ($resAS = mysqli_query($db, $sqlAllStudents)) {
         if($rowsAS = mysqli_fetch_assoc($resAS))
         ?>
+            <form action="../Right_1/1_pmm_information_basic_stu.php?ID=<?php echo $_GET["stuId"];?>" method="post" id="edit">
         <div class="btn-toolbar">
-            <button class="btn btn-primary"><font color="#F7F8F7">保存</font></button>
-            <div class="btn-group">
-            </div>
+            <input class="btn btn-primary" type="submit" name="submit" value="保存" onclick="showAreaID()">
         </div>
         <div class="well">
             <div align="center">
@@ -74,9 +73,15 @@ if(isset($_GET["stuId"])) {
                                 $sqlAllPolity="SELECT * FROM polity_bmb";
                                 if($resAP=mysqli_query($db,$sqlAllPolity)){
                                     while($rowsAP=mysqli_fetch_assoc($resAP)){
-                                        ?>
-                                        <option value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
-                                        <?php
+                                        if($rowsAS["politics_status"]==$rowsAP["Politics_status"]){
+                                            ?>
+                                            <option selected="selected" value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
+                                            <?php
+                                        }else{
+                                            ?>
+                                            <option value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
+                                            <?php
+                                        }
                                     }
                                 }
                                 ?>
@@ -159,6 +164,7 @@ if(isset($_GET["stuId"])) {
                 </table>
             </div>
         </div>
+        </form>
         <?php
     }
 }

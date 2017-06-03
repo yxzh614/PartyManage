@@ -5,9 +5,37 @@
 	session_start();
 	include("../footer/footer_head.php");
 	 require_once("../config.php");
+        if(isset($_POST["submit"])&&$_POST["submit"]){
+            $sqlUpdateStu="
+UPDATE `personnelinformation` 
+SET 
+      `name`='".$_POST['name']."', /*姓名*/
+      `sex`='".$_POST["sex"]."', /*性别*/
+      `nation`='".$_POST["nation"]."',/*民族*/
+      `strong_point`='".$_POST["strong_point"]."',/*特长*/
+      `tel`='".$_POST["tel"]."',/*电话*/
+      `politics_status`='".$_POST['politics_status']."',/*政治面貌*/
+      `zip_code`='".$_POST["zip_code"]."',/*邮编*/
+      `Datetime`='".$_POST["datetime"]."-01"."',/*生日*/
+      `major`='".$_POST["major"]."',/*专业*/
+      `floor_number`='".$_POST["floor_number"]."',/*楼号*/
+      `dormitory_number`='".$_POST["dormitory_number"]."',/*寝室号*/
+      `bed_number`='".$_POST["bed_number"]."'/*房间号*/
+ WHERE `personnelinformation`.`ID_number` = '".$_POST["ID_number"]."'";
+            if(mysqli_query($db,$sqlUpdateStu)){
+                // echo "==插入成功==";
+                echo "<script>alert('修改成功！')</script>";
+            }
+            //echo $sqlAddStu;
+            ?>
+            <script>
+                //alert("数据不能为空！");
+                //window.location = "1_DRM_stu_list.php";
+            </script>
+            <?php
+        }
+        ?>
 
-	 if(isset($_GET["stuId"])){
-      ?>
   </head>
 
   <body class="">
@@ -50,4 +78,3 @@
   </body>
 </html>
 <?php
-}

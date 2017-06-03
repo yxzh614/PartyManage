@@ -39,6 +39,8 @@
      	</div>
   
 </div>
+            <form action="../del.php" method="post">
+                <input id="submitType" type="hidden" name="type" value="">
 <div class="well">
     <table class="table">
       <thead>
@@ -58,7 +60,7 @@
       if ($resAS = mysqli_query($db, $sqlAllStudents)) {
           while ($rowsAS = mysqli_fetch_assoc($resAS)) {
               echo "<tr>";
-              echo "<td><input type='checkbox' name='checkboxGroup' value='" . $rowsAS["ID_number"] . "'></td>";
+              echo "<td><input type='checkbox' name='onetodel[]' value='" . $rowsAS["ID_number"] . "'></td>";
               echo "<td>" . $rowsAS["name"] . "</td>";
               echo "<td>" ;
               echo $rowsAS["state"]==1?"在校":($rowsAS["state"]==2?"毕业":"调出");
@@ -78,11 +80,11 @@
       </tbody>
     </table>
 </div>
-<div class="btn-toolbar">
-    <button class="btn btn-primary">全选</button>
-    <button class="btn">删除</button>
-</div>
-
+            <div class="btn-toolbar">
+                <button class="btn btn-primary" type="button" name="allChecked" id="allChecked" onclick="DoCheck()">全选</button>
+                <input  class="btn btn-primary" type="submit" name="submit" onclick="return allUncheck()&&confirm('确定要删除吗？')&&(()=>{document.getElementById('submitType').value='del';})();" value="删除">
+            </div>
+            </form>
 <!--编辑信息-->
 <div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
