@@ -1,6 +1,5 @@
 <?php
 require_once ("../config.php");
-
 if(!isset($_SESSION)){ session_start(); }
 if(isset($_COOKIE["PHPSESSID"])){
     session_id($_COOKIE["PHPSESSID"]);
@@ -38,7 +37,6 @@ SET
                         </script>
                         <?php
                     }
-                    //echo $sqlAddStu;
                     ?>
                     <script>
                         //alert("数据不能为空！");
