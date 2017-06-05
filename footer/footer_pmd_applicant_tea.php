@@ -29,8 +29,6 @@ SET
 `zip_code`='".$_POST["zip_code"]."'/*邮编*/
  WHERE `personnelinformation`.`ID_number` = '".$_POST["ID_number"]."'";
                     echo $sqlUpdateTea;
-                    echo $_POST["type"]."\n";
-                    echo $_POST["url"];
                     if(mysqli_query($db,$sqlUpdateTea)){
                         // echo "==插入成功==";
                         ?>
