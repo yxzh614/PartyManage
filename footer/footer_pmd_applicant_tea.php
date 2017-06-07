@@ -1,6 +1,5 @@
 <?php
 require_once ("../config.php");
-
 if(!isset($_SESSION)){ session_start(); }
 if(isset($_COOKIE["PHPSESSID"])){
     session_id($_COOKIE["PHPSESSID"]);
@@ -29,8 +28,6 @@ SET
 `zip_code`='".$_POST["zip_code"]."'/*邮编*/
  WHERE `personnelinformation`.`ID_number` = '".$_POST["ID_number"]."'";
                     echo $sqlUpdateTea;
-                    echo $_POST["type"]."\n";
-                    echo $_POST["url"];
                     if(mysqli_query($db,$sqlUpdateTea)){
                         // echo "==插入成功==";
                         ?>
@@ -40,7 +37,6 @@ SET
                         </script>
                         <?php
                     }
-                    //echo $sqlAddStu;
                     ?>
                     <script>
                         //alert("数据不能为空！");
