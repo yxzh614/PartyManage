@@ -80,8 +80,7 @@
             </script>
             <?php
         }
-    }
-    else{
+    }else{
     ?>
     <script>
         window.location = "../sign-in.php";

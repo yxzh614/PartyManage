@@ -36,7 +36,7 @@ SET
 `activist`.`GZRX_date`='" . ($_POST["GZRX_date"] ? $_POST["GZRX_date"] : "0000-01-01") . "',/*高中入学日期*/
 `activist`.`GZBY_date`='" . ($_POST["GZBY_date"] ? $_POST["GZBY_date"] : "0000-01-01") . "',/*高中入学日期*/
 
-`excellentyouth`.`join_T_time`='" . $_POST["join_T_time"] . "'/*入团时间*/
+`excellentyouth`.`join_T_time`='" . ($_POST["join_T_time"]?$_POST["join_T_time"]:'0000-01-01') . "'/*入团时间*/
 
  WHERE `personnelinformation`.`ID_number` = '" . $_POST["ID_number"] . "' 
  AND `excellentyouth`.`ID_number`= '" . $_POST["ID_number"] . "'
@@ -46,7 +46,7 @@ SET
                 ?>
                 <script>
                     alert('添加成功！');
-                    window.location="<?php echo $_POST['url']?>";
+                    //window.location="<?php echo $_POST['url']?>";
                 </script>
             <?php
                 }
@@ -78,10 +78,10 @@ else{
 
 ?>
 
-<form action="../Right_1/1_pmd_applicant_stu.php?ID=<?php echo $_GET["ID"];?>" method="post" id="edit">
+<form action="../footer/footer_pmd_applicant_stu.php?ID=<?php echo $_GET["ID"];?>" method="post" id="edit">
     <input type="hidden" name="url" value="<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']; ?>">
     <div class="btn-toolbar">
-        <input class="btn btn-primary" type="submit" name="submit" value="保存" onclick="showAreaID()">
+        <input class="btn btn-primary" type="submit" name="submit" value="保存" onclick="">
     </div>
 <div class="well">
     <div align="center">
@@ -412,23 +412,37 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                         <td>
                             <select name="state" class="input-medium">
                                 <?php
-                                $sqlAllState = "SELECT * FROM state_bmb";
-                                if ($resAS = mysqli_query($db, $sqlAllState)) {
-                                    while ($rowsAS = mysqli_fetch_assoc($resAS)) {
-                                        if($rowsGSR1["state"]==$rowsAS["state"]){
-                                            ?>
-                                            <option selected="true" value="<?php echo $rowsAS["state"]; ?>"><?php echo $rowsAS["state_name"]; ?></option>
-                                            <?php
-
-                                        }else{
-                                            ?>
-                                            <option value="<?php echo $rowsAS["state"]; ?>"><?php echo $rowsAS["state_name"]; ?></option>
-                                            <?php
-
+                                        switch($rowsGSR1["state"]){
+                                            case 1:{
+                                                ?>
+                                                <option selected="selected" value="1">在校</option>
+                                                <option value="2">毕业</option>
+                                                <option value="3">调出</option>
+                                                <?php
+                                            }break;
+                                            case 2:{
+                                                ?>
+                                                <option value="1">在校</option>
+                                                <option selected="selected" value="2">毕业</option>
+                                                <option value="3">调出</option>
+                                                <?php
+                                            }break;
+                                            case 3:{
+                                                ?>
+                                                <option value="1">在校</option>
+                                                <option value="2">毕业</option>
+                                                <option selected="selected" value="3">调出</option>
+                                                <?php
+                                            }break;
+                                            default:{
+                                                ?>
+                                                <option selected="selected" value="1">在校</option>
+                                                <option value="2">毕业</option>
+                                                <option value="3">调出</option>
+                                                <?php
+                                            }break;
                                         }
-                                    }
-                                }
-                                ?>
+                                        ?>
                             </select>
                         </td>
                         <td>
@@ -464,7 +478,7 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                             <div align="right">排名：</div>
                         </td>
                         <td>
-                            <input type="number" name="ranking" step="0.001" min="0" value="<?php echo $rowsGSR1["ranking"]; ?>" class="input-medium">
+                            <input type="number" name="ranking" step="0.001" min="0" value="<?php echo $rowsGSR1["ranking"]?$rowsGSR1["ranking"]:0; ?>" class="input-medium">
                         </td>
                         <td>
                             &nbsp;
