@@ -1,10 +1,10 @@
 <?php
-date_default_timezone_set('PRC');
-if(isset($_GET["stuId"])) {
-$sqlAllStudents = "SELECT *,Person_cate1_name,Person_cate2_name FROM personnelinformation,person_cate1_bmb,person_cate2_bmb WHERE ID_number = '" . $_GET["stuId"] . "' AND personnelinformation.person_cate2=person_cate2_ AND person_cate1=Person_cate1_";
-if ($resAS = mysqli_query($db, $sqlAllStudents)) {
-if($rowsAS = mysqli_fetch_assoc($resAS))
-?>
+            date_default_timezone_set('PRC');
+            if(isset($_GET["stuId"])) {
+                $sqlAllStudents = "SELECT *,Person_cate1_name,Person_cate2_name FROM personnelinformation,person_cate1_bmb,person_cate2_bmb WHERE ID_number = '" . $_GET["stuId"] . "' AND personnelinformation.person_cate2=person_cate2_ AND person_cate1=Person_cate1_";
+                if ($resAS = mysqli_query($db, $sqlAllStudents)) {
+                    if($rowsAS = mysqli_fetch_assoc($resAS))
+                        ?>
     <form action="../Right_1/1_pmm_information_basic_tea.php?ID=<?php echo $_GET["stuId"];?>" method="post" id="edit">
 <div class="btn-toolbar">
     <input class="btn btn-primary" type="submit" name="submit" value="保存" onclick="showAreaID()">

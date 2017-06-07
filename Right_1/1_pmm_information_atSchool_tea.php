@@ -4,7 +4,28 @@
         <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
+	 require_once("../config.php");
+        if(isset($_POST["submit"])&&$_POST["submit"]) {
+            $sqlUpdateTea = "
+      UPDATE `personnelinformation`
+      SET
+      `TC_and_BZ`='" . $_POST['TC_and_BZ'] . "',
+      `reward_condtion`='" . $_POST['reward_condtion'] . "',
+      `YorNwrong`='" . $_POST['YorNwrong'] . "'
+
+      WHERE `personnelinformation`.`ID_number` = '" . $_GET["stuId"] . "'";
+            if (mysqli_query($db, $sqlUpdateTea)) {
+                // echo "==插入成功==";
+                echo "<script>alert('修改成功！')</script>";
+            }
+            //echo $sqlAddStu;
+            ?>
+            <script>
+                //alert("数据不能为空！");
+                //window.location = "1_DRM_stu_list.php";
+            </script>
+            <?php
+        }?>
 
   </head>
  

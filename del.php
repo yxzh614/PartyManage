@@ -8,45 +8,70 @@
     require_once("config.php");
     if(isset($_COOKIE["PHPSESSID"])){
         session_id($_COOKIE["PHPSESSID"]);
-        if(isset($_SESSION["right"]) &&$_SESSION["right"]==0){
-            if(isset($_POST["submit"])&&$_POST["submit"]) {
+        if (isset($_SESSION["right"]) && $_SESSION["right"] == 0) {
+            if (isset($_POST["submit"]) && $_POST["submit"]) {
                 switch ($_POST["type"]) {
-                    case 'del':{
+                    case 'del': {
                         $checkbox = $_POST['onetodel'];
                         for ($i = 0; $i < count($checkbox); $i++) {
                             $sqlToDel = "DELETE FROM `personnelinformation` WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
                             echo $sqlToDel;
                         }
-                    }break;
-                    case 'save_LJJ_time':{
+                    }
+                        break;
+                    case 'save_LJJ_time': {
                         $checkbox = $_POST['onetodel'];
                         for ($i = 0; $i < count($checkbox); $i++) {
                             $sqlToDel = "UPDATE `personnelinformation` SET `LJJ_time`='" . $_POST["LJJ_time"] . "' WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
                             echo $sqlToDel;
                         }
-                    }break;
-                    case 'out':{
+                    }
+                        break;
+                    case 'out': {
                         $checkbox = $_POST['onetodel'];
                         for ($i = 0; $i < count($checkbox); $i++) {
                             $sqlToDel = "UPDATE `personnelinformation` SET `out_time`='" . $_POST["out_time"] . "',`gowhere`='" . $_POST["gowhere"] . "',`state`='" . $_POST["state"] . "' WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
-                        if (mysqli_query($db, $sqlToDel)) {
-                            // echo "==插入成功==";
-                            echo "<script>alert('调出成功！');window.location = \"Right_1/1_pmm_outside.php\";</script>";
+                            if (mysqli_query($db, $sqlToDel)) {
+                                // echo "==插入成功==";
+                                echo "<script>alert('调出成功！');window.location = \"Right_1/1_pmm_outside.php\";</script>";
+                            }
+                            ?>
+                            <?php
                         }
-                        ?>
-                        <script>
-                            //alert("数据不能为空！");
-                            //window.location = "1_DRM_stu_list.php";
-                        </script>
-                    <?php
+                    }
+                        break;
+                    case 'delAppraisement': {
+                        $checkbox = $_POST['onetodel'];
+                        for ($i = 0; $i < count($checkbox); $i++) {
+                            $sqlToDel = "DELETE FROM `appraisement` WHERE `appraisement_id` = '" . $checkbox[$i] . "'";
+                            if (mysqli_query($db, $sqlToDel)) {
+                                // echo "==插入成功==";
+                                echo "<script>alert('删除成功！');window.location = \"Right_1/1_pmm_information.php\";</script>";
+                            }
+                            ?>
+                            <?php
                         }
-                    }break;
+                    }
+                        break;
+                    case 'delRorp': {
+                        $checkbox = $_POST['onetodel'];
+                        for ($i = 0; $i < count($checkbox); $i++) {
+                            $sqlToDel = "DELETE FROM `rorp` WHERE `reward_id` = '" . $checkbox[$i] . "'";
+                            if (mysqli_query($db, $sqlToDel)) {
+                                // echo "==插入成功==";
+                                echo "<script>alert('删除成功！');window.location = \"Right_1/1_pmm_information.php\";</script>";
+                            }
+                            ?>
+                            <?php
+                        }
+                    }
+                        break;
                 }
 
-            }else{
+            } else {
                 echo 33;
             }
-        }else{
+        } else {
             ?>
             <script>
                 alert("未登录或权限不足！");
