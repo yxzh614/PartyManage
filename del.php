@@ -33,24 +33,25 @@
                             $sqlToDel = "UPDATE `personnelinformation` SET `out_time`='" . $_POST["out_time"] . "',`gowhere`='" . $_POST["gowhere"] . "',`state`='" . $_POST["state"] . "' WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
                             if (mysqli_query($db, $sqlToDel)) {
                                 // echo "==插入成功==";
-                                echo "<script>alert('调出成功！');window.location = \"Right_1/1_pmm_outside.php\";</script>";
+                                echo "<script>alert('删除成功！');</script>";
                             }
-                            ?>
-                            <?php
+                            ?><?php
                         }
+                        echo "<script>window.location = \"Right_1/1_pmm_information.php\";</script>";
                     }
                         break;
                     case 'delAppraisement': {
                         $checkbox = $_POST['onetodel'];
                         for ($i = 0; $i < count($checkbox); $i++) {
                             $sqlToDel = "DELETE FROM `appraisement` WHERE `appraisement_id` = '" . $checkbox[$i] . "'";
+                            echo $sqlToDel;
                             if (mysqli_query($db, $sqlToDel)) {
                                 // echo "==插入成功==";
-                                echo "<script>alert('删除成功！');window.location = \"Right_1/1_pmm_information.php\";</script>";
+                                echo "<script>alert('删除成功！');</script>";
                             }
-                            ?>
-                            <?php
+                            ?><?php
                         }
+                        echo "<script>window.location = \"Right_1/1_pmm_information.php\";</script>";
                     }
                         break;
                     case 'delRorp': {
@@ -59,11 +60,11 @@
                             $sqlToDel = "DELETE FROM `rorp` WHERE `reward_id` = '" . $checkbox[$i] . "'";
                             if (mysqli_query($db, $sqlToDel)) {
                                 // echo "==插入成功==";
-                                echo "<script>alert('删除成功！');window.location = \"Right_1/1_pmm_information.php\";</script>";
+                                echo "<script>alert('删除成功！');</script>";
                             }
-                            ?>
-                            <?php
+                            ?><?php
                         }
+                        echo "<script>window.location = \"Right_1/1_pmm_information.php\";</script>";
                     }
                         break;
                 }

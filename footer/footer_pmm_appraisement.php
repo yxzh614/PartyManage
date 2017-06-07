@@ -23,7 +23,7 @@
               ?>
 
               <tr>
-              <td><input type='checkbox' name='onetodel[]' value='" <?php $rowsAS["appraisement_id"]?>"'></td>
+              <td><input type='checkbox' name='onetodel[]' value='<?php echo $rowsAS["appraisement_id"];?>'></td>
               <td> <?php echo $rowsAS["PY_time"]; ?> </td>
               <td> <?php echo $rowsAS["PY_result"]; ?> </td>
               <td> <?php echo $rowsAS["remark"]; ?> </td>
