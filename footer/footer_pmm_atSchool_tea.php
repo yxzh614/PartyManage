@@ -1,5 +1,6 @@
- <div class="btn-toolbar">
-    <button class="btn btn-primary" ><font color="#F7F8F7">保存</font></button>
+<form action="../Right_1/1_pmm_information_atSchool_tea.php?stuId=<?php echo $_GET["stuId"];?>" method="post" id="edit">
+<div class="btn-toolbar">
+    <input class="btn btn-primary" type="submit" name="submit" value="保存" onclick="showAreaID()">
 </div>
 <div class="well">
     <div align="center">
@@ -20,7 +21,7 @@
         <tr align="right">
             <td>获奖情况</td>
             <td align="left">
-                <textarea name="Reward_condtion" class="input-large"><?php echo $rowsAS['reward_condtion'] ?></textarea>
+                <textarea name="reward_condtion" class="input-large"><?php echo $rowsAS['reward_condtion'] ?></textarea>
             </td>
         </tr>
         <tr align="right">
@@ -44,6 +45,7 @@
       </table>
     </div>
 </div>
+</form>
  <?php
  }
  }

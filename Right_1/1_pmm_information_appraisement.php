@@ -4,8 +4,22 @@
          <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
-
+	 require_once("../config.php");
+      if(isset($_POST["submit"])&&$_POST["submit"]){
+      $sqlAddStu = "INSERT INTO `appraisement` (ID_number,PY_time,PY_result,remark) VALUES ( '"
+      . $_GET['stuId'] . "','". $_POST['PY_time'] . "','" . $_POST['PY_result'] . "','" . $_POST['remark'] . "')";
+      if (mysqli_query($db, $sqlAddStu)) {
+      // echo "==插入成功==";
+      echo "<script>alert('添加成功！')</script>";
+      }
+      ?>
+      <script>
+          //alert("数据不能为空！");
+          //window.location = "1_DRM_stu_list.php";
+      </script>
+      <?php
+      }
+      ?>
   </head>
  
   <body class=""> 
