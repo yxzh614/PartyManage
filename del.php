@@ -16,6 +16,7 @@
                     for ($i = 0; $i < count($checkbox); $i++) {
                         $sqlToDel = "DELETE FROM `personnelinformation` WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
                         echo $sqlToDel;
+                        mysqli_query($db,$sqlToDel);
                     }
                 }break;
                     case 'save_LJJ_time': {
@@ -23,6 +24,7 @@
                     for ($i = 0; $i < count($checkbox); $i++) {
                         $sqlSaveLJJTime = "UPDATE `personnelinformation` SET `LJJ_time`='" . $_POST["LJJ_time"] . "' WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
                         echo $sqlSaveLJJTime;
+                        mysqli_query($db,$sqlSaveLJJTime);
                     }
                 }break;
                     case 'out': {

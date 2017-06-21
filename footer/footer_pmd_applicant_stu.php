@@ -17,8 +17,8 @@ SET
 `bed_number`='" . $_POST["bed_number"] . "', /*床号*/
 `all_funkobject_amount`='" . $_POST["all_funkobject_amount"] . "', /*全学程挂科数*/
 `LJJ_time`='" . ($_POST["LJJ_time"] ? $_POST["LJJ_time"] : "0000-01-01") . "',/*列积极分子时间*/
-/*`native_place`='" . $_POST['native_name'] . "',*//*籍贯*/
 `nation`='" . $_POST["nation"] . "',/*民族*/
+`police_station`='" . $_POST["police_station"] . "',/*派出所*/
 `Department_ID`='" . $_POST["Department_ID"] . "',/*所属组织*/
 `state`='" . $_POST["state"] . "',/*状态*/
 `edu`='" . $_POST["edu"] . "',/*学历*/
@@ -32,21 +32,20 @@ SET
 `ranking`='" . $_POST["ranking"] . "',/*排名*/
 `politics_status`='" . $_POST['politics_status'] . "',/*政治面貌*/
 `zip_code`='" . $_POST["zip_code"] . "',/*邮编*/
+`native_place`='".$_POST["native_place"]."',/*籍贯*/
 
 `activist`.`GZRX_date`='" . ($_POST["GZRX_date"] ? $_POST["GZRX_date"] : "0000-01-01") . "',/*高中入学日期*/
 `activist`.`GZBY_date`='" . ($_POST["GZBY_date"] ? $_POST["GZBY_date"] : "0000-01-01") . "',/*高中入学日期*/
-
-`excellentyouth`.`join_T_time`='" . ($_POST["join_T_time"]?$_POST["join_T_time"]:'0000-01-01') . "'/*入团时间*/
+`excellentyouth`.`join_T_time`='" . ($_POST["join_T_time"]?$_POST["join_T_time"]:"0000-01-01") . "'/*入团时间*/
 
  WHERE `personnelinformation`.`ID_number` = '" . $_POST["ID_number"] . "' 
- AND `excellentyouth`.`ID_number`= '" . $_POST["ID_number"] . "'
- ";
+ AND `excellentyouth`.`ID_number`= '" . $_POST["ID_number"] . "'";
             echo $sqlUpdateStu;
             if (mysqli_query($db, $sqlUpdateStu)) {
                 ?>
                 <script>
                     alert('添加成功！');
-                    //window.location="<?php echo $_POST['url']?>";
+                    window.location="<?php echo $_POST['url']?>";
                 </script>
             <?php
                 }
@@ -90,21 +89,23 @@ else{
             <?php
             $sqlGetStuR1="SELECT
 personnelinformation.*,
+personnelinformation.name,
+sex,
+personnelinformation.nation,
+instructor_ID,
+personnelinformation.major,
 person_cate1_bmb.Person_cate1_name AS p1name,/* 类别1*/
 person_cate2_bmb.person_cate2_name AS p2name,/* 类别2*/ 
 major_bmb.major_name AS major_name,/* 专业*/
 nation_bmb.nation_name AS nation_name,/* 民族*/
-native_bmb.place_name AS native_name,/* 籍贯*/
 polity_bmb.name AS polity_name,/* 政治面貌*/
 language_bmb.language_name AS language_name,/* 外语语种*/
 edu_bmb.edu_name AS edu_name,/* 学历*/
 degree_bmb.degree_name AS degree_name,/* 学位*/
-home_add_bmb.place_name AS home_add_name,/* 家庭住址所在地*/
-police_station_bmb.place_name AS police_station_name,/* 户口所在派出所*/
   organization.name AS department_name,/* 所属组织机构*/
 excellentyouth.`join_T_time` AS join_T_time,/*入团时间*/
-`activist`.`GZRX_date` AS GZRX_date,/*高中入学日期*/
-`activist`.`GZBY_date` AS GZBY_date/*高中毕业日期*/
+activist.`GZRX_date` AS GZRX_date,/*高中入学日期*/
+activist.`GZBY_date` AS GZBY_date/*高中毕业日期*/
 FROM
 personnelinformation
 LEFT JOIN excellentyouth
@@ -117,8 +118,6 @@ LEFT JOIN major_bmb
 ON major_bmb.major = personnelinformation.major
 LEFT JOIN nation_bmb
 ON nation_bmb.nation = personnelinformation.nation
-LEFT JOIN home_place_bmb AS native_bmb
-ON native_bmb.place = personnelinformation.native_place
 LEFT JOIN polity_bmb
 ON polity_bmb.Politics_status = personnelinformation.politics_status
 LEFT JOIN language_bmb
@@ -127,10 +126,6 @@ LEFT JOIN edu_bmb
 ON edu_bmb.edu = personnelinformation.edu
 LEFT JOIN degree_bmb
 ON degree_bmb.degree = personnelinformation.degree
-LEFT JOIN home_place_bmb AS home_add_bmb
-ON home_add_bmb.place = personnelinformation.Home_Add
-LEFT JOIN home_place_bmb AS police_station_bmb
-ON police_station_bmb.place = personnelinformation.police_station
 LEFT JOIN organization
 ON `organization`.Department_ID=personnelinformation.Department_ID
 LEFT JOIN `activist`
@@ -247,11 +242,30 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                             <div align="right">籍贯：</div>
                         </td>
                         <td>
-                            <select name="native_name" class="input-medium">
-                                <option value="0">辽宁</option>
-                                <option value="1">河北</option>
-                                <option value="2">黑龙江</option>
-                            </select>
+                            <input type="text" onclick="setPCD('getNativeName')" value="<?php echo $rowsGSR1["native_place"]; ?>" href="#distPicker" role="button" data-toggle="modal" class="input-medium" name="native_place" id="getNativeName" readonly="readonly">
+<?php
+    $PCDArray=explode('-',$rowsGSR1["native_place"]);//分割籍贯
+?>
+                            <!--选择籍贯-->
+                            <div class="modal small hide fade" id="distPicker" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h3 id="myModalLabel">选择籍贯</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <div data-toggle="distpicker">
+                                        <select id="selectP" data-province="<?php echo $PCDArray[0];?>"></select>
+                                        <select id="selectC" data-city="<?php echo $PCDArray[1];?>"></select>
+                                        <select id="selectD" data-district="<?php echo $PCDArray[2];?>"></select>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
+                                        <button class="btn btn-danger" id="btn_change_sava" onclick="getPCD('getNativeName')" data-dismiss="modal">确定</button>
+                                    </div>
+                                    <br/><br/><br/>
+                                </div>
+
+                            </div>
                         </td>
                         <td>
                             <div align="right">入团时间：</div>
@@ -262,13 +276,10 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right"></div>
+                            <div align="right">户口所在派出所：</div>
                         </td>
                         <td>
-                            <select name="city" class="input-medium">
-                                <option value="0">沈阳</option>
-                                <option value="1">本溪</option>
-                            </select>
+                            <input type="text" name="police_station" value="<?php echo $rowsGSR1["police_station"]; ?>" class="input-medium">
                         </td>
                         <td>
                             <div align="right">申请入党时间：</div>
@@ -282,13 +293,10 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right"></div>
+                            <div align="right">家庭住址：</div>
                         </td>
                         <td>
-                            <select name="district" class="input-medium">
-                                <option value="0">浑南新区</option>
-                                <option value="1">皇姑区</option>
-                            </select>
+                            <input type="text" name="address" value="<?php echo $rowsGSR1["Home_Add"]; ?>" class="input-medium">
                         </td>
                         <td>
                             <div align="right">列积极分子时间：</div>
@@ -302,16 +310,21 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right">户口所在派出所：</div>
+                            <div align="right">身份证号：</div>
                         </td>
                         <td>
-                            <input type="text" name="police_station" value="<?php echo $rowsGSR1["police_station_name"]; ?>" class="input-medium">
+                            <input type="text"
+                                   name="ID_number"
+                                   value="<?php echo $rowsGSR1["ID_number"]; ?>"
+                                   class="input-medium">
                         </td>
                         <td>
                             <div align="right">培养人：</div>
                         </td>
                         <td>
-                            <input type="text" name="trainer" value="??" class="input-medium"/>
+                            <input type="text"
+                                   name="trainer" value="??"
+                                   class="input-medium"/>
                         </td>
                         <td>
                             &nbsp;
@@ -319,10 +332,27 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right">家庭住址：</div>
+                            <div align="right">政治面貌：</div>
                         </td>
                         <td>
-                            <input type="text" name="address" value="<?php echo $rowsGSR1["home_add_name"] . $rowsGSR1["Home_Add_Detail"]; ?>" class="input-medium">
+                            <select name="politics_status" class="input-medium">
+                                <?php
+                                $sqlAllPolity = "SELECT * FROM polity_bmb";
+                                if ($resAP = mysqli_query($db, $sqlAllPolity)) {
+                                    while ($rowsAP = mysqli_fetch_assoc($resAP)) {
+                                        if($rowsGSR1["politics_status"]==$rowsAP["Politics_status"]){
+                                            ?>
+                                            <option selected="true" value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
+                                            <?php
+                                        }else{
+                                            ?>
+                                            <option value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
+                                            <?php
+                                        }
+                                    }
+                                }
+                                ?>
+                            </select>
                         </td>
                         <td>
                             <div align="right">所属组织：</div>
@@ -355,10 +385,28 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right">身份证号：</div>
+                            <div align="right">学历：</div>
                         </td>
                         <td>
-                            <input type="text" name="ID_number" value="<?php echo $rowsGSR1["ID_number"]; ?>" class="input-medium">
+                            <select name="edu" class="input-medium">
+                                <?php
+                                $sqlAllEdu = "SELECT * FROM edu_bmb";
+                                if ($resAE = mysqli_query($db, $sqlAllEdu)) {
+                                    while ($rowsAE = mysqli_fetch_assoc($resAE)) {
+                                        if($rowsGSR1["edu"]==$rowsAE["edu"]){
+                                            ?>
+                                            <option selected="true" value="<?php echo $rowsAE["edu"]; ?>"><?php echo $rowsAE["edu_name"]; ?></option>
+                                            <?php
+
+                                        }else{
+                                            ?>
+                                            <option value="<?php echo $rowsAE["edu"]; ?>"><?php echo $rowsAE["edu_name"]; ?></option>
+                                            <?php
+                                        }
+                                    }
+                                }
+                                ?>
+                            </select>
                         </td>
                         <td>
                             <div align="right">行政职务：</div>
@@ -384,27 +432,13 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right">政治面貌：</div>
+                            <div align="right">个人特长：</div>
                         </td>
                         <td>
-                            <select name="politics_status" class="input-medium">
-                                <?php
-                                $sqlAllPolity = "SELECT * FROM polity_bmb";
-                                if ($resAP = mysqli_query($db, $sqlAllPolity)) {
-                                    while ($rowsAP = mysqli_fetch_assoc($resAP)) {
-                                        if($rowsGSR1["politics_status"]==$rowsAP["Politics_status"]){
-                                            ?>
-                                            <option selected="true" value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
-                                            <?php
-                                        }else{
-                                            ?>
-                                            <option value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                }
-                                ?>
-                            </select>
+                            <input type="text"
+                                   name="strong_point"
+                                   value="<?php echo $rowsGSR1["strong_point"]; ?>"
+                                   class="input-medium">
                         </td>
                         <td>
                             <div align="right">状态：</div>
@@ -451,28 +485,13 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right">学历：</div>
+                            <div align="right">联系电话：</div>
                         </td>
                         <td>
-                            <select name="edu" class="input-medium">
-                                <?php
-                                $sqlAllEdu = "SELECT * FROM edu_bmb";
-                                if ($resAE = mysqli_query($db, $sqlAllEdu)) {
-                                    while ($rowsAE = mysqli_fetch_assoc($resAE)) {
-                                        if($rowsGSR1["edu"]==$rowsAE["edu"]){
-                                            ?>
-                                            <option selected="true" value="<?php echo $rowsAE["edu"]; ?>"><?php echo $rowsAE["edu_name"]; ?></option>
-                                            <?php
-
-                                        }else{
-                                            ?>
-                                            <option value="<?php echo $rowsAE["edu"]; ?>"><?php echo $rowsAE["edu_name"]; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                }
-                                ?>
-                            </select>
+                            <input type="text"
+                                   name="tel"
+                                   value="<?php echo $rowsGSR1["tel"]; ?>"
+                                   class="input-medium">
                         </td>
                         <td>
                             <div align="right">排名：</div>
@@ -486,10 +505,13 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right">个人特长：</div>
+                            <div align="right">邮编：</div>
                         </td>
                         <td>
-                            <input type="text" name="strong_point" value="<?php echo $rowsGSR1["strong_point"]; ?>" class="input-medium">
+                            <input type="text"
+                                   name="zip_code"
+                                   value="<?php echo $rowsGSR1["zip_code"]; ?>"
+                                   class="input-medium">
                         </td>
                         <td>
                             <div align="right">挂科数：</div>
@@ -503,10 +525,13 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right">联系电话：</div>
+                            <div align="right">寝室楼号：</div>
                         </td>
                         <td>
-                            <input type="text" name="tel" value="<?php echo $rowsGSR1["tel"]; ?>" class="input-medium">
+                            <input type="text"
+                                   name="floor_number"
+                                   value="<?php echo $rowsGSR1["floor_number"]; ?>"
+                                   class="input-medium">
                         </td>
                         <td rowspan="2">
                             <div align="right">获奖情况：</div>
@@ -520,10 +545,13 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right">邮编：</div>
+                            <div align="right">寝室号：</div>
                         </td>
                         <td>
-                            <input type="text" name="zip_code" value="<?php echo $rowsGSR1["zip_code"]; ?>" class="input-medium">
+                            <input type="text"
+                                   name="dormitory_number"
+                                   value="<?php echo $rowsGSR1["dormitory_number"]; ?>"
+                                   class="input-medium">
                         </td>
                         <td>
 
@@ -531,10 +559,13 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right">寝室楼号：</div>
+                            <div align="right">床号：</div>
                         </td>
                         <td>
-                            <input type="text" name="floor_number" value="<?php echo $rowsGSR1["floor_number"]; ?>" class="input-medium">
+                            <input type="text"
+                                   name="dormitory_number"
+                                   value="<?php echo $rowsGSR1["dormitory_number"]; ?>"
+                                   class="input-medium">
                         </td>
                         <td>
                             <div align="right">处分情况：</div>
@@ -560,10 +591,13 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                     </tr>
                     <tr>
                         <td>
-                            <div align="right">寝室号：</div>
+                            <div align="right">备注：</div>
                         </td>
                         <td>
-                            <input type="text" name="dormitory_number" value="<?php echo $rowsGSR1["dormitory_number"]; ?>" class="input-medium">
+                            <input type="text"
+                                   name="remark"
+                                   value="<?php echo $rowsGSR1["remark"]; ?>"
+                                   class="input-medium" />
                         </td>
                         <td rowspan="2">
                             <div align="right">突出表现和存在不足：</div>
@@ -581,23 +615,6 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                         </td>
                         <td>
                             <input type="text" name="bed_number" value="<?php echo $rowsGSR1["bed_number"]; ?>" class="input-medium">
-                        </td>
-                        <td>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div align="right">备注：</div>
-                        </td>
-                        <td>
-                            <input type="text" name="remark" value="<?php echo $rowsGSR1["remark"]; ?>" class="input-medium" />
-                        </td>
-                        <td>
-                            <div align="right"></div>
-                        </td>
-                        <td>
-
                         </td>
                         <td>
 

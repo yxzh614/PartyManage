@@ -209,7 +209,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                           while ($rowsAD = mysqli_fetch_assoc($resAD)) {
                               if($rowsGTR1["Department_ID"]==$rowsAD["Department_ID"]){
                                   ?>
-                                  <option selected="true" value="<?php echo $rowsAD["Department_ID"]; ?>"><?php echo $rowsAD["name"]; ?></option>
+                                  <option selected="selected" value="<?php echo $rowsAD["Department_ID"]; ?>"><?php echo $rowsAD["name"]; ?></option>
                                   <?php
 
                               }else{
@@ -229,7 +229,28 @@ WHERE ID_number='".$_GET["ID"]."'";
                   <div align="right">籍贯：</div>
               </td>
               <td>
-                  <input type="text" href="#distPicker" role="button" data-toggle="modal" class="input-medium" name="native_name" id="getNativeName" readonly="readonly">
+                  <input type="text" href="#distPicker" role="button" data-toggle="modal" class="input-medium" name="native_place" id="getNativeName" readonly="readonly">
+
+                  <!--选择籍贯-->
+                  <div class="modal small hide fade" id="distPicker" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                          <h3 id="myModalLabel">选择籍贯</h3>
+                      </div>
+                      <div class="modal-body">
+                          <div data-toggle="distpicker">
+                              <select id="selectP" data-province="无"></select>
+                              <select id="selectC" id="selectP" data-city="无"></select>
+                              <select id="selectD" data-district="无"></select>
+                          </div>
+                          <div class="modal-footer">
+                              <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
+                              <button class="btn btn-danger" id="btn_change_sava" onclick="getPCD('getNativeName')" data-dismiss="modal">确定</button>
+                          </div>
+                          <br/><br/><br/>
+                      </div>
+
+                  </div>
                   </td>
               <td>
                   <div align="right">行政职务：</div>
@@ -270,20 +291,35 @@ WHERE ID_number='".$_GET["ID"]."'";
               <td>
                   <select name="state" class="input-medium">
                       <?php
-                      $sqlAllState = "SELECT * FROM state_bmb";
-                      if ($resAS = mysqli_query($db, $sqlAllState)) {
-                          while ($rowsAS = mysqli_fetch_assoc($resAS)) {
-                              if($rowsGTR1["state"]==$rowsAS["state"]){
-                                  ?>
-                                  <option selected="true" value="<?php echo $rowsAS["state"]; ?>"><?php echo $rowsAS["state_name"]; ?></option>
-                                  <?php
-
-                              }else{
-                                  ?>
-                                  <option value="<?php echo $rowsAS["state"]; ?>"><?php echo $rowsAS["state_name"]; ?></option>
-                                  <?php
-                              }
-                          }
+                      switch($rowsGTR1["state"]){
+                          case 1:{
+                              ?>
+                              <option selected="selected" value="1">在校</option>
+                              <option value="2">毕业</option>
+                              <option value="3">调出</option>
+                              <?php
+                          }break;
+                          case 2:{
+                              ?>
+                              <option value="1">在校</option>
+                              <option selected="selected" value="2">毕业</option>
+                              <option value="3">调出</option>
+                              <?php
+                          }break;
+                          case 3:{
+                              ?>
+                              <option value="1">在校</option>
+                              <option value="2">毕业</option>
+                              <option selected="selected" value="3">调出</option>
+                              <?php
+                          }break;
+                          default:{
+                              ?>
+                              <option selected="selected" value="1">在校</option>
+                              <option value="2">毕业</option>
+                              <option value="3">调出</option>
+                              <?php
+                          }break;
                       }
                       ?>
                   </select>
@@ -331,7 +367,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                           while ($rowsAP = mysqli_fetch_assoc($resAP)) {
                               if($rowsGTR1["politics_status"]==$rowsAP["Politics_status"]){
                                   ?>
-                                  <option selected="true" value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
+                                  <option selected="selected" value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
                                   <?php
 
                               }else{
@@ -378,7 +414,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                           while ($rowsAE = mysqli_fetch_assoc($resAE)) {
                               if($rowsGTR1["edu"]==$rowsAE["edu"]){
                                   ?>
-                                  <option selected="true" value="<?php echo $rowsAE["edu"]; ?>"><?php echo $rowsAE["edu_name"]; ?></option>
+                                  <option selected="selected" value="<?php echo $rowsAE["edu"]; ?>"><?php echo $rowsAE["edu_name"]; ?></option>
                                   <?php
 
                               }else{
@@ -449,23 +485,3 @@ WHERE ID_number='".$_GET["ID"]."'";
     </div>
 </div>
 </form>
-<!--选择籍贯-->
-<div class="modal small hide fade" id="distPicker" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">选择籍贯</h3>
-    </div>
-    <div class="modal-body">
-        <div data-toggle="distpicker">
-            <select data-province="---- 选择省 ----"></select>
-            <select data-city="---- 选择市 ----"></select>
-            <select data-district="---- 选择区 ----"></select>
-        </div>
-        <div class="modal-footer">
-            <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
-            <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">确定</button>
-        </div>
-        <br/><br/><br/>
-    </div>
-
-</div>
