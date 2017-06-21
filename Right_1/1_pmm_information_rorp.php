@@ -4,8 +4,25 @@
         <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
-
+	 require_once("../config.php");
+      if(isset($_POST["submit"])&&$_POST["submit"]){
+      //$dt = new DateTime();
+      //$dt->format('Y-m-d H:i:s');
+      $sqlAddStu = "INSERT INTO `rorp` (ID_number,type,award_rank,Time,JC_explain,remark) VALUES ( '"
+          . $_GET['stuId'] . "','" . $_POST['type'] . "','" . $_POST['award_rank'] . "','"
+          . $_POST['Time'] . "','" . $_POST['JC_explain'] . "','" . $_POST['remark'] . "')";
+      if (mysqli_query($db, $sqlAddStu)) {
+      // echo "==插入成功==";
+      echo "<script>alert('添加成功！')</script>";
+      }
+      ?>
+      <script>
+          //alert("数据不能为空！");
+          //window.location = "1_DRM_stu_list.php";
+      </script>
+      <?php
+      }
+      ?>
   </head>
  
   <body class=""> 

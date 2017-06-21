@@ -6,7 +6,7 @@ if(isset($_GET["stuId"])) {
     if ($resAS = mysqli_query($db, $sqlAllStudents)) {
         if($rowsAS = mysqli_fetch_assoc($resAS))
         ?>
-            <form action="../Right_1/1_pmm_information_basic_stu.php?ID=<?php echo $_GET["stuId"];?>" method="post" id="edit">
+            <form action="../Right_1/1_pmm_information_basic_stu.php?stuId=<?php echo $_GET["stuId"];?>" method="post" id="edit">
         <div class="btn-toolbar">
             <input class="btn btn-primary" type="submit" name="submit" value="保存" onclick="showAreaID()">
         </div>
