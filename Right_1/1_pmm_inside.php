@@ -8,9 +8,9 @@
       if(isset($_POST["submit"])&&$_POST["submit"]) {
           //$dt = new DateTime();
           //$dt->format('Y-m-d H:i:s');
-          $sqlAddStu = "INSERT INTO `personnelinformation` (ID_number, person_cate1,person_cate2, major,nation,stu_number,class,name, sex, Datetime, Home_Add , tel, join_T_time, in_time, in_where) VALUES ( '"
+          $sqlAddStu = "INSERT INTO `personnelinformation` (ID_number, person_cate1,person_cate2, major,nation,stu_number,class,name, sex, Datetime, Home_Add , tel,RD_datetime , in_time, in_where) VALUES ( '"
               . $_POST['ID_number'] . "','" . $_POST['person_cate1'] . "','" . $_POST['person_cate2'] . "','" . $_POST['major'] . "','" . $_POST['nation'] . "','" . $_POST['number'] . "','" . substr($_POST['number'], 0, 7) . "','" . $_POST['name'] . "','" . $_POST['sex'] . "','" . $_POST['datetime'].'-01' . "','"
-              . /*$_POST['province'] . $_POST['city'] . $_POST['district'].*/  "000000','" . $_POST['tel'] . "','" . $_POST['Join_T_time'] . "','" . $_POST['in_time'] . "','" . $_POST['in_where'] . "')";
+              . /*$_POST['province'] . $_POST['city'] . $_POST['district'].*/  "000000','" . $_POST['tel'] . "','" . $_POST['RD_datetime'] . "','" . $_POST['in_time'] . "','" . $_POST['in_where'] . "')";
                               if (mysqli_query($db, $sqlAddStu)) {
               // echo "==插入成功==";
               echo "<script>alert('添加成功！')</script>";
@@ -85,17 +85,12 @@
                           ?>
                           <td>
                               <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
-                              <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
                           </td>
                           </tr>
                       <?php }
                   } ?>
                   </tbody>
               </table>
-          </div>
-          <div class="btn-toolbar">
-              <button class="btn btn-primary">全选</button>
-              <button class="btn">删除</button>
           </div>
 
           <!--编辑信息-->
@@ -165,7 +160,7 @@
                           <option value="1">皇姑区</option>
                       </select>
                       <label>出生年月：</label><input type="month" name="datetime" value="" class="input-medium"/>
-                      <label>入党时间：</label><input type="date" name="Join_T_time" value="" class="input-medium">
+                      <label>入党时间：</label><input type="date" name="RD_datetime" value="" class="input-medium">
                       <label>是否正式：</label>
                       <select name="person_cate2" class="input-medium">
                           <option value="1">是</option>

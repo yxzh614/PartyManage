@@ -114,9 +114,6 @@
                               echo "<td><a href='1_pmm_information_rorp.php?stuId=" . $rowsAS["ID_number"] . " '>奖惩情况</a></td>";
                               echo "<td><a href='1_pmm_information_regular_doc.php?stuId=" . $rowsAS["ID_number"] . " '>文档信息</a></td>";
                               echo "<td><a href='1_pmm_information_note.php?stuId=" . $rowsAS["ID_number"] . " '>备注</a></td>";?>
-                              <td>
-                                  <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-                              </td>
                               <?php
                               echo "</tr>";
                           }
@@ -143,6 +140,7 @@
                               <select class="input-medium" name="state">
                                   <option value="2">毕业</option>
                                   <option value="3">退休</option>
+                                  <option value="4">调出</option>
                               </select>
                               <label>调出至</label>
                               <input type="text" name="gowhere" value="" class="input-xlarge">

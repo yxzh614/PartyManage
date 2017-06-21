@@ -46,7 +46,7 @@ SET
                 ?>
                 <script>
                     alert('添加成功！');
-                    //window.location="<?php echo $_POST['url']?>";
+                    window.location="<?php echo $_POST['url']?>";
                 </script>
             <?php
                 }
