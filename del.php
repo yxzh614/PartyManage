@@ -4,7 +4,6 @@
 
     <?php
     session_start();//huihua
-    include("footer/footer_head.php");
     require_once("config.php");
     if(isset($_COOKIE["PHPSESSID"])){
         session_id($_COOKIE["PHPSESSID"]);
