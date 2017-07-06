@@ -61,7 +61,7 @@ else{
     <?php
 }
 ?>
-<form action="../footer/footer_pmd_applicant_tea.php" method="post" id="edit">
+<form action="../footer/footer_pmd_applicant_tea.php?ID=<?php echo $_GET["ID"];?>" method="post" id="edit">
     <input type="hidden" name="url" value="<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']; ?>">
 <div class="btn-toolbar">
     <input class="btn btn-primary" type="submit" name="submit" value="保存" onclick="showAreaID()">
@@ -256,23 +256,37 @@ WHERE ID_number='".$_GET["ID"]."'";
                   <div align="right">行政职务：</div>
               </td>
               <td>
-                  <select name="Adminis_fun" class="input-medium">
+                  <select name="state" class="input-medium">
                       <?php
-                      $sqlAllState = "SELECT * FROM state_bmb";
-                      if ($resAS = mysqli_query($db, $sqlAllState)) {
-                          while ($rowsAS = mysqli_fetch_assoc($resAS)) {
-                              if($rowsGTR1["state"]==$rowsAS["state"]){
-                                  ?>
-                                  <option selected="true" value="<?php echo $rowsAS["state"]; ?>"><?php echo $rowsAS["state_name"]; ?></option>
-                                  <?php
-
-                              }else{
-                                  ?>
-                                  <option value="<?php echo $rowsAS["state"]; ?>"><?php echo $rowsAS["state_name"]; ?></option>
-                                  <?php
-
-                              }
-                          }
+                      switch($rowsGTR1["state"]){
+                          case 1:{
+                              ?>
+                              <option selected="selected" value="1">在校</option>
+                              <option value="2">毕业</option>
+                              <option value="3">调出</option>
+                              <?php
+                          }break;
+                          case 2:{
+                              ?>
+                              <option value="1">在校</option>
+                              <option selected="selected" value="2">毕业</option>
+                              <option value="3">调出</option>
+                              <?php
+                          }break;
+                          case 3:{
+                              ?>
+                              <option value="1">在校</option>
+                              <option value="2">毕业</option>
+                              <option selected="selected" value="3">调出</option>
+                              <?php
+                          }break;
+                          default:{
+                              ?>
+                              <option selected="selected" value="1">在校</option>
+                              <option value="2">毕业</option>
+                              <option value="3">调出</option>
+                              <?php
+                          }break;
                       }
                       ?>
                   </select>

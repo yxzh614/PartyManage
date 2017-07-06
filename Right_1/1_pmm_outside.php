@@ -63,7 +63,7 @@
               echo "<td><input type='checkbox' name='onetodel[]' value='" . $rowsAS["ID_number"] . "'></td>";
               echo "<td>" . $rowsAS["name"] . "</td>";
               echo "<td>" ;
-              echo $rowsAS["state"]==1?"在校":($rowsAS["state"]==2?"毕业":"调出");
+              echo $rowsAS["state"]==1?"在校":($rowsAS["state"]==2?"毕业":($rowsAS["state"]==3?"退休":"工作调出"));
               echo "</td>";
               echo "<td>" . $rowsAS["Department_ID"] . "</td>";
               echo "<td>" . $rowsAS["gowhere"] . "</td>";
@@ -71,7 +71,6 @@
               ?>
               <td>
                   <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
-                  <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
               </td>
               </tr>
           <?php }

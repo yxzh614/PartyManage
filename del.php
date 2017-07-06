@@ -54,6 +54,20 @@
                         echo "<script>window.location = \"Right_1/1_pmm_information.php\";</script>";
                     }
                         break;
+                    case 'delArrears': {
+                        $checkbox = $_POST['onetodel'];
+                        for ($i = 0; $i < count($checkbox); $i++) {
+                            $sqlToDel = "DELETE FROM `arrears` WHERE `arrears_id` = '" . $checkbox[$i] . "'";
+                            echo $sqlToDel;
+                            if (mysqli_query($db, $sqlToDel)) {
+                                // echo "==插入成功==";
+                                echo "<script>alert('删除成功！');</script>";
+                            }
+                            ?><?php
+                        }
+                        echo "<script>window.location = \"Right_1/1_pmm_arrears.php\";</script>";
+                    }
+                        break;
                     case 'delRorp': {
                         $checkbox = $_POST['onetodel'];
                         for ($i = 0; $i < count($checkbox); $i++) {

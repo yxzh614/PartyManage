@@ -103,7 +103,6 @@
     </div>
     	<br/><br/><br/>
   </div>
-    
 </div>      
 <?php include("../footer/footer_bottom.php");?>
             </div>

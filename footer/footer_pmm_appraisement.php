@@ -29,7 +29,6 @@
               <td> <?php echo $rowsAS["remark"]; ?> </td>
               <td>
                   <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
-                  <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
               </td>
               </tr>
 

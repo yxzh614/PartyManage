@@ -4,7 +4,17 @@
          <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
+	 require_once("../config.php"); if(isset($_POST["submit"])&&$_POST["submit"]) {
+             $sqlUpdateStu = "
+UPDATE `personnelinformation` 
+SET 
+`join_T_time`= '".$_POST['join_t_time']."'
+ WHERE `personnelinformation`.`ID_number` = '" . $_GET["stuId"] . "'";
+             if (mysqli_query($db, $sqlUpdateStu)) {
+                 echo "<script>alert('修改成功！')</script>";
+             }
+         }
+         ?>
 
   </head>
  
