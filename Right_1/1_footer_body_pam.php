@@ -10,7 +10,7 @@
                <span class="font-head-first">信息科学与工程学院</span> <span class="font-head-second">党务工作信息系统</span>
         </div>
 </div>
-    
+
 
    
  <div class="sidebar-nav">

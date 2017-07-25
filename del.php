@@ -16,6 +16,10 @@
                         for ($i = 0; $i < count($checkbox); $i++) {
                             $sqlToDel = "DELETE FROM `personnelinformation` WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
                             echo $sqlToDel;
+                            if (mysqli_query($db, $sqlToDel)) {
+                                // echo "==插入成功==";
+                                echo "<script>alert('删除成功！');</script>";
+                            }
                         }
                     }
                         break;

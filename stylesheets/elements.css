@@ -10,3 +10,7 @@
 
     More info at: http://lesselements.com
 -----------------------------------------------------*/
+.onError{
+display: block;
+color: red;
+}

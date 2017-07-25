@@ -9,30 +9,31 @@ if(isset($_POST["submit"])&&$_POST["submit"]) {
             $sqlUpdateStu = "
 UPDATE `personnelinformation` ,`excellentyouth`,`activist`
 SET 
-`name`='" . $_POST['name'] . "', /*姓名*/
-`SQRD_time`='" . ($_POST["SQRD_time"] ? $_POST["SQRD_time"] : "0000-01-01") . "', /*申请入党时间*/
-`sex`='" . $_POST["sex"] . "', /*性别*/
-`floor_number`='" . $_POST["floor_number"] . "', /*楼号*/
-`dormitory_number`='" . $_POST["dormitory_number"] . "', /*寝室号*/
-`bed_number`='" . $_POST["bed_number"] . "', /*床号*/
-`all_funkobject_amount`='" . $_POST["all_funkobject_amount"] . "', /*全学程挂科数*/
-`LJJ_time`='" . ($_POST["LJJ_time"] ? $_POST["LJJ_time"] : "0000-01-01") . "',/*列积极分子时间*/
-`nation`='" . $_POST["nation"] . "',/*民族*/
-`police_station`='" . $_POST["police_station"] . "',/*派出所*/
-`Department_ID`='" . $_POST["Department_ID"] . "',/*所属组织*/
-`state`='" . $_POST["state"] . "',/*状态*/
-`edu`='" . $_POST["edu"] . "',/*学历*/
-`strong_point`='" . $_POST["strong_point"] . "',/*特长*/
-`tel`='" . $_POST["tel"] . "',/*电话*/
-`reward_condtion`='" . $_POST["reward_condtion"] . "',/*获奖情况*/
-`YorNwrong`='" . $_POST["YorNwrong"] . "',/*处分情况*/
-`remark`='" . $_POST["remark"] . "',/*备注*/
-`TC_and_BZ`='" . $_POST["TC_and_BZ"] . "',/*备注*/
-`major`='" . $_POST["major"] . "',/*专业*/
-`ranking`='" . $_POST["ranking"] . "',/*排名*/
-`politics_status`='" . $_POST['politics_status'] . "',/*政治面貌*/
-`zip_code`='" . $_POST["zip_code"] . "',/*邮编*/
-`native_place`='".$_POST["native_place"]."',/*籍贯*/
+`name`='" . $_POST['name'] . "',                                                    /*姓名*/
+`SQRD_time`='" . ($_POST["SQRD_time"] ? $_POST["SQRD_time"] : "0000-01-01") . "',   /*申请入党时间*/
+`instructor_ID`='" . $_POST['instructor_ID'] . "',                                  /*辅导员*/
+`sex`='" . $_POST["sex"] . "',                                                      /*性别*/
+`floor_number`='" . $_POST["floor_number"] . "',                                    /*楼号*/
+`dormitory_number`='" . $_POST["dormitory_number"] . "',                            /*寝室号*/
+`bed_number`='" . $_POST["bed_number"] . "',                                        /*床号*/
+`all_funkobject_amount`='" . $_POST["all_funkobject_amount"] . "',                  /*全学程挂科数*/
+`LJJ_time`='" . ($_POST["LJJ_time"] ? $_POST["LJJ_time"] : "0000-01-01") . "',      /*列积极分子时间*/
+`nation`='" . $_POST["nation"] . "',                                                /*民族*/
+`police_station`='" . $_POST["police_station"] . "',                                /*派出所*/
+`Department_ID`='" . $_POST["Department_ID"] . "',                                  /*所属组织*/
+`state`='" . $_POST["state"] . "',                                                  /*状态*/
+`edu`='" . $_POST["edu"] . "',                                                      /*学历*/
+`strong_point`='" . $_POST["strong_point"] . "',                                    /*特长*/
+`tel`='" . $_POST["tel"] . "',                                                      /*电话*/
+`reward_condtion`='" . $_POST["reward_condtion"] . "',                              /*获奖情况*/
+`YorNwrong`='" . $_POST["YorNwrong"] . "',                                          /*处分情况*/
+`remark`='" . $_POST["remark"] . "',                                                /*备注*/
+`TC_and_BZ`='" . $_POST["TC_and_BZ"] . "',                                          /*备注*/
+`major`='" . $_POST["major"] . "',                                                  /*专业*/
+`ranking`='" . $_POST["ranking"] . "',                                              /*排名*/
+`politics_status`='" . $_POST['politics_status'] . "',                              /*政治面貌*/
+`zip_code`='" . $_POST["zip_code"] . "',                                            /*邮编*/
+`native_place`='".$_POST["native_place"]."',                                        /*籍贯*/
 
 `activist`.`GZRX_date`='" . ($_POST["GZRX_date"] ? $_POST["GZRX_date"] : "0000-01-01") . "',/*高中入学日期*/
 `activist`.`GZBY_date`='" . ($_POST["GZBY_date"] ? $_POST["GZBY_date"] : "0000-01-01") . "',/*高中入学日期*/
@@ -84,53 +85,51 @@ else{
     </div>
 <div class="well">
     <div align="center">
-        <table width="916" height="500" border="1">
+        <table width="916" height="500" border="0">
             <tbody>
             <?php
             $sqlGetStuR1="SELECT
-personnelinformation.*,
-personnelinformation.name,
-sex,
-personnelinformation.nation,
-instructor_ID,
-personnelinformation.major,
-person_cate1_bmb.Person_cate1_name AS p1name,/* 类别1*/
-person_cate2_bmb.person_cate2_name AS p2name,/* 类别2*/ 
-major_bmb.major_name AS major_name,/* 专业*/
-nation_bmb.nation_name AS nation_name,/* 民族*/
-polity_bmb.name AS polity_name,/* 政治面貌*/
-language_bmb.language_name AS language_name,/* 外语语种*/
-edu_bmb.edu_name AS edu_name,/* 学历*/
-degree_bmb.degree_name AS degree_name,/* 学位*/
-  organization.name AS department_name,/* 所属组织机构*/
-excellentyouth.`join_T_time` AS join_T_time,/*入团时间*/
-activist.`GZRX_date` AS GZRX_date,/*高中入学日期*/
-activist.`GZBY_date` AS GZBY_date/*高中毕业日期*/
-FROM
-personnelinformation
-LEFT JOIN excellentyouth
-ON excellentyouth.ID_number = personnelinformation.ID_number
-LEFT JOIN person_cate1_bmb
-ON person_cate1_bmb.Person_cate1_ = personnelinformation.person_cate1
-LEFT JOIN person_cate2_bmb
-ON person_cate2_bmb.person_cate2_ = personnelinformation.person_cate2
-LEFT JOIN major_bmb
-ON major_bmb.major = personnelinformation.major
-LEFT JOIN nation_bmb
-ON nation_bmb.nation = personnelinformation.nation
-LEFT JOIN polity_bmb
-ON polity_bmb.Politics_status = personnelinformation.politics_status
-LEFT JOIN language_bmb
-ON language_bmb.language = personnelinformation.language
-LEFT JOIN edu_bmb
-ON edu_bmb.edu = personnelinformation.edu
-LEFT JOIN degree_bmb
-ON degree_bmb.degree = personnelinformation.degree
-LEFT JOIN organization
-ON `organization`.Department_ID=personnelinformation.Department_ID
-LEFT JOIN `activist`
-ON `activist`.ID_number=personnelinformation.ID_number
-WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
+            Pinfo.ID_number,
+            Pinfo.name,
+            Pinfo.sex,
+            Pinfo.nation,
+            Pinfo.native_place,
+            Pinfo.police_station,
+            Pinfo.Home_Add,
+            Pinfo.politics_status,
+            Pinfo.edu,
+            Pinfo.strong_point,
+            Pinfo.instructor_ID,
+            Pinfo.major,
+            Pinfo.nation,
+            Pinfo.Department_ID,
+            Pinfo.SQRD_time,
+            Pinfo.LJJ_time,
+            Pinfo.adminis_fun,
+            Pinfo.state,
+            Pinfo.tel,
+            Pinfo.ranking,
+            Pinfo.zip_code,
+            Pinfo.all_funkobject_amount,
+            Pinfo.floor_number,
+            Pinfo.dormitory_number,
+            Pinfo.bed_number,
+            Pinfo.reward_condtion,
+            Pinfo.remark,
+            Pinfo.YorNwrong,
+            Pinfo.TC_and_BZ,
+
+            -- trainer
+            excellentyouth.`join_T_time` AS join_T_time,/*入团时间*/
+            activist.`GZRX_date` AS GZRX_date,/*高中入学日期*/
+            activist.`GZBY_date` AS GZBY_date/*高中毕业日期*/
+            FROM
+            personnelinformation AS Pinfo
+            LEFT JOIN excellentyouth
+            ON excellentyouth.ID_number = Pinfo.ID_number
+            LEFT JOIN `activist`
+            ON `activist`.ID_number=Pinfo.ID_number
+            WHERE Pinfo.ID_number='".$_GET["ID"]."'";
             if($resGSR1=mysqli_query($db,$sqlGetStuR1)) {
                 while ($rowsGSR1 = mysqli_fetch_assoc($resGSR1)) {
                     ?>
@@ -145,7 +144,12 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                             <div align="right">辅导员：</div>
                         </td>
                         <td width="185">
-                            <input type="text" name="instructor_ID" value="<?php echo $rowsGSR1["instructor_ID"]; ?>" class="input-medium">
+                            <select name="instructor_ID" class="input-medium">
+                                <?php
+                                $sqlInstructorGroups="SELECT ID_number AS instructor_ID,name FROM personnelinformation WHERE instructor_mark=1";
+                                GetSelectGroup($db,$rowsGSR1,$sqlInstructorGroups,"instructor_ID","name");
+                                ?>
+                            </select>
                         </td>
                         <td width="236" rowspan="5">
                             <img src="../images/photo.png" />
@@ -176,20 +180,7 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                         <td>
                             <select name="major" class="input-medium">
                                 <?php
-                                $sqlAllMajor="SELECT * FROM major_bmb";
-                                if($resAM=mysqli_query($db,$sqlAllMajor)){
-                                    while($rowsAM=mysqli_fetch_assoc($resAM)){
-                                        if($rowsGSR1["major"]==$rowsAM["major"]){
-                                            ?>
-                                            <option selected="selected" value="<?php echo $rowsAM["major"]; ?>"><?php echo $rowsAM["major_name"]; ?></option>
-                                            <?php
-                                        }else{
-                                            ?>
-                                            <option value="<?php echo $rowsAM["major"]; ?>"><?php echo $rowsAM["major_name"]; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                }
+                                GetSelectGroup($db,$rowsGSR1,"SELECT major,major_name FROM major_bmb","major","major_name");
                                 ?>
                             </select>
                         </td>
@@ -216,19 +207,7 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                             <select name="nation" class="input-medium">
                                 <?php
                                 $sqlAllNation = "SELECT * FROM nation_bmb";
-                                if ($resAN = mysqli_query($db, $sqlAllNation)) {
-                                    while ($rowsAN = mysqli_fetch_assoc($resAN)) {
-                                        if($rowsGSR1["nation"]==$rowsAN["nation"]){
-                                            ?>
-                                            <option selected="true" value="<?php echo $rowsAN["nation"]; ?>"><?php echo $rowsAN["nation_name"];?></option>
-                                            <?php
-                                        }else{
-                                            ?>
-                                            <option value="<?php echo $rowsAN["nation"]; ?>"><?php echo $rowsAN["nation_name"]; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                }
+                                GetSelectGroup($db,$rowsGSR1,$sqlAllNation,"nation","nation_name");
                                 ?>
                             </select>
                         </td>
@@ -244,7 +223,11 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                         <td>
                             <input type="text" onclick="setPCD('getNativeName')" value="<?php echo $rowsGSR1["native_place"]; ?>" href="#distPicker" role="button" data-toggle="modal" class="input-medium" name="native_place" id="getNativeName" readonly="readonly">
 <?php
+if($rowsGSR1["native_place"]==""){
+    $PCDArray = array('—— 省 ——','—— 市 ——','—— 区 ——');
+    }else{
     $PCDArray=explode('-',$rowsGSR1["native_place"]);//分割籍贯
+    }
 ?>
                             <!--选择籍贯-->
                             <div class="modal small hide fade" id="distPicker" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -264,7 +247,6 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                                     </div>
                                     <br/><br/><br/>
                                 </div>
-
                             </div>
                         </td>
                         <td>
@@ -296,7 +278,7 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                             <div align="right">家庭住址：</div>
                         </td>
                         <td>
-                            <input type="text" name="address" value="<?php echo $rowsGSR1["Home_Add"]; ?>" class="input-medium">
+                            <input type="text" name="Home_Add" value="<?php echo $rowsGSR1["Home_Add"]; ?>" class="input-medium">
                         </td>
                         <td>
                             <div align="right">列积极分子时间：</div>
@@ -338,19 +320,7 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                             <select name="politics_status" class="input-medium">
                                 <?php
                                 $sqlAllPolity = "SELECT * FROM polity_bmb";
-                                if ($resAP = mysqli_query($db, $sqlAllPolity)) {
-                                    while ($rowsAP = mysqli_fetch_assoc($resAP)) {
-                                        if($rowsGSR1["politics_status"]==$rowsAP["Politics_status"]){
-                                            ?>
-                                            <option selected="true" value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
-                                            <?php
-                                        }else{
-                                            ?>
-                                            <option value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                }
+                                GetSelectGroup($db,$rowsGSR1,$sqlAllPolity,"politics_status","name");
                                 ?>
                             </select>
                         </td>
@@ -361,21 +331,8 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                             <select name="Department_ID" class="input-medium">
                                 <?php
                                 $sqlAllDepartment = "SELECT * FROM `organization`";
-                                if ($resAD = mysqli_query($db, $sqlAllDepartment)) {
-                                    while ($rowsAD = mysqli_fetch_assoc($resAD)) {
-                                        if($rowsGSR1["Department_ID"]==$rowsAD["Department_ID"]){
-                                            ?>
-                                            <option selected="true" value="<?php echo $rowsAD["Department_ID"]; ?>"><?php echo $rowsAD["name"]; ?></option>
-                                            <?php
-
-                                        }else{
-                                            ?>
-                                            <option value="<?php echo $rowsAD["Department_ID"]; ?>"><?php echo $rowsAD["name"]; ?></option>
-                                            <?php
-
-                                        }
-                                    }
-                                }
+                                GetSelectGroup($db,$rowsGSR1,$sqlAllDepartment,"Department_ID","name");
+                                
                                 ?>
                             </select>
                         </td>
@@ -562,10 +519,7 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                             <div align="right">床号：</div>
                         </td>
                         <td>
-                            <input type="text"
-                                   name="dormitory_number"
-                                   value="<?php echo $rowsGSR1["dormitory_number"]; ?>"
-                                   class="input-medium">
+                            <input type="text" name="bed_number" value="<?php echo $rowsGSR1["bed_number"]; ?>" class="input-medium">
                         </td>
                         <td>
                             <div align="right">处分情况：</div>
@@ -574,13 +528,13 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                             <?php
                             if ($rowsGSR1["YorNwrong"] == 0) {
                                 ?>
-                                <input type="radio" name="YorNwrong" value="0" id="sex_0" checked="checked"/> 是
-                                <input type="radio" name="YorNwrong" value="1" id="sex_1"/>否
+                                <input type="radio" name="YorNwrong" value="0" id="sex_0" checked="checked"/>否 
+                                <input type="radio" name="YorNwrong" value="1" id="sex_1"/>是
                                 <?php
                             } else {
                                 ?>
-                                <input type="radio" name="YorNwrong" value="0" id="sex_0"/> 是
-                                <input type="radio" name="YorNwrong" value="1" id="sex_1" checked="checked"/>否
+                                <input type="radio" name="YorNwrong" value="0" id="sex_0"/> 否
+                                <input type="radio" name="YorNwrong" value="1" id="sex_1" checked="checked"/>是
                                 <?php
                             }
                             ?>
@@ -604,17 +558,6 @@ WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
                         </td>
                         <td rowspan="2">
                             <textarea form="edit" name="TC_and_BZ" ><?php echo $rowsGSR1["TC_and_BZ"]; ?></textarea>
-                        </td>
-                        <td>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div align="right">床号：</div>
-                        </td>
-                        <td>
-                            <input type="text" name="bed_number" value="<?php echo $rowsGSR1["bed_number"]; ?>" class="input-medium">
                         </td>
                         <td>
 

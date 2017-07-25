@@ -127,9 +127,9 @@
                 <div class="modal-body">
                     <form id="tab" action="1_pmd_applicant_list.php" method="post">
                         <label>身份证号</label>
-                        <input type="text" name="ID_number" value="" class="input-xlarge">
+                        <input type="text" name="ID_number" id='ID_number' class="input-xlarge">
                         <label>姓名</label>
-                        <input type="text" name="name" value="" class="input-xlarge">
+                        <input type="text" name="name" id='name' value="" class="input-xlarge">
                         <label>人员类别</label>
                         <select name="person_cate1">
                             <option value="1">教师</option>
@@ -161,7 +161,32 @@
     function SearchPage() {
 
     }
-
+        $(function() {$('input').attr('autocomplete','off')});//关闭输入补全
+    // 验证身份证号
+    $('form #ID_number').blur(function(){
+            var $parent=$(this).parent();
+            $parent.find('.formtipsID').remove();
+            if(this.value===""||this.value.length!=18){
+                $(this).after("<span class='formtipsID onError'>请输入正确的18位身份证号</span>");
+            }
+        });
+    // 验证姓名
+    $('form #name').blur(function(){
+            var $parent=$(this).parent();
+            $parent.find('.formtipsN').remove();
+            if(this.value===""){
+                $(this).after("<span class='formtipsN onError'>请输入姓名</span>");
+            }else if(this.value.length>9){
+                $(this).after("<span class='formtipsN onError'>姓名不能超过10个字符</span>");
+            }
+        });
+        //验证提交
+        $('#tab').submit(function(e){
+            $('form :input').trigger('blur');
+            if($('form .onError').length){
+                e.preventDefault();
+            }
+        })
 </script>
 </body>
 </html>
