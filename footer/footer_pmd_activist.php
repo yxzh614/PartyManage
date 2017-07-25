@@ -6,7 +6,17 @@ if(isset($_COOKIE["PHPSESSID"])){
     if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
 
         if(isset($_POST["submit"])&&$_POST["submit"]) {
-            $sqlUpdateStu = "";
+            echo $_POST['ZQ_positivemeet_ID'];
+            echo $_POST['Tmember_meet_time'];
+            echo $_POST['JJPX_time'];
+            echo $_POST['JJPX_mark'];
+            $sqlUpdateStu = "UPDATE personnelinformation
+            SET 
+            `Tmember_meet_time`='" . ($_POST["Tmember_meet_time"] ? $_POST["Tmember_meet_time"] : "0000-01-01") . "',
+            `JJPX_time`='" . ($_POST["JJPX_time"] ? $_POST["JJPX_time"] : "0000-01-01") . "',
+            `JJPX_mark`='" . $_POST["JJPX_mark"] . "',
+            `ZQ_positivemeet_ID`='" . $_POST["ZQ_positivemeet_ID"] . "'
+            WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
             echo $sqlUpdateStu;
             if (mysqli_query($db, $sqlUpdateStu)) {
                 ?>
@@ -16,7 +26,7 @@ if(isset($_COOKIE["PHPSESSID"])){
                 </script>
                 <?php
             }
-        }
+        }else{
 ?>
 <h2>入党积极分子阶段信息</h2>
 <form action="../footer/footer_pmd_activist.php?ID=<?php echo $_GET["ID"];?>" method="post" id="edit">
@@ -35,7 +45,7 @@ if(isset($_COOKIE["PHPSESSID"])){
                 ?>
                 <tr align="right">
                     <td width="231">支部确定入党积极分子会议：</td>
-                    <td width="203" align="left"><select name="ZQ_positivemeet" class="input-medium">
+                    <td width="203" align="left"><select name="ZQ_positivemeet_ID" class="input-medium">
                         <?php 
                             $sqlGetMeeting="SELECT conference_ID AS ZQ_positivemeet_ID,meeting_theme FROM conference WHERE Department_ID='000000000' OR Department_ID=".$rowsGSR1["Department_ID"];
                             GetSelectGroup($db,$rowsGSR1,$sqlGetMeeting,"ZQ_positivemeet_ID","meeting_theme");
@@ -50,7 +60,7 @@ if(isset($_COOKIE["PHPSESSID"])){
                     <td>入党积极分子分子培训时间：</td>
                     <td align="left"><input type="date" name="JJPX_time" class="input-medium" value="<?php echo $rowsGSR1['JJPX_time'];?>"></td>
                     <td>培训成绩：</td>
-                    <td align="left"><input type="text" name="JJPX_mark" class="input-medium" value="<?php echo $rowsGSR1['JJPX_mark'];?>"></td>
+                    <td align="left"><input type="number" max=100 name="JJPX_mark" class="input-medium" value="<?php echo $rowsGSR1['JJPX_mark'];?>"></td>
                 </tr>
                 <?php
             }
@@ -62,7 +72,8 @@ if(isset($_COOKIE["PHPSESSID"])){
     </div>
 </div>
 </form>
-        <?php
+<?php
+        }
     }else{
         ?>
         <script>
