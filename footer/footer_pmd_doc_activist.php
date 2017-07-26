@@ -12,7 +12,7 @@
       <td>2014年07月22日</td>
       <td>已提交</td>
       <td>
-           <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
+           <a href="#change" class="doc" role="button" modal"><i class="icon-pencil"></i></a>
        </td>
     </tr>
     <tr>
@@ -20,7 +20,7 @@
       <td>2015年07月22日</td>
       <td>已提交</td>
       <td>
-           <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
+           <a href="#change" class="doc" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
        </td>
     </tr>
      <tr>
@@ -28,7 +28,7 @@
       <td>-</td>
       <td>未提交</td>
       <td>
-           <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
+           <a href="#change" class="doc" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
        </td>
     </tr>
      <tr>
@@ -36,7 +36,7 @@
       <td>-</td>
       <td>未提交</td>
       <td>
-           <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
+           <a href="#change"  class="doc" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
        </td>
     </tr>
      <tr>
@@ -44,7 +44,7 @@
       <td>-</td>
       <td>未提交</td>
       <td>
-           <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
+           <a href="#change" class="doc" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
        </td>
     </tr>
   </tbody>
@@ -68,3 +68,7 @@
     </div>
   </div>   
 </div>
+<script>
+    $('.doc').on('click',function () {
+    })
+</script>

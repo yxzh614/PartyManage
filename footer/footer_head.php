@@ -26,7 +26,25 @@
             font-weight: bold;
         }
     </style>
-
+<?php 
+// 获取表中下拉以及被选中的项
+// 
+function GetSelectGroup($db,$selectedResult,$sql,$realValue,$showValue){
+    if($res=mysqli_query($db,$sql)){
+        while($rows=mysqli_fetch_assoc($res)){
+            if($selectedResult[$realValue]==$rows[$realValue]){
+            ?>
+            <option selected="selected" value="<?php echo $rows[$realValue]; ?>"><?php echo $rows[$showValue]; ?></option>
+            <?php
+            }else{
+            ?>
+            <option value="<?php echo $rows[$realValue]; ?>"><?php echo $rows[$showValue]; ?></option>
+            <?php
+            }
+        }
+    }
+}
+?>
    
     <link rel="shortcut icon" href="../assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">

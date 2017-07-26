@@ -52,7 +52,6 @@
                       <input type="text" class="span12" name="username" >
                       <label>密码：</label>
                       <input type="password" class="span12" name="password">
-                      <!--目前默认登录到权限最高的人的首页，需后端判断开发-->
                       <input type="submit" name="submit" class="btn btn-primary pull-right" value="登录">
 
                       <label class="remember-me"><input type="checkbox">记住密码</label>

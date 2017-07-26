@@ -9,23 +9,23 @@ if(isset($_COOKIE["PHPSESSID"])){
                     $sqlUpdateTea=" 
 UPDATE `personnelinformation` 
 SET 
-`name`='".$_POST['name']."', /*姓名*/
-`SQRD_time`='".($_POST["SQRD_time"]?$_POST["SQRD_time"]:"2000-01-01")."', /*申请入党时间*/
-`sex`='".$_POST["sex"]."', /*性别*/
-`LJJ_time`='".($_POST["LJJ_time"]?$_POST["LJJ_time"]:"2000-01-01")."',/*列积极分子时间*/
-/*`native_place`='".$_POST['native_name']."',*//*籍贯*/
-`nation`='".$_POST["nation"]."',/*民族*/
-`Department_ID`='".$_POST["Department_ID"]."',/*所属组织*/
-`state`='".$_POST["state"]."',/*状态*/
-`edu`='".$_POST["edu"]."',/*学历*/
-`strong_point`='".$_POST["strong_point"]."',/*特长*/
-`tel`='".$_POST["tel"]."',/*电话*/
-`reward_condtion`='".$_POST["reward_condtion"]."',/*获奖情况*/
-`YorNwrong`='".$_POST["YorNwrong"]."',/*处分情况*/
-`remark`='".$_POST["remark"]."',/*备注*/
-`TC_and_BZ`='".$_POST["TC_and_BZ"]."',/*备注*/
-`politics_status`='".$_POST['politics_status']."',/*政治面貌*/
-`zip_code`='".$_POST["zip_code"]."'/*邮编*/
+`name`='".$_POST['name']."',                                                    /*姓名*/
+`SQRD_time`='".($_POST["SQRD_time"]?$_POST["SQRD_time"]:"2000-01-01")."',       /*申请入党时间*/
+`sex`='".$_POST["sex"]."',                                                      /*性别*/
+`LJJ_time`='".($_POST["LJJ_time"]?$_POST["LJJ_time"]:"2000-01-01")."',          /*列积极分子时间*/
+`nation`='".$_POST["nation"]."',                                                /*民族*/
+`Department_ID`='".$_POST["Department_ID"]."',                                  /*所属组织*/
+`state`='".$_POST["state"]."',                                                  /*状态*/
+`edu`='".$_POST["edu"]."',                                                      /*学历*/
+`strong_point`='".$_POST["strong_point"]."',                                    /*特长*/
+`tel`='".$_POST["tel"]."',                                                      /*电话*/
+`reward_condtion`='".$_POST["reward_condtion"]."',                              /*获奖情况*/
+`YorNwrong`='".$_POST["YorNwrong"]."',                                          /*处分情况*/
+`remark`='".$_POST["remark"]."',                                                /*备注*/
+`TC_and_BZ`='".$_POST["TC_and_BZ"]."',                                          /*备注*/
+`politics_status`='".$_POST['politics_status']."',                              /*政治面貌*/
+`zip_code`='".$_POST["zip_code"]."',                                            /*邮编*/
+`native_place`='".$_POST["native_place"]."'                                     /*籍贯*/
  WHERE `personnelinformation`.`ID_number` = '".$_POST["ID_number"]."'";
                     echo $sqlUpdateTea;
                     if(mysqli_query($db,$sqlUpdateTea)){
@@ -72,45 +72,30 @@ else{
   <tbody>
   <?php
   $sqlGetTeaR1="SELECT
-  personnelinformation.*,
-  person_cate1_bmb.Person_cate1_name AS p1name,/* 类别1*/
-  person_cate2_bmb.person_cate2_name AS p2name,/* 类别2*/ 
-  major_bmb.major_name AS major_name,/* 专业*/
-  nation_bmb.nation_name AS nation_name,/* 民族*/
-  native_bmb.place_name AS native_name,/* 籍贯*/
-  polity_bmb.name AS polity_name,/* 政治面貌*/
-  language_bmb.language_name AS language_name,/* 外语语种*/
-  edu_bmb.edu_name AS edu_name,/* 学历*/
-  degree_bmb.degree_name AS degree_name,/* 学位*/
-  home_add_bmb.place_name AS home_add_name,/* 家庭住址所在地*/
-  police_station_bmb.place_name AS police_station_name,/* 户口所在派出所*/
-  organization.name AS department_name/* 所属组织机构*/
+  Pinfo.ID_number,
+  Pinfo.name,
+  Pinfo.sex,
+  Pinfo.nation,
+  Pinfo.native_place,
+  Pinfo.police_station,
+  Pinfo.Home_Add,
+  Pinfo.politics_status,
+  Pinfo.edu,
+  Pinfo.strong_point,
+  Pinfo.tel,
+  Pinfo.zip_code,
+  
+  Pinfo.SQRD_time,
+  Pinfo.LJJ_time,
+  Pinfo.Department_ID,
+  Pinfo.adminis_fun,
+  Pinfo.state,
+  Pinfo.reward_condtion,
+  Pinfo.YorNwrong,
+  Pinfo.TC_and_BZ,
+  Pinfo.remark
 FROM
-  personnelinformation
-LEFT JOIN person_cate1_bmb
-ON person_cate1_bmb.Person_cate1_ = personnelinformation.person_cate1
-LEFT JOIN person_cate2_bmb
-ON person_cate2_bmb.person_cate2_ = personnelinformation.person_cate2
-LEFT JOIN major_bmb
-ON major_bmb.major = personnelinformation.major
-LEFT JOIN nation_bmb
-ON nation_bmb.nation = personnelinformation.nation
-LEFT JOIN home_place_bmb AS native_bmb
-ON native_bmb.place = personnelinformation.native_place
-LEFT JOIN polity_bmb
-ON polity_bmb.Politics_status = personnelinformation.politics_status
-LEFT JOIN language_bmb
-ON language_bmb.language = personnelinformation.language
-LEFT JOIN edu_bmb
-ON edu_bmb.edu = personnelinformation.edu
-LEFT JOIN degree_bmb
-ON degree_bmb.degree = personnelinformation.degree
-LEFT JOIN home_place_bmb AS home_add_bmb
-ON home_add_bmb.place = personnelinformation.Home_Add
-LEFT JOIN home_place_bmb AS police_station_bmb
-ON police_station_bmb.place = personnelinformation.police_station
-LEFT JOIN organization
-ON `organization`.Department_ID=personnelinformation.Department_ID
+  personnelinformation AS Pinfo
 WHERE ID_number='".$_GET["ID"]."'";
   if($resGTR1=mysqli_query($db,$sqlGetTeaR1)) {
       while ($rowsGTR1 = mysqli_fetch_assoc($resGTR1)) {
@@ -182,19 +167,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                   <select name="nation" class="input-medium">
                       <?php
                       $sqlAllNation = "SELECT * FROM nation_bmb";
-                      if ($resAN = mysqli_query($db, $sqlAllNation)) {
-                          while ($rowsAN = mysqli_fetch_assoc($resAN)) {
-                              if($rowsGTR1["nation"]==$rowsAN["nation"]){
-                                  ?>
-                                  <option selected="true" value="<?php echo $rowsAN["nation"]; ?>"><?php echo $rowsAN["nation_name"];?></option>
-                                  <?php
-                              }else{
-                                  ?>
-                                  <option value="<?php echo $rowsAN["nation"]; ?>"><?php echo $rowsAN["nation_name"]; ?></option>
-                                  <?php
-                              }
-                          }
-                      }
+                      GetSelectGroup($db,$rowsGTR1,$sqlAllNation,"nation","nation_name");
                       ?>
                   </select>
               </td>
@@ -205,21 +178,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                   <select name="Department_ID" class="input-medium">
                       <?php
                       $sqlAllDepartment = "SELECT * FROM `organization`";
-                      if ($resAD = mysqli_query($db, $sqlAllDepartment)) {
-                          while ($rowsAD = mysqli_fetch_assoc($resAD)) {
-                              if($rowsGTR1["Department_ID"]==$rowsAD["Department_ID"]){
-                                  ?>
-                                  <option selected="true" value="<?php echo $rowsAD["Department_ID"]; ?>"><?php echo $rowsAD["name"]; ?></option>
-                                  <?php
-
-                              }else{
-                                  ?>
-                                  <option value="<?php echo $rowsAD["Department_ID"]; ?>"><?php echo $rowsAD["name"]; ?></option>
-                                  <?php
-
-                              }
-                          }
-                      }
+                      GetSelectGroup($db,$rowsGTR1,$sqlAllDepartment,"Department_ID","name");
                       ?>
                   </select>
               </td>
@@ -228,9 +187,35 @@ WHERE ID_number='".$_GET["ID"]."'";
               <td>
                   <div align="right">籍贯：</div>
               </td>
-              <td>
-                  <input type="text" href="#distPicker" role="button" data-toggle="modal" class="input-medium" name="native_name" id="getNativeName" readonly="readonly">
-                  </td>
+             <td>
+                            <input type="text" onclick="setPCD('getNativeName')" value="<?php echo $rowsGTR1["native_place"]; ?>" href="#distPicker" role="button" data-toggle="modal" class="input-medium" name="native_place" id="getNativeName" readonly="readonly">
+<?php
+if($rowsGTR1["native_place"]==""){
+    $PCDArray = array('—— 省 ——','—— 市 ——','—— 区 ——');
+    }else{
+    $PCDArray=explode('-',$rowsGTR1["native_place"]);//分割籍贯
+    }
+?>
+                            <!--选择籍贯-->
+                            <div class="modal small hide fade" id="distPicker" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h3 id="myModalLabel">选择籍贯</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <div data-toggle="distpicker">
+                                        <select id="selectP" data-province="<?php echo $PCDArray[0];?>"></select>
+                                        <select id="selectC" data-city="<?php echo $PCDArray[1];?>"></select>
+                                        <select id="selectD" data-district="<?php echo $PCDArray[2];?>"></select>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
+                                        <button class="btn btn-danger" id="btn_change_sava" onclick="getPCD('getNativeName')" data-dismiss="modal">确定</button>
+                                    </div>
+                                    <br/><br/><br/>
+                                </div>
+                            </div>
+                        </td>
               <td>
                   <div align="right">行政职务：</div>
               </td>
@@ -276,7 +261,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                   <div align="right">户口所在派出所：</div>
               </td>
               <td>
-                  <input type="text" name="police_station" value="<?php echo $rowsGTR1["police_station_name"]; ?>" class="input-medium" placeholder="false">
+                  <input type="text" name="police_station" value="<?php echo $rowsGTR1["police_station"]; ?>" class="input-medium" placeholder="false">
               </td>
               <td>
                   <div align="right">状态：</div>
@@ -284,20 +269,35 @@ WHERE ID_number='".$_GET["ID"]."'";
               <td>
                   <select name="state" class="input-medium">
                       <?php
-                      $sqlAllState = "SELECT * FROM state_bmb";
-                      if ($resAS = mysqli_query($db, $sqlAllState)) {
-                          while ($rowsAS = mysqli_fetch_assoc($resAS)) {
-                              if($rowsGTR1["state"]==$rowsAS["state"]){
-                                  ?>
-                                  <option selected="true" value="<?php echo $rowsAS["state"]; ?>"><?php echo $rowsAS["state_name"]; ?></option>
-                                  <?php
-
-                              }else{
-                                  ?>
-                                  <option value="<?php echo $rowsAS["state"]; ?>"><?php echo $rowsAS["state_name"]; ?></option>
-                                  <?php
-                              }
-                          }
+                      switch($rowsGTR1["state"]){
+                          case 1:{
+                              ?>
+                              <option selected="selected" value="1">在校</option>
+                              <option value="2">毕业</option>
+                              <option value="3">调出</option>
+                              <?php
+                          }break;
+                          case 2:{
+                              ?>
+                              <option value="1">在校</option>
+                              <option selected="selected" value="2">毕业</option>
+                              <option value="3">调出</option>
+                              <?php
+                          }break;
+                          case 3:{
+                              ?>
+                              <option value="1">在校</option>
+                              <option value="2">毕业</option>
+                              <option selected="selected" value="3">调出</option>
+                              <?php
+                          }break;
+                          default:{
+                              ?>
+                              <option selected="selected" value="1">在校</option>
+                              <option value="2">毕业</option>
+                              <option value="3">调出</option>
+                              <?php
+                          }break;
                       }
                       ?>
                   </select>
@@ -311,7 +311,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                   <div align="right">家庭住址：</div>
               </td>
               <td>
-                  <input type="text" name="address" value="<?php echo $rowsGTR1["home_add_name"] . $rowsGTR1["Home_Add_Detail"]; ?>" class="input-medium" placeholder="false">
+                  <input type="text" name="address" value="<?php echo $rowsGTR1["Home_Add"]; ?>" class="input-medium" placeholder="false">
               </td>
               <td rowspan="2">
                   <div align="right">获奖情况：</div>
@@ -341,20 +341,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                   <select name="politics_status" class="input-medium">
                       <?php
                       $sqlAllPolity = "SELECT * FROM polity_bmb";
-                      if ($resAP = mysqli_query($db, $sqlAllPolity)) {
-                          while ($rowsAP = mysqli_fetch_assoc($resAP)) {
-                              if($rowsGTR1["politics_status"]==$rowsAP["Politics_status"]){
-                                  ?>
-                                  <option selected="true" value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
-                                  <?php
-
-                              }else{
-                                  ?>
-                                  <option value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
-                                  <?php
-                              }
-                          }
-                      }
+                      GetSelectGroup($db,$rowsGTR1,$sqlAllPolity,"politics_status","name");
                       ?>
                   </select>
               </td>
@@ -388,20 +375,7 @@ WHERE ID_number='".$_GET["ID"]."'";
                   <select name="edu" class="input-medium">
                       <?php
                       $sqlAllEdu = "SELECT * FROM edu_bmb";
-                      if ($resAE = mysqli_query($db, $sqlAllEdu)) {
-                          while ($rowsAE = mysqli_fetch_assoc($resAE)) {
-                              if($rowsGTR1["edu"]==$rowsAE["edu"]){
-                                  ?>
-                                  <option selected="true" value="<?php echo $rowsAE["edu"]; ?>"><?php echo $rowsAE["edu_name"]; ?></option>
-                                  <?php
-
-                              }else{
-                                  ?>
-                                  <option value="<?php echo $rowsAE["edu"]; ?>"><?php echo $rowsAE["edu_name"]; ?></option>
-                                  <?php
-                              }
-                          }
-                      }
+                      GetSelectGroup($db,$rowsGTR1,$sqlAllEdu,"edu","edu_name");
                       ?>
                   </select>
               </td>
@@ -463,23 +437,3 @@ WHERE ID_number='".$_GET["ID"]."'";
     </div>
 </div>
 </form>
-<!--选择籍贯-->
-<div class="modal small hide fade" id="distPicker" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">选择籍贯</h3>
-    </div>
-    <div class="modal-body">
-        <div data-toggle="distpicker">
-            <select data-province="---- 选择省 ----"></select>
-            <select data-city="---- 选择市 ----"></select>
-            <select data-district="---- 选择区 ----"></select>
-        </div>
-        <div class="modal-footer">
-            <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
-            <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">确定</button>
-        </div>
-        <br/><br/><br/>
-    </div>
-
-</div>

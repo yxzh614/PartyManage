@@ -4,18 +4,25 @@
 
     <?php
     session_start();//huihua
-    include("footer/footer_head.php");
     require_once("config.php");
     if(isset($_COOKIE["PHPSESSID"])){
         session_id($_COOKIE["PHPSESSID"]);
         if (isset($_SESSION["right"]) && $_SESSION["right"] == 0) {
             if (isset($_POST["submit"]) && $_POST["submit"]) {
+                echo $_POST['type'];
                 switch ($_POST["type"]) {
                     case 'del': {
+
                         $checkbox = $_POST['onetodel'];
                         for ($i = 0; $i < count($checkbox); $i++) {
                             $sqlToDel = "DELETE FROM `personnelinformation` WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
                             echo $sqlToDel;
+                            if (mysqli_query($db, $sqlToDel)) {
+                                // echo "==插入成功==";
+                                echo "<script>alert('删除成功！');</script>";
+                            }else{
+                                echo $sqlToDel;
+                            }
                         }
                     }
                         break;
@@ -34,10 +41,12 @@
                             if (mysqli_query($db, $sqlToDel)) {
                                 // echo "==插入成功==";
                                 echo "<script>alert('删除成功！');</script>";
+                            }else{
+                                echo $sqlToDel;
                             }
                             ?><?php
                         }
-                        echo "<script>window.location = \"Right_1/1_pmm_information.php\";</script>";
+                        echo "<script>window.location = 'Right_1/1_pmm_information.php';</script>";
                     }
                         break;
                     case 'delAppraisement': {
@@ -48,6 +57,8 @@
                             if (mysqli_query($db, $sqlToDel)) {
                                 // echo "==插入成功==";
                                 echo "<script>alert('删除成功！');</script>";
+                            }else{
+                                echo $sqlToDel;
                             }
                             ?><?php
                         }
@@ -81,6 +92,45 @@
                         echo "<script>window.location = \"Right_1/1_pmm_information.php\";</script>";
                     }
                         break;
+                    case 'delTrain':{
+                        if($_POST['edit']==true){
+            $sqlUpdateTrain="UPDATE train 
+                    SET
+                    `train_memory`='".$_POST['train_memory']."',
+                    `bookname`='".$_POST['bookname']."',
+                    `mark`='".$_POST['mark']."',
+                    `Fschool_advise`='".$_POST['Fschool_advise']."',
+                    `exam_date`='" . ($_POST["exam_date"] ? $_POST["exam_date"] : "0000-01-01") . "'
+                    WHERE
+                    ID='".$_POST['ID']."'";
+        if (mysqli_query($db, $sqlUpdateTrain)) {
+            ?>
+            <script>
+                alert('修改成功！');
+                window.location="<?php echo $_POST['url']?>";
+            </script>
+        <?php
+        }else{
+            echo $sqlUpdateTrain;
+        }
+        }else{
+                            echo 1;
+                            $checkbox = $_POST['onetodel'];
+                            for ($i = 0; $i < count($checkbox); $i++) {
+                                $sqlToDel = "DELETE FROM `train` WHERE `ID` = '" . $checkbox[$i] . "'";
+                                if (mysqli_query($db, $sqlToDel)) {
+                                    // echo "==插入成功==";
+                                    echo "<script>alert('删除成功！');</script>";
+                                }else{
+                                    echo $sqlToDel;
+                                }
+                                ?><script>
+                                    window.location="<?php echo $_POST['url']?>";
+                                </script><?php
+                            }
+                        }
+
+                    }break;
                 }
 
             } else {

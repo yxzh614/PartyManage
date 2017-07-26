@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-        <?php 
-	session_start();
-	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
-
-  </head>
+<head>
+    <?php include("../footer/footer_head.php");
+    require_once ("../config.php");
+    session_start();
+    if(isset($_COOKIE["PHPSESSID"])){
+    session_id($_COOKIE["PHPSESSID"]);
+    if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
+    ?>
+</head>
  
   <body class=""> 
     
@@ -45,9 +47,27 @@
         $(function() {
             $('.demo-cancel-click').click(function(){return false;});
         });
+        $(function() {$('input').attr('autocomplete','off')});//关闭输入补全
     </script>
     
   </body>
 </html>
 
+<?php
+}else{
+    ?>
+    <script>
+        alert("未登录或权限不足！");
+        window.location = "../sign-in.php";
+    </script>
+    <?php
+}
+}
+else{
+    ?>
+    <script>
+        window.location = "../sign-in.php";
+    </script>
+    <?php
+}
 
