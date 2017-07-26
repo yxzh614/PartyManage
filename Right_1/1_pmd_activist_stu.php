@@ -47,6 +47,7 @@
         $(function() {
             $('.demo-cancel-click').click(function(){return false;});
         });
+        $(function() {$('input').attr('autocomplete','off')});//关闭输入补全
     </script>
     
   </body>
