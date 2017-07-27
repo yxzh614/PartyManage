@@ -70,20 +70,8 @@ if(isset($_GET["stuId"])) {
                         <td>政治面貌：</td>
                         <td align="left"><select name="politics_status" class="input-medium">
                                 <?php
-                                $sqlAllPolity="SELECT * FROM polity_bmb";
-                                if($resAP=mysqli_query($db,$sqlAllPolity)){
-                                    while($rowsAP=mysqli_fetch_assoc($resAP)){
-                                        if($rowsAS["politics_status"]==$rowsAP["Politics_status"]){
-                                            ?>
-                                            <option selected="selected" value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
-                                            <?php
-                                        }else{
-                                            ?>
-                                            <option value="<?php echo $rowsAP["Politics_status"]; ?>"><?php echo $rowsAP["name"]; ?></option>
-                                            <?php
-                                        }
-                                    }
-                                }
+                                $sqlAllPolity = "SELECT * FROM polity_bmb";
+                                GetSelectGroup($db,$rowsAS,$sqlAllPolity,"politics_status","name");
                                 ?>
                             </select></td>
                         <td align="left">&nbsp;</td>
