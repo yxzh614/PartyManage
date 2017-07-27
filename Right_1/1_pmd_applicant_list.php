@@ -39,7 +39,7 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="btn-toolbar">
-                <button class="btn btn-primary"><a href="#change" role="button" data-toggle="modal"><font color="#F7F8F7"><i class="icon-plus"></i>新建</font></a></button>
+                <button class="btn btn-primary"><a href="#change" role="button" data-toggle="modal"><span style="color: #F7F8F7; "><i class="icon-plus"></i>新建</span></a></button>
                 <button class="btn">导入</button>
                 <a href="../getExcel.php" class="btn">导出</a>
             </div>
@@ -161,32 +161,32 @@
     function SearchPage() {
 
     }
-        $(function() {$('input').attr('autocomplete','off')});//关闭输入补全
+    $(function() {$('input').attr('autocomplete','off')});//关闭输入补全
     // 验证身份证号
     $('form #ID_number').blur(function(){
-            var $parent=$(this).parent();
-            $parent.find('.formtipsID').remove();
-            if(this.value===""||this.value.length!=18){
-                $(this).after("<span class='formtipsID onError'>请输入正确的18位身份证号</span>");
-            }
-        });
+        var $parent=$(this).parent();
+        $parent.find('.formtipsID').remove();
+        if(this.value===""||this.value.length!=18){
+            $(this).after("<span class='formtipsID onError'>请输入正确的18位身份证号</span>");
+        }
+    });
     // 验证姓名
     $('form #name').blur(function(){
-            var $parent=$(this).parent();
-            $parent.find('.formtipsN').remove();
-            if(this.value===""){
-                $(this).after("<span class='formtipsN onError'>请输入姓名</span>");
-            }else if(this.value.length>9){
-                $(this).after("<span class='formtipsN onError'>姓名不能超过10个字符</span>");
-            }
-        });
-        //验证提交
-        $('#tab').submit(function(e){
-            $('form :input').trigger('blur');
-            if($('form .onError').length){
-                e.preventDefault();
-            }
-        })
+        var $parent=$(this).parent();
+        $parent.find('.formtipsN').remove();
+        if(this.value===""){
+            $(this).after("<span class='formtipsN onError'>请输入姓名</span>");
+        }else if(this.value.length>9){
+            $(this).after("<span class='formtipsN onError'>姓名不能超过10个字符</span>");
+        }
+    });
+    //验证提交
+    $('#tab').submit(function(e){
+        $('form :input').trigger('blur');
+        if($('form .onError').length){
+            e.preventDefault();
+        }
+    })
 </script>
 </body>
 </html>
