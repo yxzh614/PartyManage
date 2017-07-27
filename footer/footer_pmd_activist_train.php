@@ -51,9 +51,10 @@ if(isset($_COOKIE["PHPSESSID"])){
                             while($rowsGT=mysqli_fetch_assoc($resGT)){
                                 ?>
                                 <form  id='inform' action="../footer/footer_pmd_activist_train.php" method="post">
-                                    <input type="hidden" name="edit" value=true>
+                                    <input type="hidden" name="edit" id="editORdel" value=true>
                                     <input type="hidden" name="ID" value="<?php echo $rowsGT["ID"];?>">
                                     <input type="hidden" name="url" value="<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']; ?>">
+                                    <input type="hidden" name="ID_number" value="<?php echo $_GET["ID"]?>">
                                     <tr>
                                         <td><input form="out" type="checkbox" name="onetodel[]" class="onetodel" value="<?php echo $rowsGT["ID"];?>"></td>
                                         <td class="showValue"><?php echo $rowsGT["train_memory"];?></td>
@@ -66,7 +67,7 @@ if(isset($_COOKIE["PHPSESSID"])){
                                         <td class="hideInput"><input class="input-medium" type='text' name='Fschool_advise' value="<?php echo $rowsGT["Fschool_advise"];?>"></td>
                                         <td class="showValue"><?php echo $rowsGT["exam_date"];?></td>
                                         <td class="hideInput"><input class="input-medium" type='date' name='exam_date' value="<?php echo $rowsGT["exam_date"];?>"></td>
-                                        <td><input class="btn btn-primary" name='submit' type='submit' onclick="return confirm('确定要编辑吗？')&&(()=>{document.getElementById('type').value='delTrain';})();" value='保存'></td>
+                                        <td><input class="btn btn-primary" name='submit' type='submit' onclick="return confirm('确定要编辑吗？')&&(()=>{document.getElementById('type').value='editTrain';})();" value='保存'></td>
                                     </tr>
                                 </form>
                                 <?php
@@ -77,13 +78,13 @@ if(isset($_COOKIE["PHPSESSID"])){
                     </table>
 
                 </div>
-
                 <div class="btn-toolbar">
                     <button class="btn btn-primary" type="button" name="allChecked" id="allChecked" onclick="DoCheck()">全选</button>
                     <input  class="btn btn-primary" type="submit" name="submit" onclick="return allUncheck()&&confirm('确定要删除吗？')&&(()=>{document.getElementById('type').value='delTrain';})();" value="删除">
                 </div>
             </form>
             <script>
+                $(function() {$('input').attr('autocomplete','off')});//关闭输入补全
                 let nodeArray=[].slice.call(document.getElementsByClassName('hideInput'));
                 nodeArray.map(function (item){ return item.style.display="none";});
                 $(function(){
@@ -143,20 +144,6 @@ if(isset($_COOKIE["PHPSESSID"])){
                     <br/><br/><br/>
                 </div>
 
-            </div>
-            <!--删除信息-->
-            <div class="modal small hide fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h3 id="myModalLabel">删除信息</h3>
-                </div>
-                <div class="modal-body">
-                    <p class="error-text"><i class="icon-warning-sign modal-icon"></i>确定删除这条信息吗？</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-                    <button class="btn btn-danger" data-dismiss="modal">删除</button>
-                </div>
             </div>
             <?php
         }

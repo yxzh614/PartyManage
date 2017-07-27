@@ -1,6 +1,3 @@
-<!--
-    党员发展-申请入党
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,19 +8,12 @@
     session_id($_COOKIE["PHPSESSID"]);
     if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
     if(isset($_POST["submit"])&&$_POST["submit"]){
-
         $sqlAddStu="INSERT INTO `personnelinformation` (ID_number,name,person_cate1,person_cate2)
- VALUES 
- ( '".$_POST['ID_number']."','".$_POST['name']."',".$_POST['person_cate1'].",4)";
+ VALUES ( '".$_POST['ID_number']."','".$_POST['name']."',".$_POST['person_cate1'].",4)";
         if(mysqli_query($db,$sqlAddStu)){
-            // echo "==插入成功==";
             echo "<script>alert('添加成功！')</script>";
         }
         ?>
-        <script>
-            //alert("数据不能为空！");
-            //window.location = "1_DRM_stu_list.php";
-        </script>
         <?php
     }
     ?>
@@ -176,30 +166,30 @@
     });
     // 验证身份证号
     $('form #ID_number').blur(function(){
-            var $parent=$(this).parent();
-            $parent.find('.formtipsID').remove();
-            if(this.value===""||this.value.length!=18){
-                $(this).after("<span class='formtipsID onError'>请输入正确的18位身份证号</span>");
-            }
-        });
-        $(function() {$('input').attr('autocomplete','off')});//关闭输入补全
+        var $parent=$(this).parent();
+        $parent.find('.formtipsID').remove();
+        if(this.value===""||this.value.length!=18){
+            $(this).after("<span class='formtipsID onError'>请输入正确的18位身份证号</span>");
+        }
+    });
+    $(function() {$('input').attr('autocomplete','off')});//关闭输入补全
     // 验证姓名
     $('form #name').blur(function(){
-            var $parent=$(this).parent();
-            $parent.find('.formtipsN').remove();
-            if(this.value===""){
-                $(this).after("<span class='formtipsN onError'>请输入姓名</span>");
-            }else if(this.value.length>9){
-                $(this).after("<span class='formtipsN onError'>姓名不能超过10个字符</span>");
-            }
-        });
-        //验证提交
-        $('#tab').submit(function(e){
-            $('form :input').trigger('blur');
-            if($('form .onError').length){
-                e.preventDefault();
-            }
-        })
+        var $parent=$(this).parent();
+        $parent.find('.formtipsN').remove();
+        if(this.value===""){
+            $(this).after("<span class='formtipsN onError'>请输入姓名</span>");
+        }else if(this.value.length>9){
+            $(this).after("<span class='formtipsN onError'>姓名不能超过10个字符</span>");
+        }
+    });
+    //验证提交
+    $('#tab').submit(function(e){
+        $('form :input').trigger('blur');
+        if($('form .onError').length){
+            e.preventDefault();
+        }
+    })
 </script>
 
 </body>
