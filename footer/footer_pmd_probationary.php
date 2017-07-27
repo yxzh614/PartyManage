@@ -1,3 +1,33 @@
+<?php
+require_once ("../config.php");
+if(!isset($_SESSION)){ session_start(); }
+if(isset($_COOKIE["PHPSESSID"])){
+session_id($_COOKIE["PHPSESSID"]);
+if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
+
+if(isset($_POST["submit"])&&$_POST["submit"]) {
+    echo $_POST['ZQ_positivemeet_ID'];
+    echo $_POST['Tmember_meet_time'];
+    echo $_POST['JJPX_time'];
+    echo $_POST['JJPX_mark'];
+    $sqlUpdateStu = "UPDATE personnelinformation
+            SET 
+            `Tmember_meet_time`='" . ($_POST["Tmember_meet_time"] ? $_POST["Tmember_meet_time"] : "0000-01-01") . "',
+            `JJPX_time`='" . ($_POST["JJPX_time"] ? $_POST["JJPX_time"] : "0000-01-01") . "',
+            `JJPX_mark`='" . $_POST["JJPX_mark"] . "',
+            `ZQ_positivemeet_ID`='" . $_POST["ZQ_positivemeet_ID"] . "'
+            WHERE personnelinformation.ID_number='".$_GET["ID"]."'";
+    echo $sqlUpdateStu;
+    if (mysqli_query($db, $sqlUpdateStu)) {
+        ?>
+        <script>
+            alert('添加成功！');
+            window.location="<?php echo $_POST['url']?>";
+        </script>
+        <?php
+    }
+}else{
+?>
 <h2>预备党员阶段信息</h2>
 <div class="btn-toolbar">
     <button class="btn btn-primary" ><font color="#F7F8F7">保存</font></button>
@@ -64,4 +94,23 @@
       </table>
   </div>
 </div>
-  
+    <?php
+}
+}else{
+    ?>
+    <script>
+        alert("未登录或权限不足！");
+        window.location = "../sign-in.php";
+    </script>
+    <?php
+}
+}
+else{
+    ?>
+    <script>
+        window.location = "../sign-in.php";
+    </script>
+    <?php
+}
+
+?>

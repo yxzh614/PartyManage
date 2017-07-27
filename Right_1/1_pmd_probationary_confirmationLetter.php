@@ -1,15 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-     <style type="text/css">
-     .brand1 {font-family: georgia, serif; }
-     </style>
-       <?php 
-	session_start();
-	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
-
-  </head>
+<head>
+    <?php include("../footer/footer_head.php");
+    require_once ("../config.php");
+    session_start();
+    if(isset($_COOKIE["PHPSESSID"])){
+    session_id($_COOKIE["PHPSESSID"]);
+    if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
+    ?>
+</head>
  	
   <body class="">
    <?php include("1_footer_body_pmd.php"); ?>
@@ -46,4 +46,21 @@
 </body>
 </html>
 
+<?php
+}else{
+    ?>
+    <script>
+        alert("未登录或权限不足！");
+        window.location = "../sign-in.php";
+    </script>
+    <?php
+}
+}
+else{
+    ?>
+    <script>
+        window.location = "../sign-in.php";
+    </script>
+    <?php
+}
 

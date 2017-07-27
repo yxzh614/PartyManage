@@ -66,7 +66,6 @@ if(isset($_COOKIE["PHPSESSID"])){
             }
         }
         ?>
-
         </tbody>
       </table>
     </div>
