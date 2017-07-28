@@ -1,13 +1,25 @@
-
-
 <!--编辑组织信息-->
+
 <div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">编辑信息</h3>
     </div>
     <div class="modal-body">     
-    <form id="tab">
+   <form <?php "id='tab' action='../Right_1/1_pam_organization.php' method='post'" ?>>
+  /// <?php
+   echo "
+        <label>上级组织机构</label>
+        <select name='SJ1'>
+            <option value='C'>党委</option>
+            <option value='B'>党总支</option>
+        </select>
+        <select name='SJ2'>
+        </select>
+        <select name='SJ3'>
+        </select>
+    		";
+        ?>
         <label>名称</label>
         <input type="text" name="name" value="" class="input-xlarge">
         <label>简称</label>
@@ -28,7 +40,6 @@
     </div>
     	<br/><br/><br/>
   </div>
-    
 </div>
 
 <!--删除组织信息-->

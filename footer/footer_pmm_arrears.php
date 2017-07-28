@@ -113,14 +113,13 @@
 
 
 <!--编辑信息-->
-<form id="tab" method="post" action="../Right_1/1_pmm_arrears.php?">
+<form id="tab" method="post" action="../Right_1/1_pmm_arrears.php">
 <div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">编辑信息</h3>
     </div>
     <div class="modal-body">
-    <form id="tab">
      	<label>身份证号</label>
         <select name="ID_number" class="input-large">
             <?php
@@ -147,8 +146,7 @@
         <label>处理意见</label>
         <input type="text" name="hand_advise" value="" class="input-xlarge">
         <label>备注</label>
-        <input type="text" name="remark" value="" class="input-xlarge">`
-    </form>
+        <input type="text" name="remark" value="" class="input-xlarge">
     <div class="modal-footer">
         <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
         <input type="submit" name="submit" class="btn btn-danger" id="btn_change_save" value="保存">

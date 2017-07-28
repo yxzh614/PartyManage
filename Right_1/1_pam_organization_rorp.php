@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <?php 
+        <script type="text/javascript" language="javaScript">
+function selectAll() {
+	    $(".rorp").attr("checked", true); //全部选中
+	    return false;
+}
+</script>
+     <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
-
+	 require_once("../config.php");	
+	 if(isset($_COOKIE["PHPSESSID"])){
+	 	session_id($_COOKIE["PHPSESSID"]);
+	 	if(isset($_SESSION["right"])&&$_SESSION["right"]==0){ 
+	 		$id=$_GET['id'];
+	 		if(isset($_POST["save"])&&$_POST["save"]){
+	 			date_default_timezone_set('PRC');
+	 			$creatid=date("YmdHis");
+	 			$sqlAddduty="INSERT INTO `ororp` (`Department_ID`, `type`, `award_rank`, `Time`,`JC_explain`,`remark`)
+     			VALUES ('".$id."','".$_POST["type"]."', '".$_POST["award_rank"]."', '".$_POST["date"]."','".$_POST["JC_explain"]."', '".$_POST["remark"]."')";
+	 			$result=mysqli_query($db,$sqlAddduty) or die("Invalid quary.".mysqli_error($db));
+	 		}
+	 		if(isset($_POST["del1"])&&$_POST["del1"]=='删除'){//删除
+	 			if(!empty($_POST['del']))
+	 			{
+	 				$ids=$_POST['del'];
+	 					foreach($ids as $ide){
+	 						$Del="DELETE  FROM ororp WHERE Department_ID=$id";
+	 						$Delre=mysqli_query($db,$Del);
+	 					}
+	 				}
+	 			}
+	 		}
+	 	}
+	 ?>
   </head>
-
- 
+  
   <body class=""> 
    <?php include("1_footer_body_pam.php"); ?>
     

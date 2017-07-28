@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
     <head>
       <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
+	 require_once("../config.php");
+	 $id=$_GET['id'];
+	 if(isset($_COOKIE["PHPSESSID"])){
+	 	session_id($_COOKIE["PHPSESSID"]);
+	 	if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
+	 if(isset($_POST["save1"])&&$_POST["save1"]=='保存'){//编辑信息
+	 	$sqlAdd="UPDATE `task` SET `remark`='".$_POST["remark"]."', `Department_ID`='".$_POST["Department"]."' ,`job_theme`='".$_POST["job_theme"]."',`job_content`='".$_POST["job_content"]."',`Datetime`='".$_POST["dateTime"]."' ,`performance`='".$_POST["performance"]."'
+	 	where `job_ID`=$id ";
+	 	if($result=mysqli_query($db,$sqlAdd)) {}
+	 }
+	 if(isset($_POST["save2"])&&$_POST["save2"]=='保存'){//工作
+	 	if(!empty($_POST['save']))
+	 	{
+	 		$ids=$_POST['save'];
+	 		foreach($ids as $ide){	 	
+	 				$Add="INSERT INTO `participator`(`ID_number`,`job_ID`,`take_job`) VALUES ('".$ide."','".$id."','待添加')";
+	 				$Adder=mysqli_query($db,$Add);
+	 		}
+	 	}
+	 }
+	 if(isset($_POST["del1"])&&$_POST["del1"]=='删除'){//删除
+	 	if(!empty($_POST['del']))
+	 	{
+	 		$idd=$_POST['del'];
+	 		{
+	 			foreach($idd as $ide){
+	 				$Del="DELETE  FROM participator WHERE job_ID=$id AND ID_number=$ide";
+	 				$Deler=mysqli_query($db,$Del);
+	 			}
+	 		}
+	 	}
+	 }
+	 	}
+	 }
+	 ?>
 
   </head>
   <body class=""> 
