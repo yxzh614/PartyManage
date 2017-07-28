@@ -20,12 +20,12 @@ if(isset($_SESSION["right"]) &&$_SESSION["right"]==0){
 <body>
  <?php include("../Right_1/1_footer_body_statistics.php"); ?>
  <div class="content">
-        
+
         <div class="header">
-            
+
             <h1 class="page-title">统计分析</h1>
         </div>
-        
+
                 <ul class="breadcrumb">
             <li><a href="1_index.php">返回首页</a>/<span class="divider">统计分析</span></li>
         </ul>
@@ -54,23 +54,23 @@ if(isset($_SESSION["right"]) &&$_SESSION["right"]==0){
                           }
                           ?>
                     </select>
-                     &nbsp; 
+                     &nbsp;
                      <label>类别</label>
                   <select name="kind" class="select">
                       <option value="-1">无限制</option>
-        	            <option value="0">学生</option>
+        	            <option value="2">学生</option>
                         <option value="1">教师</option>
-                    </select> 
+                    </select>
                      &nbsp;
                   <label>发展时间</label>
-                    <input class="input-slarge" type="date">
+                    <input name="topDevTime" class="input-slarge" type="date">
                     ~
-                     <input class="input-slarge" type="date">
+                     <input  name="bottomDevTime" class="input-slarge" type="date">
                      &nbsp;
                   <label>转正时间</label>
-                  <input class="input-slarge" type="date">
+                  <input name="topTrueTime" class="input-slarge" type="date">
                    ~
-                   <input class="input-slarge" type="date">
+                   <input name="bottomTrueTime" class="input-slarge" type="date">
                    &nbsp;
                     <input class="btn" type="submit" name="submit" value="查询统计" >
           </form>
@@ -92,8 +92,50 @@ if(isset($_SESSION["right"]) &&$_SESSION["right"]==0){
       <tbody>
         <?php
         if(isset($_POST["submit"])&&$_POST["submit"]) {
-            $sqlAllStudents = "SELECT stu_number,name,sex,nation_name,Person_cate1_name,LFZobject_time,RD_datetime FROM personnelinformation,person_cate1_bmb,nation_bmb WHERE "."personnelinformation.out_time IS NULL AND person_cate1=Person_cate1_ AND nation_bmb.nation=personnelinformation.nation";
-            if ($resAS = mysqli_query($db, $sqlAllStudents)) {
+            $sex=$_POST["sex"];
+            $nation=$_POST["nation"];
+            $kind=$_POST["kind"];
+            $topDevTime=$_POST["topDevTime"];
+            $bottomDevTime=$_POST["bottomDevTime"];
+            $topTrueTime=$_POST["topTrueTime"];
+            $bottomTrueTime=$_POST["bottomTrueTime"];
+
+            $a = "";
+            $b = "";
+            $c = "";
+            $d = "";
+
+            if($sex != null && $sex>=0){
+                $a = " and sex like '%$sex%'";}
+            if($nation != null && $nation>=0){
+                $b = " and nation like '%$nation%'";}
+            if($kind != null && $kind>1){
+                $c = " and ( person_cate1 like '2' or person_cate1 like '3')";
+            }else if($kind != null && $kind == 1){
+                $c = " and person_cate1 like '1'";
+                }
+            if($topDevTime != null && $bottomDevTime != null){
+                $d = " and LFZobject_time between '$topDevTime' and '$bottomDevTime' ";
+            }
+                else if($topDevTime != null) {
+                    $d = " and LFZobject_time like '$topDevTime' ";
+                }
+
+            if($topTrueTime != null && $bottomTrueTime != null){
+                $d = " and bec_official_time between '$topTrueTime' and '$bottomTrueTime' ";
+            }
+            else if($topTrueTime != null) {
+                $d = " and bec_official_time like '$topTrueTime'";
+            }
+
+            $sqlAnyStudents = "SELECT stu_number,name,sex,nation_name,Person_cate1_name,LFZobject_time,bec_official_time FROM personnelinformation,person_cate1_bmb,nation_bmb WHERE personnelinformation.out_time IS NULL AND person_cate1=Person_cate1_ AND nation_bmb.nation=personnelinformation.nation ";
+            $sqlAnyStudents .=$a;
+            $sqlAnyStudents .=$b;
+            $sqlAnyStudents .=$c;
+            $sqlAnyStudents .=$d;
+
+            echo $sqlAnyStudents;
+            if ($resAS = mysqli_query($db, $sqlAnyStudents)) {
                 while ($rowsAS = mysqli_fetch_assoc($resAS)) {
                     echo "<tr>";
                         echo "<td>" . $rowsAS["stu_number"] . "</td>";
@@ -102,7 +144,7 @@ if(isset($_SESSION["right"]) &&$_SESSION["right"]==0){
                         echo "<td>" . $rowsAS["nation_name"] . "</td>";
                         echo "<td>" . $rowsAS["Person_cate1_name"] . "</td>";
                         echo "<td>" . $rowsAS["LFZobject_time"] . "</td>";
-                        echo "<td>" . $rowsAS["RD_datetime"] . "</td>";
+                        echo "<td>" . $rowsAS["bec_official_time"] . "</td>";
                         echo "</tr>";
                 }
             }
@@ -125,11 +167,11 @@ if(isset($_SESSION["right"]) &&$_SESSION["right"]==0){
         }
         ?>
       </tbody>
-     
+
       </tbody>
     </table>
 </div>
-                 
+
  <?php include("../footer/footer_bottom.php");?>
      <script src="../lib/bootstrap/js/bootstrap.js"></script>
      <script type="text/javascript">

@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-       <?php 
+    <script type="text/javascript" language="javaScript">
+function selectAll() {
+	    $(".meet").attr("checked", true); //全部选中
+	    return false;
+}
+</script>
+     <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
-
+	 require_once("../config.php");	
+	 if(isset($_COOKIE["PHPSESSID"])){
+	 	session_id($_COOKIE["PHPSESSID"]);
+	 	if(isset($_SESSION["right"])&&$_SESSION["right"]==0){ 
+	 		if(isset($_POST["save"])&&$_POST["save"]){
+	 			date_default_timezone_set('PRC');
+	 			$creatid=date("YmdHis");
+	 			echo $_POST["else_member"];
+	 			echo "sssss";
+	 			$sqlAddduty="INSERT INTO `conference` (`Datetime`, `site`, `Department_ID`,`conference_type`,`meeting_theme`,`else_member`)
+     			VALUES ('".$_POST["dateTime"]."', '".$_POST["place"]."','".$_POST["Department"]."','".$_POST["Conference_type"]."','".$_POST["meeting_theme"]."','".$_POST["else_member"]."')";
+	 			$result=mysqli_query($db,$sqlAddduty) or die("Invalid quary.".mysqli_error($db));
+	 			$result7=mysqli_query($db,"SELECT * FROM personnelinformation where person_cate2='01' OR person_cate2='02' OR person_cate2='03' OR person_cate2='04'");
+	 			while($row7=mysqli_fetch_assoc($result7))
+	 			{
+	 				$ADD="INSERT INTO unattend (`conference_ID`,`ID_number`,`absent_reason`) VALUES ('".$creatid."','".$row7["ID_number"]."','因事')";
+	 				$ADDre=mysqli_query($db,$ADD);
+	 			}
+	 		}
+	 		if(isset($_POST["del1"])&&$_POST["del1"]=='删除'){//删除
+	 			if(!empty($_POST['del']))
+	 			{
+	 				$ids=$_POST['del'];
+	 				{
+	 					foreach($ids as $ide){
+	 						$Del="DELETE  FROM conference WHERE conference_ID=$ide";
+	 						$Delre=mysqli_query($db,$Del);
+	 						$Del="DELETE FROM unattend WHERE conference_ID=$ide";
+	 						$Delre=mysqli_query($db,$Del);
+	 						$Del="DELETE FROM attend WHERE conference_ID=$ide";
+	 						$Delre=mysqli_query($db,$Del);
+	 					}
+	 				}
+	 			}
+	 		}
+	 	}
+	 }
+	 ?>
   </head>
 
 <body class="">   
@@ -36,6 +78,7 @@
                 </form>
      	</div>
 <div class="well">
+  <form action='1_pam_meeting.php' method='post'> 
     <table class="table">
       <thead>
         <tr>
@@ -50,25 +93,45 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td><input type="checkbox" name="checkboxGroup" value="1"></td>
-          <td>DDDD</td>
-          <td>2012.03.04</td>
-          <td>信息科学与工程学院</td>
-          <td>XXXX</td>
-          <td>党课</td>
-          <td><a href="1_pam_meeting_information.php">详细信息</a></td>
+      <?php
+      if($result=mysqli_query($db,'SELECT * FROM conference'))
+      	while($row=mysqli_fetch_assoc($result))
+      	{
+      		$id=$row["Department_ID"];
+      		$result1=mysqli_query($db,"SELECT * FROM organization WHERE `Department_ID`='".$id."'");
+      		while($row1=mysqli_fetch_assoc($result1))
+      		{
+      			echo "s";
+      			$name=$row1["name"];
+      		}
+      		$result2=mysqli_query($db,"SELECT * FROM conference_type_bmb WHERE `conference_type`={$row["conference_type"]}");
+      		while($row2=mysqli_fetch_assoc($result2))
+      		{
+      			$type=$row2["conference_type_name"];
+      		}
+      		echo"
+      <tr>
+          <td><input type='checkbox' name='del[]' value={$row["conference_ID"]} id={$row["conference_ID"]} class='meet'></td>
+          <td>{$row["meeting_theme"]}</td>
+          <td>{$row["Datetime"]}</td>
+          <td>{$row["site"]}</td>
+          <td>$name</td>
+          <td>$type</td>
+          <td><a href='1_pam_meeting_information.php?id={$row["conference_ID"]}'>详细信息</a></td>
           <td>
-              <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+              <a href='#delete' role='button' data-toggle='modal'><i class='icon-remove'></i></a>
           </td>
         </tr>
-     
+        ";
+      	}
+     ?>
       </tbody>
     </table>
-</div>
 <div class="btn-toolbar">
-    <button class="btn btn-primary">全选</button>
-    <button class="btn">删除</button> 
+     <input type="button" class="btn btn-primary" onclick="selectAll()" value="全选">
+    <input type="submit" name="del1" class="btn" id="btn_change_sava"  value="删除" >
+</div> 
+</form>
 </div>
 
 
@@ -79,37 +142,49 @@
         <h3 id="myModalLabel">修改信息</h3>
     </div>
     <div class="modal-body">     
-    <form id="tab">
+    <form id="tab" action="1_pam_meeting.php" method="post">
      	<label>会议主题</label>
-        <input type="text" name="metting_theme" id="metting_theme" value="" class="input-xlarge">
+        <input type="text" name="meeting_theme" id="metting_theme" value="" class="input-xlarge">
         <label>日期时间</label>
-       	<input type="date" name="dataTime">
+       	<input type="date" name="dateTime">
         <label>地点</label>
         <input type="text" name="place" id="place" value="" class="input-xlarge">
         <label>召集部门</label>
         <select name="Department">
-        	<option value="0">XXXX</option>
-            <option value="1">VVVV</option>
+        <?php 
+        if($result=mysqli_query($db,"SELECT * FROM organization"))
+        	while($row=mysqli_fetch_assoc($result)){
+        	echo "
+        	<option value={$row["Department_ID"]}>{$row["name"]}</option>
+	 			";
+        }
+        ?>
         </select>
         <label>会议类型</label>
         <select name="Conference_type">
-        	<option value="0">民主生活会</option>
-            <option value="1">党委会</option>
-            <option value="2">中心组会</option>
-            <option value="3">全体党员大会</option>
-            <option value="4">组织生活会</option>
-            <option value="5">支部委员会</option>
-            <option value="6">支部党员大会</option>
-            <option value="7">党小组会</option>
+        <?php 
+        if($result=mysqli_query($db,"SELECT * FROM conference_type_bmb"))
+        	while($row=mysqli_fetch_assoc($result)){
+        	echo "
+        	<option value={$row["conference_type"]}>{$row["conference_type_name"]}</option>
+	 			";
+        }
+        ?>
         </select>
-    </form>
+        <label>参与人员类别</label>
+        <select name='else_member'>
+        <option value='全部'>全部</option>
+        <option value='党员'>党员</option>
+        <option value='积极分子'>积极分子</option>
+        </select>
     <div class="modal-footer">
         <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
-        <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">保存</button>
-    </div>
+        <input type="submit" name="save" class="btn btn-danger" id="btn_change_sava" value="保存" >
+    </div> 
+           </form>
     	<br/><br/><br/>
   </div>
-    
+
 </div>
 
 <!--删除信息-->

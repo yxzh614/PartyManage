@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <?php 
+  <script type="text/javascript" language="javaScript">
+function selectAll() {
+	    $(".act").attr("checked", true); //全部选中
+	    return false;
+}
+</script>
+       <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
-
+	 require_once("../config.php");	
+	 if(isset($_COOKIE["PHPSESSID"])){
+	 	session_id($_COOKIE["PHPSESSID"]);
+	 	if(isset($_SESSION["right"])&&$_SESSION["right"]==0){ 
+	 		if(isset($_POST["save"])&&$_POST["save"]=='保存'){
+	 			date_default_timezone_set('PRC');
+	 			$creatid=date("YmdHis");
+	 			$sqlAddduty="INSERT INTO `activity` (`Datetime`, `site`, `Department_ID`,`activity_theme`,`othert_member`)
+     			VALUES ('".$_POST["dateTime"]."', '".$_POST["place"]."','".$_POST["Department"]."','".$_POST["activity_theme"]."','".$_POST["else_member"]."')";
+	 			$result=mysqli_query($db,$sqlAddduty) or die("Invalid quary.".mysqli_error($db));
+	 			$result7=mysqli_query($db,"SELECT * FROM personnelinformation where person_cate2='01' OR person_cate2='02' OR person_cate2='03' OR person_cate2='04'");
+	 			while($row7=mysqli_fetch_assoc($result7))
+	 			{
+	 				$ADD="INSERT INTO unappearance (`Activity_ID`,`ID_number`,`absent_reason`) VALUES ('".$creatid."','".$row7["ID_number"]."','因事')";
+	 				$ADDre=mysqli_query($db,$ADD);
+	 			}
+	 		}	
+	 		if(isset($_POST["del1"])&&$_POST["del1"]=='删除'){//删除
+	 		if(!empty($_POST['del']))
+	 		{
+	 			$ids=$_POST['del'];
+	 			{
+	 				foreach($ids as $ide){
+	 					$Del="DELETE  FROM activity WHERE Activity_ID=$ide";
+	 					$Delre=mysqli_query($db,$Del);
+	 					$Del="DELETE FROM unappearance WHERE Activity_ID=$ide";
+	 					$Delre=mysqli_query($db,$Del);
+	 					$Del="DELETE FROM appearance WHERE Activity_ID=$ide";
+	 					$Delre=mysqli_query($db,$Del);
+	 				}
+	 			}
+	 		}
+	 	}
+	 	}
+	 }
+	 ?>
   </head>
 
 <body class="">   
@@ -38,6 +78,7 @@
   
 </div>
 <div class="well">
+  <form action='1_pam_activity.php' method='post'> 
     <table class="table">
       <thead>
         <tr>
@@ -51,24 +92,39 @@
         </tr>
       </thead>
       <tbody>
+      <?php
+      if($result100=mysqli_query($db,'SELECT * FROM activity'))
+      while($row=mysqli_fetch_assoc($result100))
+      {
+      	$id=$row["Department_ID"];
+      	echo $id;
+      	$result2=mysqli_query($db,"SELECT * FROM organization WHERE `Department_ID`='".$id."'");
+      	while($row2=mysqli_fetch_assoc($result2))
+      	{
+      		$name=$row2["name"];
+      	}
+      	echo "
         <tr>
-          <td><input type="checkbox" name="checkboxGroup" value="1"></td>
-          <td>活动主题</td>
-          <td>2012.03.04</td>
-          <td>XX227</td>
-          <td>XXXX</td>
-          <td><a href="1_pam_activity_information.php">详细信息</a></td>
+          <td><input type='checkbox' name='del[]' value={$row["Activity_ID"]} id={$row["Activity_ID"]} class='act'></td>
+          <td>{$row["activity_theme"]}</td>
+          <td>{$row["Datetime"]}</td>
+          <td>{$row["site"]}</td>
+          <td>$name</td>
+          <td><a href='1_pam_activity_information.php?id={$row["Activity_ID"]}'>详细信息</a></td>
           <td>
-              <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+              <a href='#delete' role='button' data-toggle='modal'><i class='icon-remove'></i></a>
           </td>
         </tr>
-     
+        ";
+      }
+      ?>
       </tbody>
     </table>
 </div>
 <div class="btn-toolbar">
-    <button class="btn btn-primary">全选</button>
-    <button class="btn">删除</button>
+     <input type="button" class="btn btn-primary" onclick="selectAll()" value="全选">
+    <input type="submit" name="del1" class="btn" id="btn_change_sava"  value="删除" >
+    </form>
 </div>
 
 <!--新建信息-->
@@ -78,24 +134,37 @@
         <h3 id="myModalLabel">新建信息</h3>
     </div>
     <div class="modal-body">     
-    <form id="tab">
+    <form id="tab" action="1_pam_activity.php" method="post">
      	<label>活动主题</label>
         <input type="text" name="activity_theme" id="activity_theme" value="" class="input-xlarge">
         <label>日期时间</label>
-        <input type="date" name="dataTime">
+        <input type="date" name="dateTime">
         <label>地点</label>
         <input type="text" name="place" id="place" value="" class="input-xlarge">
-        <label>召集部门</label>
+        <label>召集部门</label>  
         <select name="Department">
-        	<option value="0">XXXX</option>
-            <option value="1">VVVV</option>
+        <?php 
+        if($result=mysqli_query($db,"SELECT * FROM organization"))
+        	while($row=mysqli_fetch_assoc($result)){
+        	echo "
+        	<option value={$row["Department_ID"]}>{$row["name"]}</option>
+	 			";
+        }
+        	?>
         </select>
-    </form>
+         <label>参与人员类别</label>
+        <select name='else_member'>
+        <option value='全部'>全部</option>
+        <option value='党员'>党员</option>
+        <option value='积极分子'>积极分子</option>
+        </select>
     <div class="modal-footer">
         <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
-        <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">保存</button>
-    </div>
-    	<br/><br/><br/>
+          <input type="submit" name="save" class="btn btn-danger" id="btn_change_sava" value="保存" >
+    </div> 
+       	 </form>
+    	<br/><br/><br/>   
+
   </div>
     
 </div>

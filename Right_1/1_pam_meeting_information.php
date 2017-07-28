@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-       <?php 
+    <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");?>
+	 require_once("../config.php");	
+	 $id=$_GET['id'];
+	 if(isset($_COOKIE["PHPSESSID"])){
+	 	session_id($_COOKIE["PHPSESSID"]);
+	 	if(isset($_SESSION["right"])&&$_SESSION["right"]==0){ 	
 
+	 		if(isset($_POST["save1"])&&$_POST["save1"]=='保存'){//编辑信息
+	 			$sqlAddduty="UPDATE `conference` SET   `site`='".$_POST["place"]."' , `Department_ID`='".$_POST["Department"]."' ,`meeting_theme`='".$_POST["activity_theme"]."',`meeting_detail`='".$_POST["activity_content"]."',`Datetime`='".$_POST["dateTime"]."' ,`conference_type`='".$_POST["Conference_type"]."',`else_member`='".$_POST["else_member"]."'
+	 			where `conference_ID`='".$id."' ";
+	 			$result=mysqli_query($db,$sqlAddduty) or die("Invalid quary.".mysqli_error($db));
+	 		}
+	 		if(isset($_POST["save2"])&&$_POST["save2"]=='保存'){//出席情况	 			
+	 			if(!empty($_POST['save']))
+	 			{
+	 		$ids=$_POST['save'];
+	 		{
+	 		foreach($ids as $ide){	 	
+	 			$check="SELECT * FROM attend WHERE conference_ID='".$id."' and ID_number='".$ide."'";
+	 		    $result3=mysqli_query($db,$check);	
+	 			if(!mysqli_fetch_assoc($result3))
+	 			{	
+	 				$Addattend="INSERT INTO `attend`(`ID_number`,`conference_ID`) VALUES ('".$ide."','".$id."')";
+	 				$result4=mysqli_query($db,$Addattend);	
+	 				$Delunattend="DELETE  FROM unattend WHERE conference_ID=$id AND ID_number=$ide";
+	 				$delun=mysqli_query($db,$Delunattend);
+	 			}
+	 		}
+	 		}
+	 		}
+	 		}
+	 if(isset($_POST["del1"])&&$_POST["del1"]=='删除'){//删除
+	 	if(!empty($_POST['del']))
+	 	{
+	 		$idd=$_POST['del'];
+	 		{
+	 			foreach($idd as $ide){
+	 				$Addunattend="INSERT INTO `unattend`(`ID_number`,`conference_ID`,`absent_reason`) VALUES ('".$ide."','".$id."','因事')";
+	 				$Addunatt=mysqli_query($db,$Addunattend);
+	 				$Delattend="DELETE  FROM attend WHERE conference_ID=$id AND ID_number=$ide";
+	 				$Delatt=mysqli_query($db,$Delattend);
+	 			}
+	 		}
+	 	}
+	 }
+	 }
+	 }
+	 ?>
   </head>
 
 <body class="">   
