@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <?php include("../footer/footer_head.php");
-    require_once ("../config.php");
-    session_start();
-    if(isset($_COOKIE["PHPSESSID"])){
+<?php
+require "../footer/footer_head.php";
+require_once "../public/config.php";
+session_start();
+if(hasChookie()){
     session_id($_COOKIE["PHPSESSID"]);
-    if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
-    ?>
-</head>
+}
+if(hasRight(0)){
+?>
 <body class="">
 <?php include("../Right_1/1_footer_body_pmd.php"); ?>
 <div class="content">
@@ -25,7 +25,6 @@
         </div>
     </div>
 </div>
-
 <!--导航动态下拉框-->
 <script src="../lib/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript">
@@ -37,19 +36,4 @@
 </body>
 </html>
 <?php
-}else{
-    ?>
-    <script>
-        alert("未登录或权限不足！");
-        window.location = "../sign-in.php";
-    </script>
-    <?php
-}
-}
-else{
-    ?>
-    <script>
-        window.location = "../sign-in.php";
-    </script>
-    <?php
 }
