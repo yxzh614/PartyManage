@@ -4,7 +4,7 @@
    <?php
    session_start();
    require_once("config.php");
-   include('footer/footer_head.php');
+   include('../footer/footer_head.php');
    ?>
   </head>
   <?php
@@ -15,7 +15,7 @@
   if ($resL = mysqli_query($db, $sqlLogin)) {
       if ($rowL = mysqli_fetch_assoc($resL)) {
           switch ($_SESSION["right"] = $rowL["rights"]) {
-               case 0: echo "<script>window.location = 'Right_1/1_index.php';</script>";break;
+               case 0: echo "<script>window.location = '../Right_1/1_index.php';</script>";break;
 			   case 1: echo "<script>window.location = 'Right_2/2_index.php';</script>";break;
 			   case 2: echo "<script>window.location = 'Right_3/3_index.php';</script>";break;
 			   case 3: echo "<script>window.location = 'Right_4/4_index.php';</script>";break;

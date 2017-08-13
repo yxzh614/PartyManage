@@ -10,7 +10,7 @@ function selectAll() {
        <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");	
+	 require_once("../public/config.php");
 	 if(isset($_COOKIE["PHPSESSID"])){
 	 	session_id($_COOKIE["PHPSESSID"]);
 	 	if(isset($_SESSION["right"])&&$_SESSION["right"]==0){ 

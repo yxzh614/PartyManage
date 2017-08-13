@@ -4,7 +4,7 @@
       <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");
+	 require_once("../public/config.php");
       if(isset($_POST["submit"])&&$_POST["submit"]){
       $sqlAddStu = "INSERT INTO arrears (ID_number, QJ_should,QJ_reality,QJ_money, QJ_starttime, QJ_endtime, QJ_reason, hand_advise, remark) VALUES ( '"
       . $_POST['ID_number'] . "','". $_POST['QJ_should'] . "','" . $_POST['QJ_reality'] . "','" . ($_POST['QJ_should']-$_POST['QJ_reality']) . "','"

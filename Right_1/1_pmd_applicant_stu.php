@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php include("../footer/footer_head.php");
-    require_once ("../config.php");
+    require_once ("../public/config.php");
     session_start();
     if(isset($_COOKIE["PHPSESSID"])){
     session_id($_COOKIE["PHPSESSID"]);
