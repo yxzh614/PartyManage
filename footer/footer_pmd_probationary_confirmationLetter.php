@@ -1,5 +1,5 @@
 <?php
-require_once ("../config.php");
+require_once ("../public/config.php");
 if(!isset($_SESSION)){ session_start(); }
 if(isset($_COOKIE["PHPSESSID"])){
 session_id($_COOKIE["PHPSESSID"]);

@@ -5,7 +5,7 @@
  * Date: 17/7/28
  * Time: 10:26
  */
-require_once ("../config.php");
+require_once ("../public/config.php");
 
 if(!isset($_SESSION)){ session_start(); }
 

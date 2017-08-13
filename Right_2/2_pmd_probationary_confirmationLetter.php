@@ -7,7 +7,7 @@
      <?php
    session_start();
    include("../footer/footer_head.php");
-   require_once("../config.php"); ?>
+   require_once("../public/config.php"); ?>
   </head>
  	
   <body class="">

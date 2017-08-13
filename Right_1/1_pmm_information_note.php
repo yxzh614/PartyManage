@@ -4,7 +4,7 @@
         <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");
+	 require_once("../public/config.php");
 
       if(isset($_POST["submit"])&&$_POST["submit"]){
       $sqlUpdateTea="
