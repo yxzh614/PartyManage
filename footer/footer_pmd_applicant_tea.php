@@ -406,8 +406,8 @@ WHERE ID_number='".$_GET["ID"]."'";
                     function (data) {
                         //$("#back").html(data);
                         alert("保存成功！");
-                    };
-                )
+                    }
+                );
             });
         </script>
             <?php
