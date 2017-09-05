@@ -8,8 +8,24 @@
              $sqlUpdateStu = "
 UPDATE `personnelinformation` 
 SET 
-`join_T_time`= '".$_POST['join_t_time']."'
+`join_T_time`= '".$_POST['join_t_time']."'/*,
+`SQRD_time`= '".$_POST['SQRD_time']."',
+`LJJ_time`= '".$_POST['LJJ_time']."',
+`JJPX_time`= '".$_POST['JJPX_time']."',
+`Tmember_meet_time`= '".$_POST['Tmember_meet_time']."',
+`LFZobject_time`= '".$_POST['LFZobject_time']."',
+`DQPX_time`= '".$_POST['DQPX_time']."',
+`developmentplan_time`= '".$_POST['Developmentplan_time']."',
+`publicity_time`= '".$_POST['Publicity_time']."',
+`ZZ_publicity_time`= '".$_POST['ZZ_publicity_time']."',
+`bec_official_time`= '".$_POST['bec_official_time']."',
+`RD_datetime`= '".$_POST['RD_datetime']."',
+`Department_ID`= '".$_POST['Department_ID']."',
+`talk_site`= '".$_POST['talk_site']."',
+`talker_ID`= '".$_POST['talker_ID']."', 
+`talk_time`= '".$_POST['Talk_time']."'*/ 
  WHERE `personnelinformation`.`ID_number` = '" . $_GET["stuId"] . "'";
+             echo $sqlUpdateStu;
              if (mysqli_query($db, $sqlUpdateStu)) {
                  echo "<script>alert('修改成功！')</script>";
              }
