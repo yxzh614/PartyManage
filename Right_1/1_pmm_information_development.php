@@ -22,7 +22,11 @@ SET
 `RD_datetime`= '".$_POST['RD_datetime']."',
 `Department_ID`= '".$_POST['Department_ID']."',
 `talk_site`= '".$_POST['talk_site']."',
+<<<<<<< HEAD
 `talker_ID`= '".$_POST['talker_ID']."', 
+=======
+`talker_ID`= '".$_POST['talker_ID']."',
+>>>>>>> 9d3f2292cf861067e16998f4779dc22a958c8e25
 `talk_time`= '".$_POST['Talk_time']."'*/ 
  WHERE `personnelinformation`.`ID_number` = '" . $_GET["stuId"] . "'";
              echo $sqlUpdateStu;

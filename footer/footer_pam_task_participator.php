@@ -1,3 +1,9 @@
+<script type="text/javascript" language="javaScript">
+function selectAll() {
+	    $(".par").attr("checked", true); //全部选中
+	    return false;
+}
+</script>
 <!--搜索框-->
     	<div class="search-well">
                 <form class="form-inline">
@@ -8,6 +14,7 @@
                 </form>
      	</div>
 <div class="well">
+  <?php echo "<form action='1_pam_task_information.php?id=$id' method='post'> "; ?>
     <table class="table">
       <thead>
         <tr>
@@ -19,42 +26,36 @@
         </tr>
       </thead>
       <tbody>
+      <?php 
+if($result=mysqli_query($db,"SELECT * FROM participator where job_ID=$id"))
+	while($row=mysqli_fetch_assoc($result))
+	{
+		$result1=mysqli_query($db,"SELECT * FROM personnelinformation WHERE `ID_number`={$row["ID_number"]} ");
+		while($row1=mysqli_fetch_assoc($result1))
+		{
+			$name=$row1["name"];
+		}
+echo"
         <tr>
-          <td><input type="checkbox" name="checkboxGroup" value="1"></td>
-          <td>张三</td>
-          <td>1305675432653</td>
-          <td>整理文档</td>
+          <td><input type='checkbox' name='del[]' value={$row["ID_number"]} id={$row["ID_number"]} class='par'></td>
+          <td>$name</td>
+          <td>{$row["ID_number"]}</td>
+          <td>{$row["take_job"]}</td>
           <td>
-              <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
-              <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+              <a href='#change' role='button' data-toggle='modal'><i class='icon-pencil'></i></a>
+              <a href='#delete' role='button' data-toggle='modal'><i class='icon-remove'></i></a>
           </td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" name="checkboxGroup" value="2"></td>
-          <td>李四</td>
-          <td>1305675432653</td>
-          <td>记录工作</td>
-          <td>
-              <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
-              <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>
-       <tr>
-       	  <td><input type="checkbox" name="checkboxGroup" value="3"></td>
-          <td>王五</td>
-          <td>1305675432653</td>
-          <td>汇报成果</td>
-          <td>
-              <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
-              <a href="#delete" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-          </td>
-        </tr>       
+        </tr>      
+        ";
+  		}
+?>
       </tbody>
     </table>
-</div>
 <div class="btn-toolbar">
-    <button class="btn btn-primary">全选</button>
-    <button class="btn">删除</button> 
+     <input type='button' class='btn btn-primary' onclick="selectAll()" value='全选'>
+    <input type='submit' name='del1' class='btn' id='btn_change_sava'  value='删除' >
+    </div>
+    </form>
 </div>
 
 <!--导入信息-->
@@ -64,18 +65,24 @@
         <h3 id="myModalLabel">修改信息</h3>
     </div>
     <div class="modal-body">     
-    <form id="tab">
-         <input type="checkbox" name="attend_checkboxGroup" value="1305675432653" id="attend_checkboxGroup_0" /> 张三<br />
-         <input type="checkbox" name="attend_checkboxGroup" value="1305675432653" id="attend_checkboxGroup_1" /> 李四<br />
-         <input type="checkbox" name="attend_checkboxGroup" value="1305675432653" id="attend_checkboxGroup_1" /> 王五<br />
-    </form>
+      <?php echo "<form id='tab' action='1_pam_task_information.php?id=$id' method='post'> "; 
+      if($result=mysqli_query($db,"SELECT * FROM personnelinformation where person_cate2='03' or person_cate2='04' "))
+      	while($row=mysqli_fetch_assoc($result))
+      	{
+      		echo "
+            <input type='checkbox' name='save[]' value={$row["ID_number"]} id={$row["ID_number"]} > {$row["name"]}<br />
+      		";
+      	}
+  ?>
+
     <div class="modal-footer">
         <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
-        <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">保存</button>
-    </div>
+         <input type="submit" name="save2" class="btn btn-danger" id="btn_change_sava" title='save2' value="保存" >
+    </div>  
+      
     	<br/><br/><br/>
   </div>
-    
+    </form>
 </div>
 <!--修改信息-->
 <div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

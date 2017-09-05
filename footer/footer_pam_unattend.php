@@ -17,32 +17,28 @@
         </tr>
       </thead>
       <tbody>
+      <?php 
+if($result=mysqli_query($db,"SELECT * FROM unattend where conference_ID='".$id."' "))
+	while($row=mysqli_fetch_assoc($result))
+	{
+		$result1=mysqli_query($db,"SELECT * FROM personnelinformation WHERE `ID_number`='".$row["ID_number"]."' ");
+		while($row1=mysqli_fetch_assoc($result1))
+		{
+			$name=$row1["name"];
+		}
+echo"
         <tr>
-          <td>张三</td>
-          <td>1305675432653</td>
-          <td>因事</td>
+          <td>$name</td>
+          <td>{$row["ID_number"]}</td>
+          <td>{$row["absent_reason"]}</td>       
           <td>
-              <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
+              <a href='#change' role='button' data-toggle='modal'><i class='icon-pencil'></i></a>
           </td>
+        ";
+	}
+?>
+
         </tr>
-        <tr>
-          <td>李四</td>
-          <td>1305675432653</td>
-           <td>因病</td>
-          <td>
-              <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
-          </td>
-        </tr>
-        <tr>
-          <td>王五</td>
-          <td>1305675432653</td>
-          <td>因事</td>
-          <td>
-              <a href="#change" role="button" data-toggle="modal"><i class="icon-pencil"></i></a>
-          </td>
-        </tr>  
-     
-      
       </tbody>
     </table>
 </div>

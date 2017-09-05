@@ -84,3 +84,20 @@ function setPCD(id) {
         district: '思明区'
     });
 }
+function createRequest() {
+    let request;
+    try{
+        request=new XMLHttpRequest();
+    }catch (tryMS){
+        try{
+            request=new ActiveXObject("Msxml2.XMLHTTP");
+        }catch (otherMS){
+            try{
+                request= new ActiveXObject("Microsoft.XMLHTTP");
+            }catch (failed){
+                request=null;
+            }
+        }
+    }
+    return request;
+}
