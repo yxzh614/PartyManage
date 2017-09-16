@@ -32,6 +32,11 @@
                 }
             }
                 break;
+                case 'save_doc_2': {
+                        $sqlToDel = "UPDATE `stage` SET `sub_date`='" . $_POST["date"] . "' WHERE `stage`.`ID_number` = '" . $_POST["ID_number"] . "' AND docu_type = '2'";
+                        echo $sqlToDel;
+                }
+                    break;
             case 'out': {
                 $checkbox = $_POST['onetodel'];
                 for ($i = 0; $i < count($checkbox); $i++) {
@@ -111,7 +116,7 @@
             echo $sqlUpdateTrain;
         }
         }break;
-        case 'editLetter':{
+        case 'editLetter': {
         $sqlUpdateLetter="UPDATE confirmationletter 
                     SET
                     `QS_organization`='".$_POST['QS_organization']."',

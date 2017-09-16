@@ -24,12 +24,14 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">编辑信息</h3>
     </div>
-    <div class="modal-body">
+    <form class="modal-body" action="../public/del.php" method="post">
         <label>提交日期</label>
-        <input type="date" id="update">
-    <div class="modal-footer">
-        <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
-        <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">保存</button>
-    </div>
-  </div>   
+        <input type="date" name="date" id="update">
+        <input type="hidden" name="type" value="save_doc_2">
+        <input type="hidden" name="ID_number" value="<?php echo $_GET["ID"] ?>">
+        <div class="modal-footer">
+            <button class="btn" type="button" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
+            <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" value="保存">
+        </div>
+  </form>   
 </div>

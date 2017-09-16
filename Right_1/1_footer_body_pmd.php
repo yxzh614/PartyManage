@@ -1,24 +1,16 @@
- <div class="navbar">
+<div class="navbar">
         <div class="navbar-inner">
                 <ul class="nav pull-right">
-                    
                     <li><a href="http://218.25.35.28/" class="hidden-phone visible-tablet visible-desktop" role="button">沈阳理工大学</a></li>
                     <li><a href="1_pmm_information.php" class="hidden-phone visible-tablet visible-desktop" role="button"> 系统管理员</a></li>
-                    
                 </ul>
 				<img src="../images/4.png" />
                <span class="font-head-first">信息科学与工程学院</span> <span class="font-head-second">党务工作信息系统</span>        </div>
 </div>
-    
-
-   
  <div class="sidebar-nav">
-      
         <ul class="nav nav-list collapse in">
             <li><a href="1_index.php">首页</a></li>
-            
         </ul>
-        
     	<!-- 党员发展 -->
         <a href="#memberDevelopment-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-exclamation-sign"></i>党员发展<i class="icon-chevron-up"></i></a>
         <ul id="memberDevelopment-menu" class="nav nav-list collapse in">
@@ -59,4 +51,3 @@
         </ul>
 
   </div>
-       

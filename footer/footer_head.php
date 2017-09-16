@@ -58,5 +58,4 @@ function GetSelectGroup($db,$selectedResult,$sql,$realValue,$showValue){
     }
 }
 ?>
-   
 </head>
