@@ -4,7 +4,7 @@
          <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");
+	 require_once("../public/config.php");
       if(isset($_POST["submit"])&&$_POST["submit"]){
       $sqlAddStu = "INSERT INTO `appraisement` (ID_number,PY_time,PY_result,remark) VALUES ( '"
       . $_GET['stuId'] . "','". $_POST['PY_time'] . "','" . $_POST['PY_result'] . "','" . $_POST['remark'] . "')";

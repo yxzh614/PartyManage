@@ -3,7 +3,7 @@
   <head>
          <?php
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");
+	 require_once("../public/config.php");
          session_start();
          if(isset($_COOKIE["PHPSESSID"])){
          session_id($_COOKIE["PHPSESSID"]);
@@ -48,8 +48,7 @@
 
               <!--表格信息-->
               <div class="btn-toolbar">
-                  <button class="btn btn-primary"><a href="#change" role="button" data-toggle="modal"><font
-                                  color="#F7F8F7"><i class="icon-plus"></i>新建</font></a></button>
+              <button class="btn btn-primary" href="#change" role="button" data-toggle="modal"><i class="icon-plus"></i>新建</button>
                   <button class="btn"><a href="#out" role="button" data-toggle="modal"><font
                                   color="#404040">调出</font></a></button>
                   <button class="btn">导出Excel表格</button>

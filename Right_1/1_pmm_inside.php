@@ -4,7 +4,7 @@
       <?php 
 	session_start();
 	include("../footer/footer_head.php"); 
-	 require_once("../config.php");
+	 require_once("../public/config.php");
       if(isset($_POST["submit"])&&$_POST["submit"]) {
           //$dt = new DateTime();
           //$dt->format('Y-m-d H:i:s');
@@ -42,8 +42,8 @@
           <div class="row-fluid">
 
               <div class="btn-toolbar">
-                  <button class="btn btn-primary"><a href="#new" role="button" data-toggle="modal"><font
-                                  color="#F7F8F7">调入</font></a></button>
+              <button class="btn btn-primary" href="#new" role="button" data-toggle="modal">调入</button>
+              
                   <button class="btn">导出Excel表格</button>
               </div>
               <!--搜索框-->

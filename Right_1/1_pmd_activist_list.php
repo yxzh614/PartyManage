@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <?php include("../footer/footer_head.php");
-    require_once("../config.php");
+    require_once("../public/config.php");
     session_start();
     if(isset($_COOKIE["PHPSESSID"])){
     session_id($_COOKIE["PHPSESSID"]);
@@ -33,7 +33,7 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="btn-toolbar">
-                <button class="btn btn-primary"><a href="#new" role="button" data-toggle="modal"><font color="#F7F8F7"><i class="icon-plus"></i>新建</font></a></button>
+            <button class="btn btn-primary" href="#new" role="button" data-toggle="modal"><i class="icon-plus"></i>新建</button>
                 <button class="btn">导入</button>
                 <button class="btn">导出</button>
             </div>

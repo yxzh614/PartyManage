@@ -5,7 +5,7 @@
  * Date: 17/7/28
  * Time: 10:26
  */
-require_once ("../config.php");
+require_once ("../public/config.php");
 
 if(!isset($_SESSION)){ session_start(); }
 
@@ -13,7 +13,7 @@ if(isset($_COOKIE["PHPSESSID"])){
     session_id($_COOKIE["PHPSESSID"]);
     if(isset($_SESSION["right"])&&$_SESSION["right"]==0){
 
-        if(isset($_POST["ZQ_positivemeet_ID"])&&$_POST["ZQ_positivemeet_ID"]) {
+        if(isset($_POST["ZQ_positivemeet_ID"])) {
             echo $_POST['ZQ_positivemeet_ID'];
             echo $_POST['Tmember_meet_time'];
             echo $_POST['JJPX_time'];
