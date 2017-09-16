@@ -1,5 +1,5 @@
 <div class="btn-toolbar">
-    <button class="btn btn-primary"><i class="icon-plus"></i> <a href="#change" role="button" data-toggle="modal"><font color="#F7F8F7">新建</font></a></button>
+<button class="btn btn-primary" href="#change" role="button" data-toggle="modal"><i class="icon-plus"></i>新建</button>
     <button class="btn">导入</button>
     <button class="btn">导出</button>
      <button class="btn"><a href="#feiyong" role="button" data-toggle="modal"><font color="#000000">党费计算器</font></a></button>

@@ -44,7 +44,7 @@
 
     <div class="container-fluid">
         <div class="btn-toolbar">
-            <button class="btn btn-primary"><a href="#change" role="button" data-toggle="modal"><font color="#F7F8F7"><i class="icon-plus"></i>新建</font></a></button>
+        <button class="btn btn-primary" href="#change" role="button" data-toggle="modal"><i class="icon-plus"></i>新建</button>
             <button class="btn">导入</button>
             <button class="btn">导出</button>
         </div>

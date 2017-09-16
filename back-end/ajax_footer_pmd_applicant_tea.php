@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 52668
- * Date: 17/7/28
- * Time: 12:03
- */
 require_once ("../public/config.php");
 
 if(!isset($_SESSION)){ session_start(); }

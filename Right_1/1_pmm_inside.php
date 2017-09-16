@@ -42,8 +42,8 @@
           <div class="row-fluid">
 
               <div class="btn-toolbar">
-                  <button class="btn btn-primary"><a href="#new" role="button" data-toggle="modal"><font
-                                  color="#F7F8F7">调入</font></a></button>
+              <button class="btn btn-primary" href="#new" role="button" data-toggle="modal">调入</button>
+              
                   <button class="btn">导出Excel表格</button>
               </div>
               <!--搜索框-->
