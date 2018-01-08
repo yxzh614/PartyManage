@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11b319f0-8e3e-4105-9dd3-d58ea6ed508a" name="Default" comment="全选 部分删除&#10;-》》搜索post新页 判断类型导向tea或stu">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/41b229c8-5669-400d-9d82-b3dd4ec7eb2d.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/bba8d3eb-922f-4284-a951-87888db60a33.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PartyManage.iml" afterPath="$PROJECT_DIR$/.idea/PartyManage.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_outside.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_outside.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,47 +57,50 @@
       <file leaf-file-name="1_pmm_outside.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_outside.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+            <state relative-caret-position="535">
+              <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding>
-                <marker date="1497159100250" expanded="true" signature="1818:1929" ph="SELECT ID_nu... personnelinformation" />
+                <marker date="1515408314774" expanded="true" signature="1806:1917" ph="SELECT ID_nu... personnelinformation" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1_pmm_information_development.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_development.php">
+      <file leaf-file-name="1_pmm_information.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+            <state relative-caret-position="1300">
+              <caret line="52" column="48" lean-forward="false" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
               <folding>
-                <marker date="1504623770092" expanded="true" signature="228:1191" ph="UPDATE `pers... " />
-                <marker date="1504623770092" expanded="true" signature="306:1121" ph="/*, `SQRD_ti... " />
+                <marker date="1515408364089" expanded="true" signature="474:678" ph="INSERT INTO `personnelinformation`... " />
+                <marker date="1515408364089" expanded="true" signature="3286:3473" ph="SELECT *,Per... personnelinformation" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config.php">
+      <file leaf-file-name="1_pmm_inside.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_inside.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="31" column="73" lean-forward="true" selection-start-line="31" selection-start-column="73" selection-end-line="31" selection-end-column="73" />
-              <folding />
+            <state relative-caret-position="339">
+              <caret line="45" column="48" lean-forward="false" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+              <folding>
+                <marker date="1515408378598" expanded="true" signature="298:999" ph="INSERT INTO `personnelinformation`... " />
+                <marker date="1515408378598" expanded="true" signature="3300:3404" ph="SELECT ID_nu... personnelinformation" />
+                <marker date="1515408378598" expanded="true" signature="6724:6748" ph="SELECT * FRO... nation_bmb" />
+                <marker date="1515408378598" expanded="true" signature="9116:9139" ph="SELECT * FRO... major_bmb" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer_pmm_development.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/footer/footer_pmm_development.php">
+      <file leaf-file-name="1_pmm_information_rorp.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_rorp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2375">
-              <caret line="95" column="27" lean-forward="false" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+            <state relative-caret-position="150">
+              <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
               <folding>
-                <marker date="1497169410783" expanded="true" signature="278:704" ph="SELECT join_... personnelinformation" />
-                <marker date="1497169410783" expanded="true" signature="5952:6034" ph="SELECT name personnelinformation" />
-                <marker date="1497169410783" expanded="true" signature="6985:7028" ph="SELECT Depar... organization" />
+                <marker date="1496757607418" expanded="true" signature="287:550" ph="INSERT INTO `rorp`... " />
               </folding>
             </state>
           </provider>
@@ -178,13 +180,10 @@
         <option value="$PROJECT_DIR$/footer/footer_pmd_applicant_stu.php" />
         <option value="$PROJECT_DIR$/footer/footer_pmm_activities.php" />
         <option value="$PROJECT_DIR$/del.php" />
-        <option value="$PROJECT_DIR$/Right_1/1_pmm_outside.php" />
-        <option value="$PROJECT_DIR$/Right_1/1_pmm_information.php" />
         <option value="$PROJECT_DIR$/footer/footer_rorp.php" />
         <option value="$PROJECT_DIR$/footer/footer_pmm_doc_thinking.php" />
         <option value="$PROJECT_DIR$/footer/footer_pmm_doc.php" />
         <option value="$PROJECT_DIR$/footer/footer_pmm_appraisement.php" />
-        <option value="$PROJECT_DIR$/Right_1/1_pmm_inside.php" />
         <option value="$PROJECT_DIR$/footer/footer_pmm_development.php" />
         <option value="$PROJECT_DIR$/statistics.php" />
         <option value="$PROJECT_DIR$/Right_1/1_index.php" />
@@ -203,6 +202,9 @@
         <option value="$PROJECT_DIR$/Right_1/1_pmm_information_development.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_newPartyManage.zip/newPartyManage/config.php" />
+        <option value="$PROJECT_DIR$/Right_1/1_pmm_outside.php" />
+        <option value="$PROJECT_DIR$/Right_1/1_pmm_information.php" />
+        <option value="$PROJECT_DIR$/Right_1/1_pmm_inside.php" />
       </list>
     </option>
   </component>
@@ -216,8 +218,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1873" />
-    <option name="height" value="1096" />
+    <option name="width" value="1872" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -256,6 +258,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,8 +288,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,7 +297,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="SearchEverywhereHistoryKey" value="footer_rorp.php&#9;FILE&#9;file://F:/wamp64/www/PartyManage/footer/footer_rorp.php&#10;fpat&#9;FILE&#9;file://D:/wamp/www/PartyManage/footer/footer_pmd_applicant_tea.php&#10;1&#9;FILE&#9;file://D:/wamp/www/PartyManage/Right_1/1_footer_body_pmd.php&#10;footer&#9;FILE&#9;file://D:/wamp/www/PartyManage/footer/footer_pmd_applicant_tea.php" />
@@ -438,6 +440,7 @@
       <workItem from="1501148165167" duration="956000" />
       <workItem from="1501207629633" duration="435000" />
       <workItem from="1508308413458" duration="33000" />
+      <workItem from="1515408129495" duration="392000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1494246562769</created>
@@ -464,16 +467,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162135000" />
+    <option name="totallyTimeSpent" value="162527000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1873" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1872" height="1084" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16262789" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16217673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13139473" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13092673" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -585,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_rorp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/footer/footer_pmd_doc_regular.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-171">
@@ -617,13 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
           <caret line="43" column="42" lean-forward="true" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_inside.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="93" column="16" lean-forward="false" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -755,22 +744,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="10" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="24" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Right_1/1_pmd_activist_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-642">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1501145702774" expanded="true" signature="374:540" ph="INSERT INTO `personnelinformation`... " />
-            <marker date="1501145702774" expanded="true" signature="2636:2759" ph="SELECT *,Per... personnelinformation" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -828,16 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_outside.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding>
-            <marker date="1497159100250" expanded="true" signature="1818:1929" ph="SELECT ID_nu... personnelinformation" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_arrears.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -885,6 +853,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_newPartyManage.zip/newPartyManage/config.php" />
     <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_development.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
@@ -896,12 +865,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_newPartyManage.zip/newPartyManage/config.php" />
+    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_outside.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding>
+            <marker date="1515408314774" expanded="true" signature="1806:1917" ph="SELECT ID_nu... personnelinformation" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="31" column="73" lean-forward="true" selection-start-line="31" selection-start-column="73" selection-end-line="31" selection-end-column="73" />
-          <folding />
+        <state relative-caret-position="-125">
+          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1300">
+          <caret line="52" column="48" lean-forward="false" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+          <folding>
+            <marker date="1515408364089" expanded="true" signature="474:678" ph="INSERT INTO `personnelinformation`... " />
+            <marker date="1515408364089" expanded="true" signature="3286:3473" ph="SELECT *,Per... personnelinformation" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_inside.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="45" column="48" lean-forward="false" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="48" />
+          <folding>
+            <marker date="1515408378598" expanded="true" signature="298:999" ph="INSERT INTO `personnelinformation`... " />
+            <marker date="1515408378598" expanded="true" signature="3300:3404" ph="SELECT ID_nu... personnelinformation" />
+            <marker date="1515408378598" expanded="true" signature="6724:6748" ph="SELECT * FRO... nation_bmb" />
+            <marker date="1515408378598" expanded="true" signature="9116:9139" ph="SELECT * FRO... major_bmb" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_rorp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding>
+            <marker date="1496757607418" expanded="true" signature="287:550" ph="INSERT INTO `rorp`... " />
+          </folding>
         </state>
       </provider>
     </entry>

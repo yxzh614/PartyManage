@@ -24,7 +24,7 @@
             <div class="row-fluid">
                     
 <div class="btn-toolbar"> 
-    <button class="btn btn-primary"><font color="#F7F8F7">导出Excel表格</font></button>
+    <button class="btn"><font color="#404040">导出Excel表格</font></button>
     </div>
     <!--搜索框-->
     	<div class="search-well">
