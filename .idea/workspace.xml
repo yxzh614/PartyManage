@@ -4,10 +4,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11b319f0-8e3e-4105-9dd3-d58ea6ed508a" name="Default" comment="全选 部分删除&#10;-》》搜索post新页 判断类型导向tea或stu">
+    <list default="true" id="11b319f0-8e3e-4105-9dd3-d58ea6ed508a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_outside.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_outside.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -440,7 +438,7 @@
       <workItem from="1501148165167" duration="956000" />
       <workItem from="1501207629633" duration="435000" />
       <workItem from="1508308413458" duration="33000" />
-      <workItem from="1515408129495" duration="392000" />
+      <workItem from="1515408129495" duration="574000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1494246562769</created>
@@ -463,11 +461,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494752335301</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="全选 部分删除&#10;-》》搜索post新页 判断类型导向tea或stu">
+      <created>1515408536268</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1515408536268</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162527000" />
+    <option name="totallyTimeSpent" value="162709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1872" height="1084" extended-state="0" />
