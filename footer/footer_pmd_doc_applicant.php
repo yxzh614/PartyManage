@@ -18,15 +18,17 @@
 </table>
 </div>
 </div>
-<!--修改日期-->
+<!--修改组织信息-->
 <div class="modal small hide fade" id="change" tabindex="10" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">编辑信息</h3>
     </div>
-    <div class="modal-body">
+    <div class="modal-body">     
+    <form id="tab"> 
         <label>提交日期</label>
-        <input type="date" id="update">
+        <input type="date" name="">
+    </form>
     <div class="modal-footer">
         <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
         <button class="btn btn-danger" id="btn_change_sava" data-dismiss="modal">保存</button>

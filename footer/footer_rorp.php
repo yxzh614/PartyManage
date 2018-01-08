@@ -4,7 +4,7 @@
     <button class="btn">导出</button>
 </div>
 <div class="well">
-   <form <?php echo " id='tab' action='../Right_1/1_pam_organization_rorp.php?id={$id}' method='post'"?>>
+   <form <?php $id=$_GET(); echo " id='tab' action='../Right_1/1_pam_organization_rorp.php?id={$id}' method='post'"?>>
     <table class="table">
       <thead>
         <tr>

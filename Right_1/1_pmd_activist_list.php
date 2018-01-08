@@ -102,7 +102,7 @@
                     </div>
                     <div class="modal-body">
                         <form id="tab" action="1_pmd_activist_list.php" method="post">
-                            <label>积极分子分子培训时间</label>
+                            <label>积极分子培训时间</label>
                             <input type="date" name="JJPX_time">
                             <label>培训总结时间</label>
                             <input type="date" name="summary" />
