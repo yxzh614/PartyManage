@@ -94,7 +94,7 @@ if(isset($_GET["stuId"])) {
                         <td align="left"><input type="text" name="strong_point" value="<?php echo $rowsAS["strong_point"]; ?>" class="input-medium"/></td>
                         <td>户口所在派出所：</td>
                         <td align="left"><input type="text" name="police_station" value="<?php echo $rowsAS["police_station"]; ?>" class="input-medium"/></td>
-                        <td><input type="file" name="fileField" id="fileField" class="input-small"/></td>
+                        <td><input type="file" name="fileField" id="fileField" class="input-small" /></td>
                     </tr>
                     <tr align="right">
                         <td>家庭住址：</td>

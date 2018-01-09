@@ -95,7 +95,12 @@
            <td align="left"><input type="text" name="strong_point" value="<?php echo $rowsAS["strong_point"]; ?>" class="input-medium" /></td>
            <td>户口所在派出所：</td>
            <td align="left"><input type="text" name="police_station" value="" class="input-medium" /></td>
-           <td><input type="file" name="fileField" id="fileField" class="input-small"/></td>
+            <td>
+                <form enctype="multipart/form-data" method="post" name="upform" id="upform" action="/Right_1/upload.php?stuId=<?php echo $_GET['stuId'];?>">
+                    <input type="file" name="upfile" id="upfile" class="input-small"/>
+                    <button id="upload" class="btn" onclick="uploadPhoto()">上传</button>
+                </form>
+            </td>
           </tr>
           <tr align="right">
             <td>家庭住址：</td>
@@ -137,6 +142,11 @@
     </div>
 </div>
     </form>
+<script>
+    function uploadPhoto() {
+        document.getElementsByName("upform").submit();
+    }
+</script>
     <?php
 }
 }
