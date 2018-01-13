@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
 
    <?php
@@ -18,12 +18,9 @@
    }
    ?>
   </head>
-  <body class=""> 
+  <body>
     <?php include("1_footer_body_pmd.php"); ?>
-
-    
     <div class="content">
-        
         <div class="header">
             <div class="stats">
 </div>
@@ -36,8 +33,6 @@
 <div class="copyrights"><a href="http://218.25.35.28/"  title="沈阳理工大学官网">沈阳理工大学官网</a></div>
         <div class="container-fluid">
             <div class="row-fluid">
-                    
-
 <div class="row-fluid">
 
     <div class="alert alert-info">

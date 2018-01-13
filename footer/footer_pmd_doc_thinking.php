@@ -60,3 +60,18 @@
     </div>
   </div>   
 </div>
+<script>
+var vm = new Vue(
+    {
+
+    }
+)
+    vm.$http.get('../back-end/thinking').then(
+        function (response) {
+            alert(response)
+        },
+        function (response) {
+            alert('err')
+        }
+    )
+</script>
