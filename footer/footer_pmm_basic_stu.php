@@ -6,6 +6,7 @@ if(isset($_GET["stuId"])) {
     if ($resAS = mysqli_query($db, $sqlAllStudents)) {
         if($rowsAS = mysqli_fetch_assoc($resAS))
         ?>
+            <div>
             <form action="../Right_1/1_pmm_information_basic_stu.php?stuId=<?php echo $_GET["stuId"];?>" method="post" id="edit">
         <div class="btn-toolbar">
             <input class="btn btn-primary" type="submit" name="submit" value="保存" onclick="showAreaID()">
@@ -151,12 +152,13 @@ if(isset($_GET["stuId"])) {
             </div>
         </div>
         </form>
-        <div>
+        <div style="position: absolute">
             <form method="post" action="../Right_1/upload.php?stuId=<?php echo $_GET["stuId"];?>" id="stu_photo">
                 <img src="../images/photo.png"/>
                 <input type="file" name="fileField" id="fileField" class="input-small" />
                 <input class="btn btn-primary" type="submit" name="submit" value="上传">
             </form>
+        </div>
         </div>
         <?php
     }

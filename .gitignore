@@ -1,4 +1,4 @@
-config.php
+public/config.php
 .idea/*
 .idea/dataSources/bba8d3eb-922f-4284-a951-87888db60a33.xml
 .idea/PartyManage.iml
