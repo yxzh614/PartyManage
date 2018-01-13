@@ -31,7 +31,7 @@ if(isset($_COOKIE["PHPSESSID"])){
                                 </td>
                             </tr>
                             <tr align="right">
-                                <td>入党积极分子分子培训时间：</td>
+                                <td>入党积极分子培训时间：</td>
                                 <td align="left"><input type="date" id="JJPX_time" title="JJPX_time" class="input-medium" value="<?php echo $rowsGSR1['JJPX_time'];?>"></td>
                                 <td>培训成绩：</td>
                                 <td align="left"><input type="number" id="JJPX_mark" max=100 title="JJPX_mark" class="input-medium" value="<?php echo $rowsGSR1['JJPX_mark'];?>"></td>

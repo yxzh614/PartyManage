@@ -297,6 +297,7 @@ if($rowsGSR1["native_place"]==""){
                         <td>
                             <input type="text"
                                    name="ID_number"
+                                   readonly="readonly"
                                    value="<?php echo $rowsGSR1["ID_number"]; ?>"
                                    class="input-medium">
                         </td>
