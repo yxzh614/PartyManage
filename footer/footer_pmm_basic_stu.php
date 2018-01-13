@@ -31,7 +31,6 @@ if(isset($_GET["stuId"])) {
                                 <?php
                             }
                             ?></td>
-                        <td width="235" rowspan="5" align="left"><img src="../images/photo.png"/></td>
                     </tr>
                     <tr align="right">
                         <td>出生年月：</td>
@@ -94,7 +93,6 @@ if(isset($_GET["stuId"])) {
                         <td align="left"><input type="text" name="strong_point" value="<?php echo $rowsAS["strong_point"]; ?>" class="input-medium"/></td>
                         <td>户口所在派出所：</td>
                         <td align="left"><input type="text" name="police_station" value="<?php echo $rowsAS["police_station"]; ?>" class="input-medium"/></td>
-                        <td><input type="file" name="fileField" id="fileField" class="input-small" /></td>
                     </tr>
                     <tr align="right">
                         <td>家庭住址：</td>
@@ -153,6 +151,13 @@ if(isset($_GET["stuId"])) {
             </div>
         </div>
         </form>
+        <div>
+            <form method="post" action="../Right_1/upload.php?stuId=<?php echo $_GET["stuId"];?>" id="stu_photo">
+                <img src="../images/photo.png"/>
+                <input type="file" name="fileField" id="fileField" class="input-small" />
+                <input class="btn btn-primary" type="submit" name="submit" value="上传">
+            </form>
+        </div>
         <?php
     }
 }
