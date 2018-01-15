@@ -48,8 +48,8 @@
 
               <!--表格信息-->
               <div class="btn-toolbar">
-                  <button class="btn btn-primary"><a href="#change" role="button" data-toggle="modal"><font
-                                  color="#F7F8F7"><i class="icon-plus"></i>新建</font></a></button>
+<!--                  <button class="btn btn-primary"><a href="#change" role="button" data-toggle="modal"><font-->
+<!--                                  color="#F7F8F7"><i class="icon-plus"></i>新建</font></a></button>-->
                   <button class="btn"><a href="#out" role="button" data-toggle="modal"><font
                                   color="#404040">调出</font></a></button>
                   <button class="btn">导出Excel表格</button>

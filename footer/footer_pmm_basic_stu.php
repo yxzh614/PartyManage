@@ -152,11 +152,22 @@ if(isset($_GET["stuId"])) {
             </div>
         </div>
         </form>
-        <div style="position: absolute">
-            <form method="post" action="../Right_1/upload.php?stuId=<?php echo $_GET["stuId"];?>" id="stu_photo">
-                <img src="../images/photo.png"/>
+        <div style="position: fixed;left: 80%;top: 35%; ">
+            <?php
+            $destination_folder="uploadimg/";
+            $destination = $destination_folder.$_GET["stuId"].".jpg";
+            if(file_exists($destination)){
+                echo "<img src='$destination' style='width: 102px;height: 131px'/>";
+            }else{
+                ?>
+                <img src="../images/photo.png" />
+                <?php
+            }
+            ?>
+            <form method="post" action="../Right_1/upload.php?stuId=<?php echo $_GET["stuId"];?>" id="upform" enctype="multipart/form-data">
                 <input type="file" name="fileField" id="fileField" class="input-small" />
-                <input class="btn btn-primary" type="submit" name="submit" value="上传">
+                <input type="hidden" name="url" id="url" value="<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'];?>"/>
+                <input class="btn btn-primary" type="submit" name="submit" value="上传"/>
             </form>
         </div>
         </div>
