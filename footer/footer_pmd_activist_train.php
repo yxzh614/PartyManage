@@ -21,7 +21,7 @@ if(isset($_COOKIE["PHPSESSID"])){
             }
         }else{
             ?>
-            <form action="../del.php" id="out" method="post">
+            <form action="../public/del.php" id="out" method="post">
                 <input id="type" type="hidden" name="type" value="">
                 <h4><span style="color: #0F258F; ">积极分子培训信息</span></h4>
                 <div class="btn-toolbar">
@@ -50,7 +50,7 @@ if(isset($_COOKIE["PHPSESSID"])){
                         if($resGT=mysqli_query($db,$sqlGetTrain)){
                             while($rowsGT=mysqli_fetch_assoc($resGT)){
                                 ?>
-                                <form  id='inform' action="../footer/footer_pmd_activist_train.php" method="post">
+                                <form id='inform' action="../public/del.php" method="post">
                                     <input type="hidden" name="edit" id="editORdel" value=true>
                                     <input type="hidden" name="ID" value="<?php echo $rowsGT["ID"];?>">
                                     <input type="hidden" name="url" value="<?php echo 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING']; ?>">

@@ -33,8 +33,18 @@
             }
                 break;
                 case 'save_doc_2': {
-                        $sqlToDel = "UPDATE `stage` SET `sub_date`='" . $_POST["date"] . "' WHERE `stage`.`ID_number` = '" . $_POST["ID_number"] . "' AND docu_type = '2'";
-                        echo $sqlToDel;
+                    $sqlDelOldDate = "DELETE FROM `stage` WHERE ID_number='" . $_POST["ID_number"] . "' AND docu_type='2'";
+                    mysqli_query($db, $sqlDelOldDate);
+                    $sqlNewDate = "INSERT INTO `stage`(ID_number, docu_type, sub_date, remark) VALUES ('" . $_POST["ID_number"] . "','2','" . $_POST["date"] . "',NULL)";
+                    if (mysqli_query($db, $sqlNewDate)) {
+                            echo $sqlNewDate;
+                            // echo "==插入成功==";
+                            echo "<script>alert('修改成功！');</script>";
+                        }else{
+                            echo $sqlNewDate;
+                        }
+                        
+                echo "<script>window.location = '../Right_1/1_pmd_applicant_list.php';</script>";
                 }
                     break;
             case 'out': {
