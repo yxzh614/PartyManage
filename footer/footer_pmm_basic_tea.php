@@ -59,7 +59,7 @@ if(isset($_GET["stuId"])) {
                     </tr>
                     <tr align="right">
                         <td>身份证号：</td>
-                        <td align="left"><input type="text" name="ID_number" value="<?php echo $rowsAS["ID_number"];?>" class="input-medium" /></td>
+                        <td align="left"><input type="text" name="ID_number" readonly="readonly" value="<?php echo $rowsAS["ID_number"];?>" class="input-medium" /></td>
                         <td>籍贯：</td>
                         <td align="left"><select name="province" class="input-medium">
                                 <option value="0">辽宁</option>
