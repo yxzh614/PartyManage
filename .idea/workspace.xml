@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11b319f0-8e3e-4105-9dd3-d58ea6ed508a" name="Default" comment="全选 部分删除&#10;-》》搜索post新页 判断类型导向tea或stu">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_rorp.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_rorp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/upload.php" afterPath="$PROJECT_DIR$/Right_1/upload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_footer_body_pmd.php" afterPath="$PROJECT_DIR$/Right_1/1_footer_body_pmd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_footer_body_pmm.php" afterPath="$PROJECT_DIR$/Right_1/1_footer_body_pmm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_footer_body_setting.php" afterPath="$PROJECT_DIR$/Right_1/1_footer_body_setting.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_footer_body_statistics.php" afterPath="$PROJECT_DIR$/Right_1/1_footer_body_statistics.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_pmm_information_development.php" afterPath="$PROJECT_DIR$/Right_1/1_pmm_information_development.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_statistics.php" afterPath="$PROJECT_DIR$/Right_1/1_statistics.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Right_1/1_user_log_in.php" afterPath="$PROJECT_DIR$/Right_1/1_user_log_in.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_basic_stu.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_basic_stu.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer/footer_pmm_basic_tea.php" afterPath="$PROJECT_DIR$/footer/footer_pmm_basic_tea.php" />
     </list>
@@ -28,10 +33,77 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="dj_1@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="dj_1@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="user" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="1_user_log_in.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Right_1/1_user_log_in.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2972">
+              <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+              <folding>
+                <marker date="1516778152310" expanded="true" signature="1355:1375" ph="SELECT * FRO... user" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1_pmm_information_development.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_development.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-403">
+              <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+              <folding>
+                <marker date="1516774304525" expanded="true" signature="235:286" ph="UPDATE `pers... " />
+                <marker date="1516774304525" expanded="true" signature="235:1791" ph="UPDATE `pers... " />
+                <marker date="1516774304525" expanded="true" signature="356:1722" ph="/*, `SQRD_ti... " />
+                <marker date="1516774304525" expanded="true" signature="2743:2820" ph="..." />
+                <marker date="1516774304525" expanded="true" signature="2804:2820" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer_pmm_development.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/footer/footer_pmm_development.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+              <folding>
+                <marker date="1516773719532" expanded="true" signature="278:704" ph="SELECT join_... personnelinformation" />
+                <marker date="1516773719532" expanded="true" signature="5952:6034" ph="SELECT name personnelinformation" />
+                <marker date="1516773719532" expanded="true" signature="6985:7028" ph="SELECT Depar... organization" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,6 +129,8 @@
       <find>!=-1</find>
       <find>upfile</find>
       <find>img</find>
+      <find>_POST</find>
+      <find>).</find>
     </findStrings>
     <replaceStrings>
       <replace>footer/footer_head.php</replace>
@@ -70,6 +144,9 @@
       <replace>Department_ID</replace>
       <replace>Department</replace>
       <replace>&gt;=0</replace>
+      <replace>_GET</replace>
+      <replace>:(&quot;'&quot;.$</replace>
+      <replace>.&quot;'&quot;)).</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\wamp64\www\PartyManage</dir>
@@ -81,8 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/search.php" />
-        <option value="$PROJECT_DIR$/Right_1/1_pmd_applicant_tea.php" />
         <option value="$PROJECT_DIR$/sign-in.php" />
         <option value="$PROJECT_DIR$/footer/footer_head.php" />
         <option value="$PROJECT_DIR$/Right_1/1_pmm_information_basic_stu.php" />
@@ -104,20 +179,13 @@
         <option value="$PROJECT_DIR$/footer/footer_pmm_doc_thinking.php" />
         <option value="$PROJECT_DIR$/footer/footer_pmm_doc.php" />
         <option value="$PROJECT_DIR$/footer/footer_pmm_appraisement.php" />
-        <option value="$PROJECT_DIR$/footer/footer_pmm_development.php" />
         <option value="$PROJECT_DIR$/statistics.php" />
         <option value="$PROJECT_DIR$/Right_1/1_index.php" />
         <option value="$PROJECT_DIR$/Right_1/1_footer_body_pam.php" />
-        <option value="$PROJECT_DIR$/Right_1/1_footer_body_pmd.php" />
-        <option value="$PROJECT_DIR$/Right_1/1_footer_body_pmm.php" />
-        <option value="$PROJECT_DIR$/Right_1/1_footer_body_setting.php" />
-        <option value="$PROJECT_DIR$/Right_1/1_footer_body_statistics.php" />
         <option value="$PROJECT_DIR$/Right_1/statistics.php" />
         <option value="$PROJECT_DIR$/Right_1/1_footer_pmm_stage.php" />
-        <option value="$PROJECT_DIR$/Right_1/1_statistics.php" />
         <option value="$PROJECT_DIR$/footer/footer_pmm_arrears.php" />
         <option value="$PROJECT_DIR$/Right_1/1_pmm_arrears.php" />
-        <option value="$PROJECT_DIR$/Right_1/1_pmm_information_development.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/Temp1_newPartyManage.zip/newPartyManage/config.php" />
         <option value="$PROJECT_DIR$/Right_1/1_pmm_outside.php" />
@@ -130,8 +198,17 @@
         <option value="$PROJECT_DIR$/Right_1/1_pmm_information.php" />
         <option value="$PROJECT_DIR$/Right_1/1_pmm_information_rorp.php" />
         <option value="$PROJECT_DIR$/Right_1/upload.php" />
+        <option value="$PROJECT_DIR$/back-end/ajax_1_statistics.php" />
         <option value="$PROJECT_DIR$/footer/footer_pmm_basic_stu.php" />
         <option value="$PROJECT_DIR$/footer/footer_pmm_basic_tea.php" />
+        <option value="$PROJECT_DIR$/Right_1/1_footer_body_setting.php" />
+        <option value="$PROJECT_DIR$/Right_1/1_footer_body_statistics.php" />
+        <option value="$PROJECT_DIR$/Right_1/1_footer_body_pmm.php" />
+        <option value="$PROJECT_DIR$/Right_1/1_footer_body_pmd.php" />
+        <option value="$PROJECT_DIR$/footer/footer_pmm_development.php" />
+        <option value="$PROJECT_DIR$/Right_1/1_pmm_information_development.php" />
+        <option value="$PROJECT_DIR$/Right_1/1_statistics.php" />
+        <option value="$PROJECT_DIR$/Right_1/1_user_log_in.php" />
       </list>
     </option>
   </component>
@@ -185,8 +262,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,6 +326,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="back-end" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PartyManage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PartyManage" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Right_1" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -275,6 +364,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -432,7 +523,10 @@
       <workItem from="1515833047548" duration="757000" />
       <workItem from="1515833861171" duration="1065000" />
       <workItem from="1515836674261" duration="852000" />
-      <workItem from="1515989997918" duration="8718000" />
+      <workItem from="1515989997918" duration="9086000" />
+      <workItem from="1516095107562" duration="210000" />
+      <workItem from="1516527995843" duration="1435000" />
+      <workItem from="1516760678689" duration="10814000" />
     </task>
     <task id="LOCAL-00001" summary="d">
       <created>1494246562769</created>
@@ -480,17 +574,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184013000" />
+    <option name="totallyTimeSpent" value="196840000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1874" height="1096" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16200215" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16200215" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1307858" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -524,87 +618,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_新建文件夹.zip/新建文件夹/right1/1_statistics.php" />
-    <entry file="file://$USER_HOME$/Desktop/新建文件夹/新建文件夹/right1/1_statistics.php" />
-    <entry file="file://$USER_HOME$/Desktop/新建文件夹/新建文件夹/footer/footer_pmm_arrears.php" />
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/PartyManage-yxz/PartyManage-yxz/del.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2775">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/del.php" />
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmd_activist_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-642">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmd_activist_stu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="30" column="40" lean-forward="false" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_footer_body_pmd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/footer/footer_head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/footer/footer_pmd_applicant_stu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="322" column="101" lean-forward="true" selection-start-line="321" selection-start-column="31" selection-end-line="322" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_arrears.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="68" lean-forward="false" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_activities.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_atSchool_stu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/footer/footer_pmm_arrears.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1800">
@@ -612,27 +625,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/footer/footer_pmm_development.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2375">
-          <caret line="95" column="27" lean-forward="false" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_newPartyManage.zip/newPartyManage/config.php" />
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_development.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="29" column="41" lean-forward="false" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_outside.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="650">
           <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,25 +641,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/footer/footer_bottom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Right_1/photo/uploadimg/1515488255.jpg" />
     <entry file="file://$PROJECT_DIR$/Right_1/photo/uploadimg/1515488245.jpg" />
     <entry file="file://$PROJECT_DIR$/Right_1/photo/uploadimg/1515487734.jpg" />
     <entry file="file://$PROJECT_DIR$/Right_1/photo/upload.php" />
-    <entry file="file://$PROJECT_DIR$/Right_1/1_index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Right_1/1_pam_activity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -675,23 +657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmd_applicant_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_statistics.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,9 +664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="26" column="58" lean-forward="true" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
-          <folding>
-            <marker date="1515989968705" expanded="true" signature="598:663" ph="SELECT * FRO... appraisement" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -719,9 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="46" column="36" lean-forward="false" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
-          <folding>
-            <marker date="1515990133204" expanded="true" signature="294:557" ph="INSERT INTO `rorp`... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -729,11 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding>
-            <marker date="1515989968735" expanded="true" signature="750:792" ph="SELECT * FRO... ororp" />
-            <marker date="1515989968735" expanded="true" signature="1198:1725" ph="..." />
-            <marker date="1515989968735" expanded="true" signature="1499:1711" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -748,39 +702,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/uploadimg/1515994330.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_basic_stu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1475">
-          <caret line="59" column="37" lean-forward="false" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
-          <folding>
-            <marker date="1515989968265" expanded="true" signature="236:952" ph="UPDATE `pers... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_basic_tea.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="76" lean-forward="false" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
-          <folding>
-            <marker date="1515989968275" expanded="true" signature="236:765" ph="UPDATE `pers... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/uploadimg/1515994330.jpg" />
     <entry file="file://$PROJECT_DIR$/images/photo.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -801,16 +723,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/uploadimg/150428199703310000.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/uploadimg/150428199703310000.png" />
     <entry file="file://$PROJECT_DIR$/footer/footer_pmm_basic_stu_look.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,38 +746,246 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/footer/footer_pmm_basic_tea.php">
+    <entry file="file://$PROJECT_DIR$/Right_1/upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="139" column="17" lean-forward="true" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="17" />
+        <state relative-caret-position="1447">
+          <caret line="83" column="25" lean-forward="true" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dj.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3600">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/58f6cb5e-bec3-486f-b567-0cda486d0f4f/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back-end/ajax_1_statistics.php" />
+    <entry file="file://$PROJECT_DIR$/back-end/ajax_1_pmd_applicant_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
           <folding>
-            <element signature="e#7951#7995#0#HTML" expanded="true" />
+            <marker date="1515989968624" expanded="true" signature="186:352" ph="INSERT INTO `personnelinformation`... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_pmd_applicant_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3225">
+          <caret line="129" column="38" lean-forward="false" selection-start-line="129" selection-start-column="38" selection-end-line="129" selection-end-column="38" />
+          <folding>
+            <marker date="1515989968245" expanded="true" signature="1869:1992" ph="SELECT *,Per... personnelinformation" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_activities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/footer/footer_pmm_basic_stu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="300">
+          <caret line="60" column="96" lean-forward="true" selection-start-line="60" selection-start-column="77" selection-end-line="60" selection-end-column="96" />
           <folding>
-            <element signature="e#9315#9359#0#HTML" expanded="true" />
-            <marker date="1516006198155" expanded="true" signature="92:322" ph="SELECT *,Per... personnelinformation" />
-            <marker date="1516006198155" expanded="true" signature="2385:2409" ph="SELECT * FRO... nation_bmb" />
-            <marker date="1516006198155" expanded="true" signature="4281:4305" ph="SELECT * FRO... polity_bmb" />
-            <marker date="1516006198155" expanded="true" signature="6049:6124" ph="SELECT all_n... home_place_bmb" />
-            <marker date="1516006198155" expanded="true" signature="7943:7966" ph="SELECT * FRO... major_bmb" />
-            <marker date="1516006198155" expanded="true" signature="9591:9617" ph="..." />
+            <marker date="1516765419147" expanded="true" signature="92:322" ph="SELECT *,Per... personnelinformation" />
+            <marker date="1516765419147" expanded="true" signature="2385:2409" ph="SELECT * FRO... nation_bmb" />
+            <marker date="1516765419147" expanded="true" signature="4301:4325" ph="SELECT * FRO... polity_bmb" />
+            <marker date="1516765419147" expanded="true" signature="6069:6144" ph="SELECT all_n... home_place_bmb" />
+            <marker date="1516765419147" expanded="true" signature="7963:7986" ph="SELECT * FRO... major_bmb" />
+            <marker date="1516765419147" expanded="true" signature="9611:9637" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Right_1/upload.php">
+    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_basic_stu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1447">
-          <caret line="83" column="25" lean-forward="true" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+        <state relative-caret-position="306">
+          <caret line="59" column="38" lean-forward="false" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
           <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
+            <marker date="1515989968265" expanded="true" signature="236:952" ph="UPDATE `pers... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_basic_tea.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="56" column="39" lean-forward="true" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+          <folding>
+            <marker date="1515989968275" expanded="true" signature="236:765" ph="UPDATE `pers... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer/footer_pmm_basic_tea.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="61" column="96" lean-forward="false" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
+          <folding>
+            <marker date="1516765451870" expanded="true" signature="91:321" ph="SELECT *,Per... personnelinformation" />
+            <marker date="1516765451870" expanded="true" signature="2441:2465" ph="SELECT * FRO... nation_bmb" />
+            <marker date="1516765451870" expanded="true" signature="4358:4382" ph="SELECT * FRO... polity_bmb" />
+            <marker date="1516765451870" expanded="true" signature="6121:6196" ph="SELECT all_n... home_place_bmb" />
+            <marker date="1516765451870" expanded="true" signature="8247:8273" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back-end/ajax_footer_pmd_applicant_tea.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1515989968624" expanded="true" signature="302:1903" ph="UPDATE `pers... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer/footer_bottom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer/footer_head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <marker date="1515989968224" expanded="true" signature="414:572" ph="INSERT INTO `news`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_footer_body_pmd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="43" column="26" lean-forward="false" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_footer_pmm_stage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_footer_body_pam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_footer_body_pmm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="52" column="167" lean-forward="false" selection-start-line="52" selection-start-column="167" selection-end-line="52" selection-end-column="167" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_footer_body_statistics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="52" column="167" lean-forward="false" selection-start-line="52" selection-start-column="167" selection-end-line="52" selection-end-column="167" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_footer_body_setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="52" column="167" lean-forward="true" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="167" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_statistics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="72" column="73" lean-forward="false" selection-start-line="72" selection-start-column="73" selection-end-line="72" selection-end-column="73" />
+          <folding>
+            <element signature="e#2386#2392#0#HTML" expanded="true" />
+            <marker date="1516775863972" expanded="true" signature="1697:1721" ph="SELECT * FRO... nation_bmb" />
+            <marker date="1516775863972" expanded="true" signature="2469:3070" ph="..." />
+            <marker date="1516775863972" expanded="true" signature="3858:4106" ph="..." />
+            <marker date="1516775863972" expanded="true" signature="3875:4106" ph="..." />
+            <marker date="1516775863972" expanded="true" signature="4185:4226" ph="..." />
+            <marker date="1516775863972" expanded="true" signature="5841:6109" ph="SELECT stu_n... personnelinformation" />
+            <marker date="1516775863972" expanded="true" signature="7105:7367" ph="SELECT stu_n... personnelinformation" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_pmm_information_development.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-403">
+          <caret line="29" column="14" lean-forward="true" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding>
+            <marker date="1516774304525" expanded="true" signature="235:286" ph="UPDATE `pers... " />
+            <marker date="1516774304525" expanded="true" signature="235:1791" ph="UPDATE `pers... " />
+            <marker date="1516774304525" expanded="true" signature="356:1722" ph="/*, `SQRD_ti... " />
+            <marker date="1516774304525" expanded="true" signature="2743:2820" ph="..." />
+            <marker date="1516774304525" expanded="true" signature="2804:2820" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer/footer_pmm_development.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding>
+            <marker date="1516773719532" expanded="true" signature="278:704" ph="SELECT join_... personnelinformation" />
+            <marker date="1516773719532" expanded="true" signature="5952:6034" ph="SELECT name personnelinformation" />
+            <marker date="1516773719532" expanded="true" signature="6985:7028" ph="SELECT Depar... organization" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Right_1/1_user_log_in.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2972">
+          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding>
+            <marker date="1516778152310" expanded="true" signature="1355:1375" ph="SELECT * FRO... user" />
           </folding>
         </state>
       </provider>

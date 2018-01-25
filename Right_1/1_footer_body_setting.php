@@ -50,7 +50,7 @@
       	<a href="#statistics-menu" class="nav-header" data-toggle="collapse"><i class="icon-legal"></i>统计分析<i class="icon-chevron-up"></i></a>
         <ul id="statistics-menu" class="nav nav-list collapse">
         	<li ><a href="1_user_log_in.php">用户登录信息</a></li>
-            <li ><a href="1_statistics.php">人员基本信息</a></li>
+            <li ><a href="1_statistics.php?sex=-1&nation=-1&kind=-1&topDevTime=&bottomDevTime=&topTrueTime=&bottomTrueTime=&submit=%E6%9F%A5%E8%AF%A2%E7%BB%9F%E8%AE%A1">人员基本信息</a></li>
         </ul>
         <!--设置-->
       	<a href="#setting-menu" class="nav-header" data-toggle="collapse"><i class="icon-briefcase"></i>设置<span class="label label-info"></span></a>
