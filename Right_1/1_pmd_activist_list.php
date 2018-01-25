@@ -24,7 +24,7 @@
 
 <div class="content">
     <div class="header">
-        <h1 class="page-title">积极分子人员信息</h1>
+        <h1 class="page-title">积极分子人员信息</h1> 
     </div>
     <ul class="breadcrumb">
         <li><a href="1_index.php">返回首页</a> / <span class="divider">积极分子人员信息</span></li>
@@ -44,7 +44,7 @@
                     <button class="btn" type="button"><i class="icon-search"></i> 查询</button>
                 </form>
             </div>
-            <form action="../del.php" method="post">
+            <form action="../public/del.php" method="post">
                 <input id="submitType" type="hidden" name="type" value="">
                 <div class="well">
                     <table width="66%" height="82"  class="table">
@@ -101,7 +101,6 @@
                         <h3 id="myModalLabel">录入阶段信息</h3>
                     </div>
                     <div class="modal-body">
-                        <form id="tab" action="1_pmd_activist_list.php" method="post">
                             <label>积极分子培训时间</label>
                             <input type="date" name="JJPX_time">
                             <label>培训总结时间</label>
@@ -117,7 +116,6 @@
                                 <button class="btn" id="btn_change_cancle" data-dismiss="modal" aria-hidden="true">取消</button>
                                 <input type="submit" name="submit" class="btn btn-danger" id="btn_change_sava" onclick="return allUncheck()&&(()=>{document.getElementById('submitType').value='save_JJPX_time';})();" value="保存" >
                             </div>
-                        </form>
                         <br/><br/><br/>
                     </div>
                 </div>

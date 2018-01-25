@@ -26,12 +26,40 @@
                 break;
             case 'save_LJJ_time': {
                 $checkbox = $_POST['onetodel'];
+                $success = true;
                 for ($i = 0; $i < count($checkbox); $i++) {
-                    $sqlToDel = "UPDATE `personnelinformation` SET `LJJ_time`='" . $_POST["LJJ_time"] . "' WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
-                    echo $sqlToDel;
+                    $sqlToDel = "UPDATE `personnelinformation` SET `LJJ_time`='" . $_POST["LJJ_time"] . "', person_cate2 = 4 WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
+
+                    if(!mysqli_query($db, $sqlToDel)) {
+                        $success = false;
+                    } else {
+                        echo $sqlToDel;
+                    }
+                    if($success) {
+                        echo "<script>alert('修改成功！');</script>";
+                        echo "<script>window.location = '../Right_1/1_pmd_applicant_list.php';</script>";
+                    }
                 }
             }
                 break;
+                case 'save_JJPX_time': {
+                    $checkbox = $_POST['onetodel'];
+                    $success = true;
+                    for ($i = 0; $i < count($checkbox); $i++) {
+                        $sqlToDel = "UPDATE `personnelinformation` SET `JJPX_time`='" . $_POST["JJPX_time"] . "', person_cate2 = 2 WHERE `personnelinformation`.`ID_number` = '" . $checkbox[$i] . "'";
+
+                        if(!mysqli_query($db, $sqlToDel)) {
+                            $success = false;
+                        } else {
+                            echo $sqlToDel;
+                        }
+                        if($success) {
+                            echo "<script>alert('修改成功！');</script>";
+                            echo "<script>window.location = '../Right_1/1_pmd_applicant_list.php';</script>";
+                        }
+                    }
+                }
+                    break;
                 case 'save_doc_2': {
                     $sqlDelOldDate = "DELETE FROM `stage` WHERE ID_number='" . $_POST["ID_number"] . "' AND docu_type='2'";
                     mysqli_query($db, $sqlDelOldDate);
