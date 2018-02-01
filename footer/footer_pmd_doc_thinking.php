@@ -12,7 +12,7 @@ if (isset($_COOKIE["PHPSESSID"])) {
         $sql = "UPDATE `stage` SET `sub_date` = '".$_POST['sub_date']."' WHERE ID = '".$_POST['ID']."'"; 
         $submess = '修改成功!';
       } else if ($_POST['type'] == 'new') {
-        $sql = "INSERT INTO `stage`(`ID_number`, `docu_type`, `sub_date`) VALUES(".$_POST['ID_number'].", '14', '".$_POST['sub_date']."')";
+        $sql = "INSERT INTO `stage`(`ID_number`, `docu_type`, `sub_date`) VALUES('".$_POST['ID_number']."', '14', '".$_POST['sub_date']."')";
         $submess = '新建成功!';
       }
       if ($resND = mysqli_query($db, $sql)) {
@@ -38,7 +38,7 @@ if (isset($_COOKIE["PHPSESSID"])) {
             <th>提交日期</th>
             <th style="width: 26px;"></th>
             <?php 
-              $sqlthinking = "SELECT ID, sub_date FROM `stage` WHERE docu_type = '14' AND ID_number = ".$_GET["ID"]." ORDER BY sub_date DESC";
+              $sqlthinking = "SELECT ID, sub_date FROM `stage` WHERE docu_type = '14' AND ID_number = '".$_GET["ID"]."' ORDER BY sub_date DESC";
               if ($rest = mysqli_query($db,$sqlthinking)) {
                 while ($rowst = mysqli_fetch_assoc($rest)) {
                   ?>
@@ -50,6 +50,8 @@ if (isset($_COOKIE["PHPSESSID"])) {
           </tr>
           <?php
                 }
+              } else {
+                echo $sqlthinking;
               }
             ?>
           </tbody>

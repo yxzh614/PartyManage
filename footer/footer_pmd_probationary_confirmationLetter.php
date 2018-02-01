@@ -20,7 +20,7 @@ if(isset($_POST["submit"])&&$_POST["submit"]) {
     }
 }else{
 ?>
-<form action="../del.php" id="out" method="post">
+<form action="../public/del.php" id="out" method="post">
     <input id="type" type="hidden" name="type" value="">
     <div class="btn-toolbar">
         <button class="btn btn-primary" type="button" href="#change" role="button" data-toggle="modal"><i class="icon-plus"></i> 新建</button>

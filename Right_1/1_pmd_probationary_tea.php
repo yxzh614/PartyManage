@@ -15,7 +15,6 @@
     <div class="content">
         
         <div class="header">
-            
             <h1 class="page-title">详细信息</h1>
         </div>
         

@@ -22,7 +22,7 @@ if(isset($_COOKIE["PHPSESSID"])){
             SET 
             `Tmember_meet_time`='" . ($_POST["Tmember_meet_time"] ? $_POST["Tmember_meet_time"] : "0000-01-01") . "',
             `JJPX_time`='" . ($_POST["JJPX_time"] ? $_POST["JJPX_time"] : "0000-01-01") . "',
-            `JJPX_mark`='" . $_POST["JJPX_mark"] . "',
+            `JJPX_mark`='" . ($_POST["JJPX_mark"]?$_POST["JJPX_mark"] : 0) . "',
             `ZQ_positivemeet_ID`='" . $_POST["ZQ_positivemeet_ID"] . "'
             WHERE personnelinformation.ID_number='".$_POST["ID"]."'";
             if (mysqli_query($db, $sqlUpdateStu)) {

@@ -184,7 +184,7 @@
                     if (mysqli_query($db, $sqlToDel)) {
                         // echo "==插入成功==";
                         echo "<script>alert('删除成功！');</script>";
-                        echo "<script>window.location = \"Right_1/1_pmm_information.php\";</script>";
+                        //echo "<script>window.location = \"Right_1/1_pmm_information.php\";</script>";
                     }else{
                         echo $sqlToDel;
                     }
